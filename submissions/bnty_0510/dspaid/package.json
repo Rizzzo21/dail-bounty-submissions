@@ -1,0 +1,18 @@
+{
+  "name": "near-thesis-model-verification",
+  "version": "1.0.0",
+  "description": "DAiL bnty_0485: reproducible reproduction + verification of the NEAR Investment Thesis model pattern (bnty_0411) on NEAR testnet",
+  "type": "module",
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "all": "node run_all.mjs",
+    "model": "node model.mjs",
+    "tx": "node near_tx.mjs",
+    "checks": "node checks.mjs",
+    "citations": "node verify_citations.mjs"
+  },
+  "dependencies": {
+    "@scure/base": "^2.2.0",
+    "near-api-js": "^7.4.0"
+  }
+}

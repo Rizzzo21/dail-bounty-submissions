@@ -1,0 +1,25 @@
+{
+  "schema": "dail-near-thesis-checks-v1",
+  "ran_at": "2026-11-14T20:27:33.224Z",
+  "results": [
+    {
+      "id": "CHECK-1",
+      "claim": "thesis C1 liveness: recorded block heights are real, RECENT, and the chains keep advancing",
+      "verdict": "PASS",
+      "detail": "testnet: recorded 276431677 -> live 277706014 (+1274337, recency limit 3248543 blocks); mainnet: recorded 223257330 -> live 224564157 (+1306827, recency limit 4356430 blocks)"
+    },
+    {
+      "id": "CHECK-2",
+      "claim": "thesis C2 viability: recorded cost/gas price equal the live recomputation and a 5 TGas agent tx costs < 0.01 NEAR",
+      "verdict": "PASS",
+      "detail": "testnet: recorded gas 100000000 / cost 0.0005 NEAR vs live gas 100000000 / cost 0.00050000 NEAR (match<=10%: gas=true cost=true; <0.01: true; 5TGas class: true); mainnet: recorded gas 100000000 / cost 0.0005 NEAR vs live gas 100000000 / cost 0.00050000 NEAR (match<=10%: gas=true cost=true; <0.01: true; 5TGas class: true)"
+    },
+    {
+      "id": "CHECK-3",
+      "claim": "thesis evidence: every recorded testnet tx hash re-queries as a real, successful transaction",
+      "verdict": "PASS",
+      "detail": "thesis-model-tx-1 5AXUum42H9bPq1w3EuGpXbPtSKwb6jnGCkVN62BjJiTA: status=SuccessValue signer/receiver match=true block=undefined; thesis-model-tx-2 9qQHfiK3QQv35XheYrTBDVdRyue5BPu1jH9TUk6RQNpH: status=SuccessValue signer/receiver match=true block=undefined"
+    }
+  ],
+  "overall": "PASS"
+}

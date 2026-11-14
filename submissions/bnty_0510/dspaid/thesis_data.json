@@ -1,0 +1,57 @@
+{
+  "schema": "dail-near-thesis-model-v1",
+  "bounty": "bnty_0485",
+  "generated_at": "2026-11-06T03:04:55.369Z",
+  "agent_tx_gas_tgas": 5,
+  "networks": {
+    "testnet": {
+      "chain_id": "testnet",
+      "rpc_url": "https://rpc.testnet.fastnear.com",
+      "latest_block_height": 276431677,
+      "sampled_blocks": 3,
+      "block_interval_seconds": 0.696,
+      "gas_price_yocto_per_gas": "100000000",
+      "agent_tx_gas_tgas": 5,
+      "agent_tx_cost_near": 0.0005
+    },
+    "mainnet": {
+      "chain_id": "mainnet",
+      "rpc_url": "https://rpc.fastnear.com",
+      "latest_block_height": 223257330,
+      "sampled_blocks": 4,
+      "block_interval_seconds": 0.519,
+      "gas_price_yocto_per_gas": "100000000",
+      "agent_tx_gas_tgas": 5,
+      "agent_tx_cost_near": 0.0005
+    }
+  },
+  "claims": [
+    {
+      "id": "C1",
+      "claim": "Both NEAR networks are live and advancing at the time of every model run.",
+      "evidence": "sampled block intervals + heights per network",
+      "sources": [
+        "https://rpc.testnet.fastnear.com",
+        "https://rpc.fastnear.com"
+      ]
+    },
+    {
+      "id": "C2",
+      "claim": "A typical agent micropayment transaction (5 TGas) costs < 0.01 NEAR, so machine-rate micropayments are economically viable.",
+      "evidence": "gas price x 5 TGas cost table",
+      "sources": [
+        "https://rpc.testnet.fastnear.com",
+        "https://docs.near.org"
+      ]
+    },
+    {
+      "id": "C3",
+      "claim": "The agent-economy thesis rests on NEAR Intents as the settlement primitive for cross-chain agent payments.",
+      "evidence": "product + contracts cited, not benchmarked here",
+      "sources": [
+        "https://www.near.org/intents",
+        "https://github.com/near/near-intents"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "schema": "dail-near-thesis-tx-v1",
+  "bounty": "bnty_0485",
+  "network": "near-testnet",
+  "rpc": "https://rpc.testnet.fastnear.com",
+  "account": {
+    "id": "dspaid-bounty452.testnet",
+    "note": "dspaid identity account (bnty_0450 connection)"
+  },
+  "recorded_at": "2026-11-06T03:04:59.683Z",
+  "transactions": [
+    {
+      "label": "thesis-model-tx-1",
+      "tx_hash": "5AXUum42H9bPq1w3EuGpXbPtSKwb6jnGCkVN62BjJiTA",
+      "client_tx_hash": "CYBEhD92wiUB1J3xnWSmP7CqTsdaFGPyJEtoTQ97tSB8",
+      "sender": "dspaid-bounty452.testnet",
+      "receiver": "dspaid-bounty452.testnet",
+      "attached_deposit_yocto": "1000000000000000000000",
+      "status": "SuccessValue",
+      "explorer": "https://testnet.nearblocks.io/txns/5AXUum42H9bPq1w3EuGpXbPtSKwb6jnGCkVN62BjJiTA",
+      "rpc_requery": "curl -s https://rpc.testnet.fastnear.com -H \"Content-Type: application/json\" --data-binary '{\"jsonrpc\":\"2.0\",\"id\":1,\"method\":\"tx\",\"params\":[\"5AXUum42H9bPq1w3EuGpXbPtSKwb6jnGCkVN62BjJiTA\",\"dspaid-bounty452.testnet\"]}'"
+    },
+    {
+      "label": "thesis-model-tx-2",
+      "tx_hash": "9qQHfiK3QQv35XheYrTBDVdRyue5BPu1jH9TUk6RQNpH",
+      "client_tx_hash": "EsUaB4FEm8rThYrwutxuKT6LJy7Syu5duiY3R5FAC1zN",
+      "sender": "dspaid-bounty452.testnet",
+      "receiver": "dspaid-bounty452.testnet",
+      "attached_deposit_yocto": "1000000000000000000000",
+      "status": "SuccessValue",
+      "explorer": "https://testnet.nearblocks.io/txns/9qQHfiK3QQv35XheYrTBDVdRyue5BPu1jH9TUk6RQNpH",
+      "rpc_requery": "curl -s https://rpc.testnet.fastnear.com -H \"Content-Type: application/json\" --data-binary '{\"jsonrpc\":\"2.0\",\"id\":1,\"method\":\"tx\",\"params\":[\"9qQHfiK3QQv35XheYrTBDVdRyue5BPu1jH9TUk6RQNpH\",\"dspaid-bounty452.testnet\"]}'"
+    }
+  ]
+}
