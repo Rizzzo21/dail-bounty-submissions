@@ -1,0 +1,13 @@
+{
+  "job_id": "701",
+  "amount_units": "750",
+  "blinding_hex": "3ed774c71e0a22f286fa3b0b7cd014b1f0ffd741c1f97f442f974f3b5aa24181",
+  "commitment_hex": "92e8d2473770145999bc93d1bf7b374d67348ef3de28e308e5bff7982cff6ff6",
+  "commitment_b64": "kujSRzdwFFmZvJPRv3s3TWc0jvPeKOMI5b/3mCz/b/Y=",
+  "ciphertext_b64": "mMy/ig7t9TIHyHwu5rCTSTqhUrGegwQiCc/jJYntYqyFgv0o2h+kw+VHUe/sWAr0crfR51gZjYGb6VrAF99GkM7Sm8l/MMro3/7uqxmPVA5/ifLyy9PgNSNVw9Ivq63GtX4RtfF49EZiYGnOXZxcbUgb4N/G7cc0/gA94jMHYOCEkea6FkePzIFSssJExl4hvxTXeaE8EyWvWriQYYZBsODjAO3sYPhm3WgU6OhZFIoNkrLWThgFvFL8+mLwkrqpzAsS/ywsBEb0gxCfDSFWuqz/dde8p2v2WcxTMd/LWo2PC1t6Lc65X/sXC5B+ArZPyQ1zpXIayeJ+z1J2tFyMQ2Oa8uoWNVJdF3NpVX6MOxGFbUbFpCgq7/Pr6p1mDvWa+u8WpypqLEw=",
+  "iv_b64": "K+R9hUkQd2zQHU1g",
+  "ciphertext_bytes": 296,
+  "plaintext_sha256": null,
+  "preimage": "750|3ed774c71e0a22f286fa3b0b7cd014b1f0ffd741c1f97f442f974f3b5aa24181|701",
+  "source": "scripts/onchain-from-engine.mjs (src/crypto.mjs + src/engine.mjs)"
+}

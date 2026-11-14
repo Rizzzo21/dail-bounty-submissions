@@ -1,0 +1,771 @@
+{
+  "protocol": "passport",
+  "track": "Open Innovation",
+  "bounty": "bnty_0415",
+  "asOf": 1808380800,
+  "attestationCount": 15,
+  "passport": {
+    "agent": "acc_cb3ecbf84edda99b",
+    "name": "agent-ava",
+    "asOf": 1808380800,
+    "scores": {
+      "settlement": {
+        "category": "settlement",
+        "label": "delivers what it promises",
+        "score": 90.014,
+        "count": 1,
+        "weight": 1,
+        "minimum": 70,
+        "detail": [
+          {
+            "id": "927fe4dbd4708f2521acd5983c0e70eb",
+            "claim": "redeemed a matured T-bill position for 98,839 USDC",
+            "value": 0.95,
+            "weight": 1,
+            "decay": 0.947516,
+            "contribution": 0.90014,
+            "issuedAt": 1807776000
+          }
+        ]
+      },
+      "disclosure": {
+        "category": "disclosure",
+        "label": "shows its work",
+        "score": 90.014,
+        "count": 1,
+        "weight": 0.8,
+        "minimum": 60,
+        "detail": [
+          {
+            "id": "0b03f42b163c9e9e87c8d5cfb3acb897",
+            "claim": "published every coupon accrual as it happened",
+            "value": 0.95,
+            "weight": 1,
+            "decay": 0.947516,
+            "contribution": 0.90014,
+            "issuedAt": 1807776000
+          }
+        ]
+      },
+      "community": {
+        "category": "community",
+        "label": "supports the commons",
+        "score": 28.4255,
+        "count": 1,
+        "weight": 0.6,
+        "minimum": 50,
+        "detail": [
+          {
+            "id": "6e1a4ec7d36a078ec50f33f610f015f5",
+            "claim": "took a small part in a HOWL window that burned 1% of every trade",
+            "value": 0.3,
+            "weight": 1,
+            "decay": 0.947516,
+            "contribution": 0.284255,
+            "issuedAt": 1807776000
+          }
+        ]
+      },
+      "privacy": {
+        "category": "privacy",
+        "label": "protects the people it deals with",
+        "score": 85.2764,
+        "count": 1,
+        "weight": 0.9,
+        "minimum": 65,
+        "detail": [
+          {
+            "id": "e3ad603222e8fe7b0d32c5fc3840c644",
+            "claim": "refused to serve a party that had not cleared its compliance gate",
+            "value": 0.9,
+            "weight": 1,
+            "decay": 0.947516,
+            "contribution": 0.852764,
+            "issuedAt": 1807776000
+          }
+        ]
+      }
+    },
+    "composite": 77.524,
+    "gates": {
+      "pass": false,
+      "gates": [
+        {
+          "category": "settlement",
+          "minimum": 70,
+          "score": 90.014,
+          "pass": true
+        },
+        {
+          "category": "disclosure",
+          "minimum": 60,
+          "score": 90.014,
+          "pass": true
+        },
+        {
+          "category": "community",
+          "minimum": 50,
+          "score": 28.4255,
+          "pass": false
+        },
+        {
+          "category": "privacy",
+          "minimum": 65,
+          "score": 85.2764,
+          "pass": true
+        }
+      ],
+      "failed": [
+        "community"
+      ]
+    },
+    "attestations": [
+      {
+        "id": "927fe4dbd4708f2521acd5983c0e70eb",
+        "subject": "acc_cb3ecbf84edda99b",
+        "issuer": "near-anchor-registry",
+        "category": "settlement",
+        "claim": "redeemed a matured T-bill position for 98,839 USDC",
+        "value": 0.95,
+        "weight": 1,
+        "issuedAt": 1807776000,
+        "source": {
+          "file": "anchor-events.jsonl",
+          "recordHash": "3c35b0deab87f4dbcc122fbb92f222915b691b567b4f1f3936d0f38ebf4cac83",
+          "entry": "bnty_0414",
+          "url": "https://near-anchor.surge.sh/docs/demo-trace.json"
+        },
+        "hash": "927fe4dbd4708f2521acd5983c0e70ebd86ff935fd38569b2c3aa619b7bb3cc2"
+      },
+      {
+        "id": "0b03f42b163c9e9e87c8d5cfb3acb897",
+        "subject": "acc_cb3ecbf84edda99b",
+        "issuer": "near-anchor-registry",
+        "category": "disclosure",
+        "claim": "published every coupon accrual as it happened",
+        "value": 0.95,
+        "weight": 1,
+        "issuedAt": 1807776000,
+        "source": {
+          "file": "anchor-events.jsonl",
+          "recordHash": "0d9aeb09c5c97189a7308d5012eb169cd006027b8b5147d54169eefd9a7abc5f",
+          "entry": "bnty_0414",
+          "url": "https://near-anchor.surge.sh/docs/demo-trace.json"
+        },
+        "hash": "0b03f42b163c9e9e87c8d5cfb3acb897ad2f3b8beb2b3f4e75f9ada198b51720"
+      },
+      {
+        "id": "6e1a4ec7d36a078ec50f33f610f015f5",
+        "subject": "acc_cb3ecbf84edda99b",
+        "issuer": "near-ritual-registry",
+        "category": "community",
+        "claim": "took a small part in a HOWL window that burned 1% of every trade",
+        "value": 0.3,
+        "weight": 1,
+        "issuedAt": 1807776000,
+        "source": {
+          "file": "ritual-scenarios.json",
+          "recordHash": "e12b7c83b332e50082ab4fe8bc512b747dc1038e9db073d9336f1edacb0375dd",
+          "entry": "bnty_0421",
+          "url": "https://near-ritual.surge.sh/docs/demo-trace.json"
+        },
+        "hash": "6e1a4ec7d36a078ec50f33f610f015f51fe028dc1c0c19dd93dbaf28b92b007b"
+      },
+      {
+        "id": "e3ad603222e8fe7b0d32c5fc3840c644",
+        "subject": "acc_cb3ecbf84edda99b",
+        "issuer": "near-anchor-registry",
+        "category": "privacy",
+        "claim": "refused to serve a party that had not cleared its compliance gate",
+        "value": 0.9,
+        "weight": 1,
+        "issuedAt": 1807776000,
+        "source": {
+          "file": "anchor-events.jsonl",
+          "recordHash": "a2c331dffadd547c65a822a0c9421ee5d035317485123b16c577d8c2c48e2ce1",
+          "entry": "bnty_0414",
+          "url": "https://near-anchor.surge.sh/docs/demo-trace.json"
+        },
+        "hash": "e3ad603222e8fe7b0d32c5fc3840c644e9a4eff991ed7daf9bdd1206c1eced59"
+      }
+    ]
+  },
+  "card": {
+    "id": "9d1687032765aa11f12abc3f785896a3",
+    "agent": "acc_cb3ecbf84edda99b",
+    "agentName": "agent-ava",
+    "issuer": "acc_72ca5c14405cadae",
+    "policy": {
+      "halflifeDays": 90,
+      "categories": {
+        "settlement": {
+          "weight": 1,
+          "minimum": 70,
+          "label": "delivers what it promises"
+        },
+        "disclosure": {
+          "weight": 0.8,
+          "minimum": 60,
+          "label": "shows its work"
+        },
+        "community": {
+          "weight": 0.6,
+          "minimum": 50,
+          "label": "supports the commons"
+        },
+        "privacy": {
+          "weight": 0.9,
+          "minimum": 65,
+          "label": "protects the people it deals with"
+        }
+      }
+    },
+    "attestations": [
+      {
+        "id": "927fe4dbd4708f2521acd5983c0e70eb",
+        "subject": "acc_cb3ecbf84edda99b",
+        "issuer": "near-anchor-registry",
+        "category": "settlement",
+        "claim": "redeemed a matured T-bill position for 98,839 USDC",
+        "value": 0.95,
+        "weight": 1,
+        "issuedAt": 1807776000,
+        "source": {
+          "file": "anchor-events.jsonl",
+          "recordHash": "3c35b0deab87f4dbcc122fbb92f222915b691b567b4f1f3936d0f38ebf4cac83",
+          "entry": "bnty_0414",
+          "url": "https://near-anchor.surge.sh/docs/demo-trace.json"
+        },
+        "hash": "927fe4dbd4708f2521acd5983c0e70ebd86ff935fd38569b2c3aa619b7bb3cc2"
+      },
+      {
+        "id": "0b03f42b163c9e9e87c8d5cfb3acb897",
+        "subject": "acc_cb3ecbf84edda99b",
+        "issuer": "near-anchor-registry",
+        "category": "disclosure",
+        "claim": "published every coupon accrual as it happened",
+        "value": 0.95,
+        "weight": 1,
+        "issuedAt": 1807776000,
+        "source": {
+          "file": "anchor-events.jsonl",
+          "recordHash": "0d9aeb09c5c97189a7308d5012eb169cd006027b8b5147d54169eefd9a7abc5f",
+          "entry": "bnty_0414",
+          "url": "https://near-anchor.surge.sh/docs/demo-trace.json"
+        },
+        "hash": "0b03f42b163c9e9e87c8d5cfb3acb897ad2f3b8beb2b3f4e75f9ada198b51720"
+      },
+      {
+        "id": "6e1a4ec7d36a078ec50f33f610f015f5",
+        "subject": "acc_cb3ecbf84edda99b",
+        "issuer": "near-ritual-registry",
+        "category": "community",
+        "claim": "took a small part in a HOWL window that burned 1% of every trade",
+        "value": 0.3,
+        "weight": 1,
+        "issuedAt": 1807776000,
+        "source": {
+          "file": "ritual-scenarios.json",
+          "recordHash": "e12b7c83b332e50082ab4fe8bc512b747dc1038e9db073d9336f1edacb0375dd",
+          "entry": "bnty_0421",
+          "url": "https://near-ritual.surge.sh/docs/demo-trace.json"
+        },
+        "hash": "6e1a4ec7d36a078ec50f33f610f015f51fe028dc1c0c19dd93dbaf28b92b007b"
+      },
+      {
+        "id": "e3ad603222e8fe7b0d32c5fc3840c644",
+        "subject": "acc_cb3ecbf84edda99b",
+        "issuer": "near-anchor-registry",
+        "category": "privacy",
+        "claim": "refused to serve a party that had not cleared its compliance gate",
+        "value": 0.9,
+        "weight": 1,
+        "issuedAt": 1807776000,
+        "source": {
+          "file": "anchor-events.jsonl",
+          "recordHash": "a2c331dffadd547c65a822a0c9421ee5d035317485123b16c577d8c2c48e2ce1",
+          "entry": "bnty_0414",
+          "url": "https://near-anchor.surge.sh/docs/demo-trace.json"
+        },
+        "hash": "e3ad603222e8fe7b0d32c5fc3840c644e9a4eff991ed7daf9bdd1206c1eced59"
+      }
+    ],
+    "asOf": 1808380800,
+    "issuedAt": 1808380800,
+    "scores": {
+      "settlement": {
+        "category": "settlement",
+        "label": "delivers what it promises",
+        "score": 90.014,
+        "count": 1,
+        "weight": 1,
+        "minimum": 70,
+        "detail": [
+          {
+            "id": "927fe4dbd4708f2521acd5983c0e70eb",
+            "claim": "redeemed a matured T-bill position for 98,839 USDC",
+            "value": 0.95,
+            "weight": 1,
+            "decay": 0.947516,
+            "contribution": 0.90014,
+            "issuedAt": 1807776000
+          }
+        ]
+      },
+      "disclosure": {
+        "category": "disclosure",
+        "label": "shows its work",
+        "score": 90.014,
+        "count": 1,
+        "weight": 0.8,
+        "minimum": 60,
+        "detail": [
+          {
+            "id": "0b03f42b163c9e9e87c8d5cfb3acb897",
+            "claim": "published every coupon accrual as it happened",
+            "value": 0.95,
+            "weight": 1,
+            "decay": 0.947516,
+            "contribution": 0.90014,
+            "issuedAt": 1807776000
+          }
+        ]
+      },
+      "community": {
+        "category": "community",
+        "label": "supports the commons",
+        "score": 28.4255,
+        "count": 1,
+        "weight": 0.6,
+        "minimum": 50,
+        "detail": [
+          {
+            "id": "6e1a4ec7d36a078ec50f33f610f015f5",
+            "claim": "took a small part in a HOWL window that burned 1% of every trade",
+            "value": 0.3,
+            "weight": 1,
+            "decay": 0.947516,
+            "contribution": 0.284255,
+            "issuedAt": 1807776000
+          }
+        ]
+      },
+      "privacy": {
+        "category": "privacy",
+        "label": "protects the people it deals with",
+        "score": 85.2764,
+        "count": 1,
+        "weight": 0.9,
+        "minimum": 65,
+        "detail": [
+          {
+            "id": "e3ad603222e8fe7b0d32c5fc3840c644",
+            "claim": "refused to serve a party that had not cleared its compliance gate",
+            "value": 0.9,
+            "weight": 1,
+            "decay": 0.947516,
+            "contribution": 0.852764,
+            "issuedAt": 1807776000
+          }
+        ]
+      }
+    },
+    "composite": 77.524,
+    "gates": {
+      "pass": false,
+      "gates": [
+        {
+          "category": "settlement",
+          "minimum": 70,
+          "score": 90.014,
+          "pass": true
+        },
+        {
+          "category": "disclosure",
+          "minimum": 60,
+          "score": 90.014,
+          "pass": true
+        },
+        {
+          "category": "community",
+          "minimum": 50,
+          "score": 28.4255,
+          "pass": false
+        },
+        {
+          "category": "privacy",
+          "minimum": 65,
+          "score": 85.2764,
+          "pass": true
+        }
+      ],
+      "failed": [
+        "community"
+      ]
+    },
+    "prevCardHash": "0000000000000000000000000000000000000000000000000000000000000000",
+    "issuerPublicKey": "302a300506032b6570032100132b4897a8ce74d0eb1da1e50abd5a2aaee090064c8f7f51bd8ca0c73df90042",
+    "hash": "5ccd0ae9dc48921d5326601a05fc9464e71a063669e8c042ccabe13659b58702",
+    "signature": "5cee7d8143cdbcaeedf9de85e67fb0c25efad609003b6e162ca9c872d4202b28be5fff9da3a29358e696abe3ea9d73ca944defc9cdda323b04285dbd56bebc0b"
+  },
+  "cardVerification": {
+    "ok": true,
+    "contentOk": true,
+    "signatureOk": true,
+    "scoresMatch": true
+  },
+  "escrows": [
+    {
+      "id": "esc_91157dfe2c9b82c6cb0d7863",
+      "creator": "acc_9c0be4ee1e11cec9",
+      "beneficiary": "acc_2e4fcbe5ac474f4a",
+      "amount": 300,
+      "funded": 300,
+      "categories": [
+        "settlement",
+        "community"
+      ],
+      "note": "work delivered by agent-bob",
+      "status": "RELEASED",
+      "createdAt": 1808380800,
+      "fundedAt": 1808380860,
+      "closedAt": 1808380920,
+      "releasedTo": "acc_2e4fcbe5ac474f4a",
+      "history": [
+        {
+          "at": 1808380800,
+          "type": "opened",
+          "detail": "gated on settlement, community"
+        },
+        {
+          "at": 1808380860,
+          "type": "funded",
+          "detail": "300 credits from client-echo"
+        },
+        {
+          "at": 1808380920,
+          "type": "released",
+          "detail": "300 credits to agent-bob (approved by registry)"
+        }
+      ]
+    },
+    {
+      "id": "esc_d5962caa278894f5d17f9f83",
+      "creator": "acc_9c0be4ee1e11cec9",
+      "beneficiary": "acc_cb3ecbf84edda99b",
+      "amount": 500,
+      "funded": 500,
+      "categories": [
+        "settlement",
+        "community"
+      ],
+      "note": "work delivered by agent-ava",
+      "status": "FUNDED",
+      "createdAt": 1808380800,
+      "fundedAt": 1808380860,
+      "closedAt": null,
+      "releasedTo": null,
+      "history": [
+        {
+          "at": 1808380800,
+          "type": "opened",
+          "detail": "gated on settlement, community"
+        },
+        {
+          "at": 1808380860,
+          "type": "funded",
+          "detail": "500 credits from client-echo"
+        },
+        {
+          "at": 1808380920,
+          "type": "release_refused",
+          "detail": "community scores 28.4252, needs 50"
+        }
+      ]
+    }
+  ],
+  "events": [
+    {
+      "seq": 0,
+      "type": "attestation_imported",
+      "payload": {
+        "id": "927fe4dbd4708f2521acd5983c0e70eb",
+        "subject": "acc_cb3ecbf84edda99b",
+        "category": "settlement",
+        "issuer": "near-anchor-registry",
+        "source": "3c35b0deab87f4dbcc122fbb92f222915b691b567b4f1f3936d0f38ebf4cac83"
+      },
+      "prevHash": "0000000000000000000000000000000000000000000000000000000000000000",
+      "hash": "432e1220d53aaaddc94abad1215e315bfc21d3c3095e59d42513505dba8dc4ef"
+    },
+    {
+      "seq": 1,
+      "type": "attestation_imported",
+      "payload": {
+        "id": "0b03f42b163c9e9e87c8d5cfb3acb897",
+        "subject": "acc_cb3ecbf84edda99b",
+        "category": "disclosure",
+        "issuer": "near-anchor-registry",
+        "source": "0d9aeb09c5c97189a7308d5012eb169cd006027b8b5147d54169eefd9a7abc5f"
+      },
+      "prevHash": "432e1220d53aaaddc94abad1215e315bfc21d3c3095e59d42513505dba8dc4ef",
+      "hash": "7a3a854e0176297ce3dc72a9254b5aed9b14a27631969ec740be30fc3760f453"
+    },
+    {
+      "seq": 2,
+      "type": "attestation_imported",
+      "payload": {
+        "id": "6e1a4ec7d36a078ec50f33f610f015f5",
+        "subject": "acc_cb3ecbf84edda99b",
+        "category": "community",
+        "issuer": "near-ritual-registry",
+        "source": "e12b7c83b332e50082ab4fe8bc512b747dc1038e9db073d9336f1edacb0375dd"
+      },
+      "prevHash": "7a3a854e0176297ce3dc72a9254b5aed9b14a27631969ec740be30fc3760f453",
+      "hash": "03ee7a94405d0101c8dbcbfc0e3a5f0a7b5c2439e540ee255f737c9ed6d74663"
+    },
+    {
+      "seq": 3,
+      "type": "attestation_imported",
+      "payload": {
+        "id": "e3ad603222e8fe7b0d32c5fc3840c644",
+        "subject": "acc_cb3ecbf84edda99b",
+        "category": "privacy",
+        "issuer": "near-anchor-registry",
+        "source": "a2c331dffadd547c65a822a0c9421ee5d035317485123b16c577d8c2c48e2ce1"
+      },
+      "prevHash": "03ee7a94405d0101c8dbcbfc0e3a5f0a7b5c2439e540ee255f737c9ed6d74663",
+      "hash": "ffea2cf3807d5772ff061fee579f9b089f8d157cf3d4cf5f1df3b8d909b874d0"
+    },
+    {
+      "seq": 4,
+      "type": "attestation_imported",
+      "payload": {
+        "id": "3902275d4f110f2d5c0ef21b7ed79265",
+        "subject": "acc_2e4fcbe5ac474f4a",
+        "category": "settlement",
+        "issuer": "near-anchor-registry",
+        "source": "a4b56fc0952bfd8a58c41ae0ededa35b82425b85c471d2a6a5aee87c51342f38"
+      },
+      "prevHash": "ffea2cf3807d5772ff061fee579f9b089f8d157cf3d4cf5f1df3b8d909b874d0",
+      "hash": "0793ae6509cf85f4945cfc20e66ef6dff19db608b28a054f155a31e1be8a6d98"
+    },
+    {
+      "seq": 5,
+      "type": "attestation_imported",
+      "payload": {
+        "id": "94d8bf1aea676176ecf95ec91c4c0ef3",
+        "subject": "acc_2e4fcbe5ac474f4a",
+        "category": "disclosure",
+        "issuer": "near-anchor-registry",
+        "source": "e4ae56b2cd42f291219d537931ef43a94211acc8f56f02288ca1194414e7f3e8"
+      },
+      "prevHash": "0793ae6509cf85f4945cfc20e66ef6dff19db608b28a054f155a31e1be8a6d98",
+      "hash": "edf3853a2fa7ac57fbd13c765e13cfc235f4a2f728a889a41c54ea9ea8e27583"
+    },
+    {
+      "seq": 6,
+      "type": "attestation_imported",
+      "payload": {
+        "id": "343cc3817c93e17c9eab8a47071beacd",
+        "subject": "acc_2e4fcbe5ac474f4a",
+        "category": "community",
+        "issuer": "near-ritual-registry",
+        "source": "e8accc5172a1e188e9a8d62bbcabb83f72e762aa36dd953d663f70363358a2a3"
+      },
+      "prevHash": "edf3853a2fa7ac57fbd13c765e13cfc235f4a2f728a889a41c54ea9ea8e27583",
+      "hash": "346a8c486c8370f10470b760f60176f111b6e204720456d168baa71f18e0d43f"
+    },
+    {
+      "seq": 7,
+      "type": "attestation_imported",
+      "payload": {
+        "id": "11e64a407f2a31e71f8d994cb73028b0",
+        "subject": "acc_2e4fcbe5ac474f4a",
+        "category": "privacy",
+        "issuer": "near-anchor-registry",
+        "source": "75d43370a71f31232020d3fc9cc4d25d5bae7d2121930fffd289a278e09554ae"
+      },
+      "prevHash": "346a8c486c8370f10470b760f60176f111b6e204720456d168baa71f18e0d43f",
+      "hash": "f4748169b88d8fbe10e2a05c0c083b6aa690350134c70231de05f2d4fc0994b9"
+    },
+    {
+      "seq": 8,
+      "type": "attestation_imported",
+      "payload": {
+        "id": "dda18b7fdc70287cb46fd2108889f611",
+        "subject": "acc_25c521b0c8aed1bb",
+        "category": "settlement",
+        "issuer": "near-anchor-registry",
+        "source": "772355c2f553259fea0fba4d44ee4785a1caed2f7ef7e63abdee7f54c0321216"
+      },
+      "prevHash": "f4748169b88d8fbe10e2a05c0c083b6aa690350134c70231de05f2d4fc0994b9",
+      "hash": "c0dd28a53afa10653ddae6d389e339022e9b79c0ead79979cf8ce91f98f761ac"
+    },
+    {
+      "seq": 9,
+      "type": "attestation_imported",
+      "payload": {
+        "id": "90c305ab4f7b4f253a3f96f1274e5676",
+        "subject": "acc_25c521b0c8aed1bb",
+        "category": "disclosure",
+        "issuer": "near-anchor-registry",
+        "source": "22bd02d648e50ab3fce8e4bbd6cebbb391c5e50e7d57302ae6da387ea624a3a8"
+      },
+      "prevHash": "c0dd28a53afa10653ddae6d389e339022e9b79c0ead79979cf8ce91f98f761ac",
+      "hash": "892595d364ade30870939f3f763884f8ab144ebd65933ed4cde8a0189c0694fb"
+    },
+    {
+      "seq": 10,
+      "type": "attestation_imported",
+      "payload": {
+        "id": "0657f693b8a98300e5329954280f2614",
+        "subject": "acc_25c521b0c8aed1bb",
+        "category": "community",
+        "issuer": "near-ritual-registry",
+        "source": "e12b7c83b332e50082ab4fe8bc512b747dc1038e9db073d9336f1edacb0375dd"
+      },
+      "prevHash": "892595d364ade30870939f3f763884f8ab144ebd65933ed4cde8a0189c0694fb",
+      "hash": "ee0ffa08337212d582c31cabe63fbaeeb3e88bac90418d65ed2dda03ae9bf7dc"
+    },
+    {
+      "seq": 11,
+      "type": "attestation_imported",
+      "payload": {
+        "id": "d1a7414afe4f90b46e0312bd60de5d92",
+        "subject": "acc_25c521b0c8aed1bb",
+        "category": "privacy",
+        "issuer": "near-anchor-registry",
+        "source": "919e6564c1f1c0e5483afb0647394eaa2a89d6a32cab6fc9e8030e3c677d932c"
+      },
+      "prevHash": "ee0ffa08337212d582c31cabe63fbaeeb3e88bac90418d65ed2dda03ae9bf7dc",
+      "hash": "410aba2cdc07b5a93a070072ce4aff8dfd694a6db3cd2b509b6d95368459a7ea"
+    },
+    {
+      "seq": 12,
+      "type": "attestation_imported",
+      "payload": {
+        "id": "e633ad86fe454491142292711b8c47a8",
+        "subject": "acc_d9a88566f2e10afc",
+        "category": "settlement",
+        "issuer": "near-anchor-registry",
+        "source": "919e6564c1f1c0e5483afb0647394eaa2a89d6a32cab6fc9e8030e3c677d932c"
+      },
+      "prevHash": "410aba2cdc07b5a93a070072ce4aff8dfd694a6db3cd2b509b6d95368459a7ea",
+      "hash": "8976309d3966f4604e7c98b5030012b4518a54e7631dae1b470a42e4a37a3f8c"
+    },
+    {
+      "seq": 13,
+      "type": "attestation_imported",
+      "payload": {
+        "id": "72259daccb43164b3c830d639995e18d",
+        "subject": "acc_d9a88566f2e10afc",
+        "category": "disclosure",
+        "issuer": "near-ritual-registry",
+        "source": "e9b1d3e8f9b6f550479ffcd45018fe2a003e2df8568b33ff8fa7439d8591a933"
+      },
+      "prevHash": "8976309d3966f4604e7c98b5030012b4518a54e7631dae1b470a42e4a37a3f8c",
+      "hash": "a405bf6e6f53c85330c8a14f7a625cf6e59d1571a4b991f9ec49b8e7df61c20f"
+    },
+    {
+      "seq": 14,
+      "type": "attestation_imported",
+      "payload": {
+        "id": "2b70244009bd40fda1633dbca9a93f96",
+        "subject": "acc_d9a88566f2e10afc",
+        "category": "privacy",
+        "issuer": "near-anchor-registry",
+        "source": "75d43370a71f31232020d3fc9cc4d25d5bae7d2121930fffd289a278e09554ae"
+      },
+      "prevHash": "a405bf6e6f53c85330c8a14f7a625cf6e59d1571a4b991f9ec49b8e7df61c20f",
+      "hash": "9904202be1055fe6a0649ad6be8a8931282addb80db778c45a748468bc97d9ab"
+    },
+    {
+      "seq": 15,
+      "type": "escrow_opened",
+      "payload": {
+        "id": "esc_91157dfe2c9b82c6cb0d7863",
+        "beneficiary": "acc_2e4fcbe5ac474f4a",
+        "amount": 300,
+        "categories": [
+          "settlement",
+          "community"
+        ]
+      },
+      "prevHash": "9904202be1055fe6a0649ad6be8a8931282addb80db778c45a748468bc97d9ab",
+      "hash": "96a59922c6368f220a6f846de18c99730fcf6347ab4218965de6d240d5966fa8"
+    },
+    {
+      "seq": 16,
+      "type": "escrow_funded",
+      "payload": {
+        "id": "esc_91157dfe2c9b82c6cb0d7863",
+        "amount": 300
+      },
+      "prevHash": "96a59922c6368f220a6f846de18c99730fcf6347ab4218965de6d240d5966fa8",
+      "hash": "22b16b5f42987bc687236606f8682ffbb443a5fd4dbb193a470e97597a5d568c"
+    },
+    {
+      "seq": 17,
+      "type": "escrow_released",
+      "payload": {
+        "id": "esc_91157dfe2c9b82c6cb0d7863",
+        "to": "acc_2e4fcbe5ac474f4a",
+        "amount": 300
+      },
+      "prevHash": "22b16b5f42987bc687236606f8682ffbb443a5fd4dbb193a470e97597a5d568c",
+      "hash": "bd129bee142b0046f99bcb9874492755538b227193e4a09809d5bb43c45aaa0d"
+    },
+    {
+      "seq": 18,
+      "type": "escrow_opened",
+      "payload": {
+        "id": "esc_d5962caa278894f5d17f9f83",
+        "beneficiary": "acc_cb3ecbf84edda99b",
+        "amount": 500,
+        "categories": [
+          "settlement",
+          "community"
+        ]
+      },
+      "prevHash": "bd129bee142b0046f99bcb9874492755538b227193e4a09809d5bb43c45aaa0d",
+      "hash": "5bbfa31d5219d2ff780bae6d9122215dce1af077444e10fb16f176b17c9eefb6"
+    },
+    {
+      "seq": 19,
+      "type": "escrow_funded",
+      "payload": {
+        "id": "esc_d5962caa278894f5d17f9f83",
+        "amount": 500
+      },
+      "prevHash": "5bbfa31d5219d2ff780bae6d9122215dce1af077444e10fb16f176b17c9eefb6",
+      "hash": "7cca04cf179f53f9d859326381eefc332635f206344f97bc8cc2a61b793965b1"
+    },
+    {
+      "seq": 20,
+      "type": "escrow_release_refused",
+      "payload": {
+        "id": "esc_d5962caa278894f5d17f9f83",
+        "reason": "the release is refused: community scores 28.4252, needs 50"
+      },
+      "prevHash": "7cca04cf179f53f9d859326381eefc332635f206344f97bc8cc2a61b793965b1",
+      "hash": "d25b8fbde84436a72ff75acf214a870fbf78c9d6ec357deeb2b8b6555fe42fa9"
+    },
+    {
+      "seq": 21,
+      "type": "card_issued",
+      "payload": {
+        "id": "9d1687032765aa11f12abc3f785896a3",
+        "agent": "acc_cb3ecbf84edda99b",
+        "composite": 77.524,
+        "gatesPass": false,
+        "failed": [
+          "community"
+        ]
+      },
+      "prevHash": "d25b8fbde84436a72ff75acf214a870fbf78c9d6ec357deeb2b8b6555fe42fa9",
+      "hash": "2258e0d2e672758b95ae054f1e2e86e5ebfcc35d6406b0e7ca545390d2af2755"
+    }
+  ],
+  "stateHash": "bd305e2517a70d2173d6e7e16893d5251f8a9ab686e6fdb343044c28fb799817"
+}

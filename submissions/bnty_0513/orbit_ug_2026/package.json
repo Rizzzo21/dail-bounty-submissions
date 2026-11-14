@@ -1,0 +1,16 @@
+{
+  "name": "near-anchor-rwa",
+  "version": "1.0.0",
+  "description": "NEAR Real-World Money entry: ANCHOR - a registry for tokenised real-world assets where a position is a journal entry, yield accrues on a supplied timestamp, transfers pass a compliance gate, and redemption pays principal plus accrued yield out of the issuer reserve.",
+  "type": "module",
+  "license": "MIT",
+  "private": true,
+  "engines": { "node": ">=18.0.0" },
+  "scripts": {
+    "demo": "node scripts/demo.mjs",
+    "test": "node --test",
+    "verify": "bash docs/verify.sh"
+  },
+  "dependencies": {},
+  "devDependencies": {}
+}

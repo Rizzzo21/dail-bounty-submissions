@@ -1,0 +1,231 @@
+{
+  "note": "Each claim points at a real record shipped in attestations/. The passport re-hashes the record and refuses a claim it cannot trace.",
+  "compiledAt": 1807776000,
+  "claims": [
+    {
+      "agent": "agent-ava",
+      "category": "settlement",
+      "value": 0.95,
+      "weight": 1,
+      "claim": "redeemed a matured T-bill position for 98,839 USDC",
+      "issuer": "near-anchor-registry",
+      "issuedAt": 1807776000,
+      "source": {
+        "file": "anchor-events.jsonl",
+        "recordHash": "3c35b0deab87f4dbcc122fbb92f222915b691b567b4f1f3936d0f38ebf4cac83",
+        "entry": "bnty_0414",
+        "url": "https://near-anchor.surge.sh/docs/demo-trace.json"
+      }
+    },
+    {
+      "agent": "agent-ava",
+      "category": "disclosure",
+      "value": 0.95,
+      "weight": 1,
+      "claim": "published every coupon accrual as it happened",
+      "issuer": "near-anchor-registry",
+      "issuedAt": 1807776000,
+      "source": {
+        "file": "anchor-events.jsonl",
+        "recordHash": "0d9aeb09c5c97189a7308d5012eb169cd006027b8b5147d54169eefd9a7abc5f",
+        "entry": "bnty_0414",
+        "url": "https://near-anchor.surge.sh/docs/demo-trace.json"
+      }
+    },
+    {
+      "agent": "agent-ava",
+      "category": "community",
+      "value": 0.3,
+      "weight": 1,
+      "claim": "took a small part in a HOWL window that burned 1% of every trade",
+      "issuer": "near-ritual-registry",
+      "issuedAt": 1807776000,
+      "source": {
+        "file": "ritual-scenarios.json",
+        "recordHash": "e12b7c83b332e50082ab4fe8bc512b747dc1038e9db073d9336f1edacb0375dd",
+        "entry": "bnty_0421",
+        "url": "https://near-ritual.surge.sh/docs/demo-trace.json"
+      }
+    },
+    {
+      "agent": "agent-ava",
+      "category": "privacy",
+      "value": 0.9,
+      "weight": 1,
+      "claim": "refused to serve a party that had not cleared its compliance gate",
+      "issuer": "near-anchor-registry",
+      "issuedAt": 1807776000,
+      "source": {
+        "file": "anchor-events.jsonl",
+        "recordHash": "a2c331dffadd547c65a822a0c9421ee5d035317485123b16c577d8c2c48e2ce1",
+        "entry": "bnty_0414",
+        "url": "https://near-anchor.surge.sh/docs/demo-trace.json"
+      }
+    },
+    {
+      "agent": "agent-bob",
+      "category": "settlement",
+      "value": 0.9,
+      "weight": 1,
+      "claim": "settled a secondary trade of 2,000 units at the published NAV",
+      "issuer": "near-anchor-registry",
+      "issuedAt": 1807776000,
+      "source": {
+        "file": "anchor-events.jsonl",
+        "recordHash": "a4b56fc0952bfd8a58c41ae0ededa35b82425b85c471d2a6a5aee87c51342f38",
+        "entry": "bnty_0414",
+        "url": "https://near-anchor.surge.sh/docs/demo-trace.json"
+      }
+    },
+    {
+      "agent": "agent-bob",
+      "category": "disclosure",
+      "value": 0.95,
+      "weight": 1,
+      "claim": "published a net asset value the market could price against",
+      "issuer": "near-anchor-registry",
+      "issuedAt": 1807776000,
+      "source": {
+        "file": "anchor-events.jsonl",
+        "recordHash": "e4ae56b2cd42f291219d537931ef43a94211acc8f56f02288ca1194414e7f3e8",
+        "entry": "bnty_0414",
+        "url": "https://near-anchor.surge.sh/docs/demo-trace.json"
+      }
+    },
+    {
+      "agent": "agent-bob",
+      "category": "community",
+      "value": 0.9,
+      "weight": 1,
+      "claim": "led a CHANT that minted supply into the treasury floor",
+      "issuer": "near-ritual-registry",
+      "issuedAt": 1807776000,
+      "source": {
+        "file": "ritual-scenarios.json",
+        "recordHash": "e8accc5172a1e188e9a8d62bbcabb83f72e762aa36dd953d663f70363358a2a3",
+        "entry": "bnty_0421",
+        "url": "https://near-ritual.surge.sh/docs/demo-trace.json"
+      }
+    },
+    {
+      "agent": "agent-bob",
+      "category": "privacy",
+      "value": 0.85,
+      "weight": 1,
+      "claim": "refused a redemption while a counterparty was under review",
+      "issuer": "near-anchor-registry",
+      "issuedAt": 1807776000,
+      "source": {
+        "file": "anchor-events.jsonl",
+        "recordHash": "75d43370a71f31232020d3fc9cc4d25d5bae7d2121930fffd289a278e09554ae",
+        "entry": "bnty_0414",
+        "url": "https://near-anchor.surge.sh/docs/demo-trace.json"
+      }
+    },
+    {
+      "agent": "agent-cid",
+      "category": "settlement",
+      "value": 0.85,
+      "weight": 1,
+      "claim": "subscribed 100,000 USDC of a T-bill and held it",
+      "issuer": "near-anchor-registry",
+      "issuedAt": 1807776000,
+      "source": {
+        "file": "anchor-events.jsonl",
+        "recordHash": "772355c2f553259fea0fba4d44ee4785a1caed2f7ef7e63abdee7f54c0321216",
+        "entry": "bnty_0414",
+        "url": "https://near-anchor.surge.sh/docs/demo-trace.json"
+      }
+    },
+    {
+      "agent": "agent-cid",
+      "category": "disclosure",
+      "value": 0.7,
+      "weight": 1,
+      "claim": "published its subscription and its share of the issue",
+      "issuer": "near-anchor-registry",
+      "issuedAt": 1807776000,
+      "source": {
+        "file": "anchor-events.jsonl",
+        "recordHash": "22bd02d648e50ab3fce8e4bbd6cebbb391c5e50e7d57302ae6da387ea624a3a8",
+        "entry": "bnty_0414",
+        "url": "https://near-anchor.surge.sh/docs/demo-trace.json"
+      }
+    },
+    {
+      "agent": "agent-cid",
+      "category": "community",
+      "value": 0.45,
+      "weight": 1,
+      "claim": "parted with tokens in a HOWL window, well below the quorum",
+      "issuer": "near-ritual-registry",
+      "issuedAt": 1807776000,
+      "source": {
+        "file": "ritual-scenarios.json",
+        "recordHash": "e12b7c83b332e50082ab4fe8bc512b747dc1038e9db073d9336f1edacb0375dd",
+        "entry": "bnty_0421",
+        "url": "https://near-ritual.surge.sh/docs/demo-trace.json"
+      }
+    },
+    {
+      "agent": "agent-cid",
+      "category": "privacy",
+      "value": 0.75,
+      "weight": 1,
+      "claim": "froze a counterparty under sanctions review",
+      "issuer": "near-anchor-registry",
+      "issuedAt": 1807776000,
+      "source": {
+        "file": "anchor-events.jsonl",
+        "recordHash": "919e6564c1f1c0e5483afb0647394eaa2a89d6a32cab6fc9e8030e3c677d932c",
+        "entry": "bnty_0414",
+        "url": "https://near-anchor.surge.sh/docs/demo-trace.json"
+      }
+    },
+    {
+      "agent": "agent-dan",
+      "category": "settlement",
+      "value": 0.4,
+      "weight": 1,
+      "claim": "was frozen mid-obligation and did not complete it",
+      "issuer": "near-anchor-registry",
+      "issuedAt": 1807776000,
+      "source": {
+        "file": "anchor-events.jsonl",
+        "recordHash": "919e6564c1f1c0e5483afb0647394eaa2a89d6a32cab6fc9e8030e3c677d932c",
+        "entry": "bnty_0414",
+        "url": "https://near-anchor.surge.sh/docs/demo-trace.json"
+      }
+    },
+    {
+      "agent": "agent-dan",
+      "category": "disclosure",
+      "value": 0.6,
+      "weight": 1,
+      "claim": "published the refusal to act on a ritual that missed quorum",
+      "issuer": "near-ritual-registry",
+      "issuedAt": 1807776000,
+      "source": {
+        "file": "ritual-scenarios.json",
+        "recordHash": "e9b1d3e8f9b6f550479ffcd45018fe2a003e2df8568b33ff8fa7439d8591a933",
+        "entry": "bnty_0421",
+        "url": "https://near-ritual.surge.sh/docs/demo-trace.json"
+      }
+    },
+    {
+      "agent": "agent-dan",
+      "category": "privacy",
+      "value": 0.8,
+      "weight": 1,
+      "claim": "kept its own settlement hidden until the review closed",
+      "issuer": "near-anchor-registry",
+      "issuedAt": 1807776000,
+      "source": {
+        "file": "anchor-events.jsonl",
+        "recordHash": "75d43370a71f31232020d3fc9cc4d25d5bae7d2121930fffd289a278e09554ae",
+        "entry": "bnty_0414",
+        "url": "https://near-anchor.surge.sh/docs/demo-trace.json"
+      }
+    }
+  ]
+}

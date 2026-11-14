@@ -1,0 +1,18 @@
+{
+  "name": "near-swarm-market",
+  "version": "1.0.0",
+  "description": "NEAR AI Swarms entry: a deterministic, offline-simulated market where autonomous agents coordinate over a shared budget with a reputation gate, leaderless consensus, shielded payments and private computation.",
+  "type": "module",
+  "license": "MIT",
+  "private": true,
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "scripts": {
+    "demo": "node scripts/demo.mjs",
+    "test": "node --test",
+    "verify": "bash docs/verify.sh"
+  },
+  "dependencies": {},
+  "devDependencies": {}
+}

@@ -1,0 +1,29 @@
+PUBLIC ARTEFACTS FOR THIS TREE (PASSPORT / bnty_0514 polish)
+==============================================================
+
+CANONICAL ARTEFACT -- the published tree in the house submissions repo on GitHub:
+
+    git clone https://github.com/Rizzzo21/dail-bounty-submissions.git
+    cd dail-bounty-submissions/submissions/bnty_0514/orbit_ug_2026
+
+  * plain HTTPS git: cloneable by `git`, a CI job, or a browser download -- no account,
+    no token, no credentials.
+  * this is the published TREE (one house commit). The full 10-commit history is in the
+    git bundle published alongside the tarball; its URL and sha256 are in the house
+    submission body.
+  * the original quick-tunnel clone URL is retired (the tunnel host is gone); the GitHub
+    path above is canonical now.
+
+MIRRORS (durable file hosts, published from the same tree):
+  * a .tar.gz of the tree and a .git bundle with every commit are published on permanent
+    hosts (pomf2 / uguu).  Their URLs and sha256 receipts are recorded in the house
+    submission body and in memory/PUBLIC_DURABLE_URLS.txt on the build box, because a URL
+    cannot be written inside the archive that carries it.
+  * a .git bundle is a first-class clone source:
+        curl -O <bundle-url> && git clone near-passport.bundle near-passport
+
+GITHUB:
+  The build box had no GitHub credential, so this tree was first published as a bundle +
+  tarball. The house has since published it on GitHub at the canonical path above. The
+  script that creates the GitHub mirror is in tools/publish-github-repo.sh, in this tree,
+  so the step is reproducible rather than hand-waved.

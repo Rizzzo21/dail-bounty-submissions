@@ -1,0 +1,70 @@
+================================================================
+ RITUAL - a memecoin whose supply is a function of what the
+ community does, and whose treasury runs explicit rules.
+ track: NEAR Hackathon, Memecoins With Mechanics (bnty_0421)
+================================================================
+
+RULE SET (every number lives in src/state.js)
+  quorum                    3 votes - one vote per address per epoch, a whale's vote capped at 1
+  min stake                 1,000 tokens
+  mint cap                  500,000 tokens per ritual, scaled by participation
+  steward                   2.0% of every mint
+  pool fee                  3.00% - collected in USDC, goes to the treasury
+  treasury floor            10,000 tokens - the treasury mints itself up to it
+  treasury ceiling          10,000 USDC - above it the treasury buys and burns tokens
+  chant fee                 100 tokens per signer, burn 5,000 tokens per signer
+  howl tax                  1.00% of every trade burned while a howl window is open
+
+SCENARIO 1 - THE CHANT: the community performs a ritual, the supply reacts
+  supply before            7,905,000
+  eligible holders         9 (the whale abstains; the steward holds no tokens)
+  chanters                 mara, ivo, sana, tomas, wren, kofi
+  ritual id                rit_1_CHANT_251783c6
+  votes                    6.00 of 3 needed -> FIRED
+  participation            66.7% of eligible holders took part
+  minted to the community  333,333 tokens (cap 500,000, scaled by participation)
+  steward cut (2%)         6,667 tokens - disclosed, not hidden
+  chant fees to treasury   600 tokens (100 per signer)
+  RULE R1 liquidity floor  treasury minted 9,400 tokens up to its floor
+  supply after             8,247,733  (+342,733 tokens)
+
+SCENARIO 2 - THE STORM: usage funds the treasury, then a ritual makes it act
+  supply before            7,905,000
+  the whale trades 8 x 80,000 USDC into the pool (3% fee each)
+  fees collected           19,200 USDC -> treasury USDC 19,200
+  price moved              0.858551 USDC per token
+  ...then the community chants again, and the treasury rules run on the fees
+  RULE R1 liquidity floor  treasury minted 9,700 tokens up to its floor
+  RULE R2 buyback          treasury spent 9,200 USDC of fees, bought and burned 7,855 tokens
+  supply after             8,073,512  (+168,512 tokens)
+  the mint and the buyback pull against each other - that is the point: the
+  rules, not a marketing plan, decide how much of the token exists.
+
+SCENARIO 3 - NO QUORUM: a ritual that nobody backs does nothing at all
+  2 signers for BURN       votes 2.00 of 3 -> PENDING, nothing happened
+  supply unchanged         7,905,000 (was 7,905,000 - the ritual did nothing)
+  a third holder shows up later:
+  votes                    3.00 of 3 -> FIRED
+  burned                   15,000 tokens (5,000 per signer)
+  RULE R1 liquidity floor  treasury minted 10,000 tokens up to its floor
+  supply after             7,900,000  (-5,000 tokens)
+
+SCENARIO 4 - THE HOWL: a ritual window burns a share of every trade
+  window open              epoch 1 -> 2
+  a 50,000 USDC trade      fee 1,500 USDC + howl tax 189 tokens burned
+  RULE R1 liquidity floor  treasury minted 10,000 tokens up to its floor
+  supply after             7,914,811  (+9,811 tokens)
+
+SUMMARY - what the mechanic did to the supply
+  scenario        supply before      supply after        delta
+  chant             7,905,000        8,247,733      342,733
+  storm             7,905,000        8,073,512      168,512
+  quorum            7,905,000        7,900,000       -5,000
+  howl              7,905,000        7,914,811        9,811
+
+  event log                    10 events, hash chain VERIFIED
+  final state hash (scenario 1) f6f92a807ed137e8953c8bc1d023888c978ad1b595057b2f58b0994dadbe7bc5
+  state fingerprint (scenario 1) 643bed928f9b6433f69572fe90dcdbc33c8a17fc605d8322a8122bf5064ba7dd
+
+  every number above comes from running the code; nothing is hard-coded.
+  re-run: node scripts/demo.mjs   (identical output, byte for byte)

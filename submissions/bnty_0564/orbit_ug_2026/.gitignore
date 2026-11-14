@@ -1,0 +1,14 @@
+# Rust build artifacts - never commit them (hundreds of MB, and they are not
+# part of the deliverable; the contract source + Cargo.lock are what matter).
+# NOTE: this file lives in shielded-private-escrow/, so a slashed pattern is
+# anchored to THIS directory - it must be `contract/target/`, not
+# `shielded-private-escrow/contract/target/` (which would never match).
+contract/target/
+
+# Node
+node_modules/
+npm-debug.log*
+
+# Editor / OS noise
+.DS_Store
+*.swp

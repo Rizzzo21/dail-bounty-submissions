@@ -1,0 +1,138 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1360" height="900" viewBox="0 0 1360 900" font-family="DejaVu Sans Mono, Menlo, Consolas, monospace">
+  <rect width="1360" height="900" fill="#0d1117" rx="14"/>
+
+  <text x="40" y="52" fill="#58a6ff" font-size="24" font-weight="bold">BLIND-ESCROW (bnty_0412) — architecture</text>
+  <text x="40" y="80" fill="#8b949e" font-size="14">shielded payment · private compute · atomic reveal — names below are the real functions in src/crypto.mjs and src/engine.mjs</text>
+
+  <!-- ==================================================================== -->
+  <!-- 1. SHIELDED PAYMENT                                                  -->
+  <!-- ==================================================================== -->
+  <rect x="30" y="110" width="1300" height="220" rx="12" fill="#111823" stroke="#3fb950" stroke-width="2"/>
+  <text x="52" y="140" fill="#3fb950" font-size="18" font-weight="bold">1. SHIELDED PAYMENT</text>
+  <text x="52" y="162" fill="#8b949e" font-size="13">public state before settle carries only the commitment C — never the amount, never the opening</text>
+
+  <!-- buyer -->
+  <rect x="60" y="190" width="250" height="110" rx="9" fill="#161b22" stroke="#58a6ff" stroke-width="2"/>
+  <text x="76" y="216" fill="#58a6ff" font-size="15" font-weight="bold">buyer</text>
+  <text x="76" y="240" fill="#c9d1d9" font-size="13">amount = "750"</text>
+  <text x="76" y="260" fill="#c9d1d9" font-size="13">blinding_factor = 32 B hex</text>
+  <text x="76" y="280" fill="#c9d1d9" font-size="13">job_id = "701"</text>
+
+  <!-- arrow buyer -> commitment -->
+  <line x1="310" y1="245" x2="398" y2="245" stroke="#3fb950" stroke-width="2"/>
+  <polygon points="398,245 386,239 386,251" fill="#3fb950"/>
+
+  <!-- commitment box -->
+  <rect x="400" y="190" width="360" height="110" rx="9" fill="#161b22" stroke="#3fb950" stroke-width="2"/>
+  <text x="416" y="216" fill="#3fb950" font-size="15" font-weight="bold">computeCommitment()</text>
+  <text x="416" y="240" fill="#c9d1d9" font-size="13">C = SHA-256(amount || "|" ||</text>
+  <text x="416" y="260" fill="#c9d1d9" font-size="13">     blinding_factor_hex || "|" || job_id)</text>
+  <text x="416" y="284" fill="#8b949e" font-size="13">3 fields, one ASCII 0x7C, no newline</text>
+
+  <!-- arrow -> pool -->
+  <line x1="760" y1="245" x2="848" y2="245" stroke="#3fb950" stroke-width="2"/>
+  <polygon points="848,245 836,239 836,251" fill="#3fb950"/>
+
+  <!-- escrow pool -->
+  <rect x="850" y="190" width="290" height="110" rx="9" fill="#161b22" stroke="#3fb950" stroke-width="2"/>
+  <text x="866" y="216" fill="#3fb950" font-size="15" font-weight="bold">escrow pool</text>
+  <text x="866" y="240" fill="#c9d1d9" font-size="13">accepts note C only</text>
+  <text x="866" y="260" fill="#c9d1d9" font-size="13">verifyOpening() on settle</text>
+  <text x="866" y="280" fill="#8b949e" font-size="13">forged opening -&gt; REFUSED</text>
+
+  <!-- negative case -->
+  <rect x="400" y="308" width="740" height="0" fill="none"/>
+  <rect x="1160" y="190" width="150" height="110" rx="9" fill="#2d1214" stroke="#f85149" stroke-width="2"/>
+  <text x="1174" y="216" fill="#f85149" font-size="14" font-weight="bold">REFUSED</text>
+  <text x="1174" y="240" fill="#c9d1d9" font-size="13">wrong blinding</text>
+  <text x="1174" y="258" fill="#c9d1d9" font-size="13">factor -&gt; C' != C</text>
+  <text x="1174" y="282" fill="#8b949e" font-size="13">forged_opening</text>
+  <text x="1174" y="296" fill="#8b949e" font-size="13">_accepted = false</text>
+  <line x1="1098" y1="245" x2="1158" y2="245" stroke="#f85149" stroke-width="2"/>
+  <polygon points="1158,245 1146,239 1146,251" fill="#f85149"/>
+
+  <!-- ==================================================================== -->
+  <!-- 2. PRIVATE COMPUTE                                                   -->
+  <!-- ==================================================================== -->
+  <rect x="30" y="350" width="1300" height="230" rx="12" fill="#111823" stroke="#d2a8ff" stroke-width="2"/>
+  <text x="52" y="380" fill="#d2a8ff" font-size="18" font-weight="bold">2. PRIVATE COMPUTE</text>
+  <text x="52" y="402" fill="#8b949e" font-size="13">the payload is encrypted with AES-256-GCM; the worker signs what it computed, so a buyer can verify without seeing the prompt</text>
+
+  <rect x="60" y="430" width="250" height="120" rx="9" fill="#161b22" stroke="#58a6ff" stroke-width="2"/>
+  <text x="76" y="456" fill="#58a6ff" font-size="15" font-weight="bold">private_job</text>
+  <text x="76" y="480" fill="#c9d1d9" font-size="13">encryptPayload()</text>
+  <text x="76" y="500" fill="#c9d1d9" font-size="13">AES-256-GCM</text>
+  <text x="76" y="520" fill="#c9d1d9" font-size="13">key = SHA-256("…KEY/v1|"</text>
+  <text x="76" y="538" fill="#c9d1d9" font-size="13">     || job_id), iv = 12 B</text>
+
+  <line x1="310" y1="490" x2="398" y2="490" stroke="#d2a8ff" stroke-width="2"/>
+  <polygon points="398,490 386,484 386,496" fill="#d2a8ff"/>
+
+  <rect x="400" y="430" width="360" height="120" rx="9" fill="#161b22" stroke="#d2a8ff" stroke-width="2"/>
+  <text x="416" y="456" fill="#d2a8ff" font-size="15" font-weight="bold">attested execution</text>
+  <text x="416" y="480" fill="#c9d1d9" font-size="13">Ed25519 key from demo seed</text>
+  <text x="416" y="500" fill="#c9d1d9" font-size="13">signCommitment(priv, C)</text>
+  <text x="416" y="520" fill="#c9d1d9" font-size="13">signResult(priv, job_id,</text>
+  <text x="416" y="538" fill="#c9d1d9" font-size="13">     ciphertext_hex)</text>
+
+  <line x1="760" y1="490" x2="848" y2="490" stroke="#d2a8ff" stroke-width="2"/>
+  <polygon points="848,490 836,484 836,496" fill="#d2a8ff"/>
+
+  <rect x="850" y="430" width="290" height="120" rx="9" fill="#161b22" stroke="#d2a8ff" stroke-width="2"/>
+  <text x="866" y="456" fill="#d2a8ff" font-size="15" font-weight="bold">buyer verifies</text>
+  <text x="866" y="480" fill="#c9d1d9" font-size="13">verifyCommitmentAttestation()</text>
+  <text x="866" y="500" fill="#c9d1d9" font-size="13">verifyResultProof()</text>
+  <text x="866" y="520" fill="#c9d1d9" font-size="13">decryptPayload() == plaintext</text>
+  <text x="866" y="540" fill="#8b949e" font-size="13">tampered ciphertext -&gt; GCM throws</text>
+
+  <rect x="1160" y="430" width="150" height="120" rx="9" fill="#2d1214" stroke="#f85149" stroke-width="2"/>
+  <text x="1174" y="456" fill="#f85149" font-size="14" font-weight="bold">REJECTED</text>
+  <text x="1174" y="480" fill="#c9d1d9" font-size="13">forged sig -&gt;</text>
+  <text x="1174" y="498" fill="#c9d1d9" font-size="13">Ed25519 verify</text>
+  <text x="1174" y="516" fill="#c9d1d9" font-size="13">returns false</text>
+  <text x="1174" y="540" fill="#8b949e" font-size="13">tampered_ciphertext</text>
+  <line x1="1098" y1="490" x2="1158" y2="490" stroke="#f85149" stroke-width="2"/>
+  <polygon points="1158,490 1146,484 1146,496" fill="#f85149"/>
+
+  <!-- ==================================================================== -->
+  <!-- 3. ATOMIC REVEAL                                                     -->
+  <!-- ==================================================================== -->
+  <rect x="30" y="600" width="1300" height="200" rx="12" fill="#111823" stroke="#58a6ff" stroke-width="2"/>
+  <text x="52" y="630" fill="#58a6ff" font-size="18" font-weight="bold">3. ATOMIC REVEAL</text>
+  <text x="52" y="652" fill="#8b949e" font-size="13">atomicReveal(): every check must pass or nothing settles — open, verify, release in one step</text>
+
+  <rect x="60" y="680" width="200" height="90" rx="9" fill="#161b22" stroke="#8b949e" stroke-width="2"/>
+  <text x="76" y="706" fill="#c9d1d9" font-size="14" font-weight="bold">opening</text>
+  <text x="76" y="730" fill="#c9d1d9" font-size="13">(750, blinding, 701)</text>
+  <text x="76" y="752" fill="#8b949e" font-size="13">released at settle</text>
+
+  <line x1="260" y1="725" x2="338" y2="725" stroke="#58a6ff" stroke-width="2"/>
+  <polygon points="338,725 326,719 326,731" fill="#58a6ff"/>
+
+  <rect x="340" y="672" width="330" height="106" rx="9" fill="#161b22" stroke="#58a6ff" stroke-width="2"/>
+  <text x="356" y="698" fill="#58a6ff" font-size="15" font-weight="bold">atomicReveal()</text>
+  <text x="356" y="722" fill="#c9d1d9" font-size="13">verifyOpening() -&gt; C' == C</text>
+  <text x="356" y="742" fill="#c9d1d9" font-size="13">verifyCommitmentAttestation()</text>
+  <text x="356" y="762" fill="#c9d1d9" font-size="13">verifyResultProof() -&gt; decrypt</text>
+
+  <line x1="670" y1="725" x2="748" y2="725" stroke="#58a6ff" stroke-width="2"/>
+  <polygon points="748,725 736,719 736,731" fill="#58a6ff"/>
+
+  <rect x="750" y="680" width="270" height="90" rx="9" fill="#161b22" stroke="#3fb950" stroke-width="2"/>
+  <text x="766" y="706" fill="#3fb950" font-size="15" font-weight="bold">SETTLED</text>
+  <text x="766" y="730" fill="#c9d1d9" font-size="13">worker_released_usdc = 750</text>
+  <text x="766" y="752" fill="#c9d1d9" font-size="13">buyer_decrypted_ok = true</text>
+
+  <line x1="1020" y1="725" x2="1098" y2="725" stroke="#3fb950" stroke-width="2"/>
+  <polygon points="1098,725 1086,719 1086,731" fill="#3fb950"/>
+
+  <rect x="1100" y="680" width="210" height="90" rx="9" fill="#161b22" stroke="#8b949e" stroke-width="2"/>
+  <text x="1116" y="706" fill="#c9d1d9" font-size="14" font-weight="bold">hash-chain head</text>
+  <text x="1116" y="730" fill="#8b949e" font-size="13">DeterministicStateMachine</text>
+  <text x="1116" y="752" fill="#8b949e" font-size="13">verifyChain() == true</text>
+
+  <!-- ==================================================================== -->
+  <text x="40" y="838" fill="#8b949e" font-size="13">status machine: COMMITTED -&gt; LOCKED -&gt; SETTLED — derived from the verified checks, not hard-coded</text>
+  <text x="40" y="862" fill="#8b949e" font-size="13">demo seed caveat: blinding factor / AES key / IV are derived from a documented seed so the trace is reproducible; a real deployment uses random bytes</text>
+  <text x="40" y="886" fill="#8b949e" font-size="13">limitation: on a public chain the attached NEAR amount of a deposit is visible in the transaction — only the pre-settle public state is shielded here</text>
+</svg>

@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1088" height="3164" viewBox="0 0 1088 3164">
+  <rect width="100%" height="100%" fill="#0d1117"/>
+  <g font-family="'DejaVu Sans Mono','Menlo','Consolas',monospace" font-size="15px">
+  <text x="22" y="22" fill="#58a6ff" xml:space="preserve">NEAR SWARM MARKET -- agent coordination demo</text>
+  <text x="22" y="42" fill="#c9d1d9" xml:space="preserve">seed: near-swarm-2026   rounds: 8</text>
+  <text x="22" y="62" fill="#c9d1d9" xml:space="preserve"></text>
+  <text x="22" y="82" fill="#c9d1d9" xml:space="preserve">Legend: [round] event ...</text>
+  <text x="22" y="102" fill="#c9d1d9" xml:space="preserve"></text>
+  <text x="22" y="122" fill="#c9d1d9" xml:space="preserve"></text>
+  <text x="22" y="142" fill="#58a6ff" xml:space="preserve">---------------- SETUP ----------------</text>
+  <text x="22" y="162" fill="#c9d1d9" xml:space="preserve">  POOL PREFUNDED  12000000 uNEAR in one lump -- lump sum: no per-escrow transfer size is ever published</text>
+  <text x="22" y="182" fill="#c9d1d9" xml:space="preserve">  AGENTS          registered: atlas.near, borealis.near, cinder.near, drift.near, ember.near</text>
+  <text x="22" y="202" fill="#c9d1d9" xml:space="preserve"></text>
+  <text x="22" y="222" fill="#58a6ff" xml:space="preserve">---------------- ROUND 1 ----------------</text>
+  <text x="22" y="242" fill="#c9d1d9" xml:space="preserve">  JOB POSTED      job-alpha-1  skill=research  budget=3.0000 NEAR  reputation gate&gt;=0</text>
+  <text x="22" y="262" fill="#c9d1d9" xml:space="preserve">                   "Market survey on on-chain agent hiring"</text>
+  <text x="22" y="282" fill="#c9d1d9" xml:space="preserve">  BID             atlas.near      price= 1.9341 NEAR  quality=0.853  rep=50</text>
+  <text x="22" y="302" fill="#c9d1d9" xml:space="preserve">  NO BID          borealis.near   not attractive</text>
+  <text x="22" y="322" fill="#c9d1d9" xml:space="preserve">  BID             cinder.near     price= 1.6004 NEAR  quality=0.390  rep=50</text>
+  <text x="22" y="342" fill="#c9d1d9" xml:space="preserve">  NO BID          drift.near      not attractive</text>
+  <text x="22" y="362" fill="#c9d1d9" xml:space="preserve">  NO BID          ember.near      not attractive</text>
+  <text x="22" y="382" fill="#c9d1d9" xml:space="preserve">  VOTE            atlas.near      signed the digest it derived itself (quorum 4)</text>
+  <text x="22" y="402" fill="#c9d1d9" xml:space="preserve">  VOTE            borealis.near   signed the digest it derived itself (quorum 4)</text>
+  <text x="22" y="422" fill="#c9d1d9" xml:space="preserve">  VOTE            cinder.near     signed the digest it derived itself (quorum 4)</text>
+  <text x="22" y="442" fill="#c9d1d9" xml:space="preserve">  VOTE            drift.near      signed the digest it derived itself (quorum 4)</text>
+  <text x="22" y="462" fill="#c9d1d9" xml:space="preserve">  VOTE            ember.near      signed the digest it derived itself (quorum 4)</text>
+  <text x="22" y="482" fill="#3fb950" xml:space="preserve">  AWARDED         atlas.near wins job-alpha-1 for 1.9341 NEAR (quality 0.8525, 5/4 votes)</text>
+  <text x="22" y="502" fill="#3fb950" xml:space="preserve">  SETTLED         atlas.near paid 1.9341 NEAR (fee 0.0967 NEAR -&gt; social money)</text>
+  <text x="22" y="522" fill="#c9d1d9" xml:space="preserve">                   delivered quality 0.8112, reputation now 53</text>
+  <text x="22" y="542" fill="#c9d1d9" xml:space="preserve"></text>
+  <text x="22" y="562" fill="#58a6ff" xml:space="preserve">---------------- ROUND 2 ----------------</text>
+  <text x="22" y="582" fill="#c9d1d9" xml:space="preserve">  JOB POSTED      job-bravo-2  skill=analysis  budget=2.6000 NEAR  reputation gate&gt;=0</text>
+  <text x="22" y="602" fill="#c9d1d9" xml:space="preserve">                   "Reputation-weighted settlement audit"</text>
+  <text x="22" y="622" fill="#c9d1d9" xml:space="preserve">  BID             atlas.near      price= 1.6305 NEAR  quality=0.737  rep=53</text>
+  <text x="22" y="642" fill="#c9d1d9" xml:space="preserve">  NO BID          borealis.near   not attractive</text>
+  <text x="22" y="662" fill="#c9d1d9" xml:space="preserve">  NO BID          cinder.near     not attractive</text>
+  <text x="22" y="682" fill="#c9d1d9" xml:space="preserve">  BID             drift.near      price= 1.4472 NEAR  quality=0.768  rep=50</text>
+  <text x="22" y="702" fill="#c9d1d9" xml:space="preserve">  NO BID          ember.near      not attractive</text>
+  <text x="22" y="722" fill="#c9d1d9" xml:space="preserve">  VOTE            atlas.near      signed the digest it derived itself (quorum 4)</text>
+  <text x="22" y="742" fill="#c9d1d9" xml:space="preserve">  VOTE            borealis.near   signed the digest it derived itself (quorum 4)</text>
+  <text x="22" y="762" fill="#c9d1d9" xml:space="preserve">  VOTE            cinder.near     signed the digest it derived itself (quorum 4)</text>
+  <text x="22" y="782" fill="#c9d1d9" xml:space="preserve">  VOTE            drift.near      signed the digest it derived itself (quorum 4)</text>
+  <text x="22" y="802" fill="#c9d1d9" xml:space="preserve">  VOTE            ember.near      signed the digest it derived itself (quorum 4)</text>
+  <text x="22" y="822" fill="#3fb950" xml:space="preserve">  AWARDED         drift.near wins job-bravo-2 for 1.4472 NEAR (quality 0.7682, 5/4 votes)</text>
+  <text x="22" y="842" fill="#3fb950" xml:space="preserve">  SETTLED         drift.near paid 1.4472 NEAR (fee 0.0724 NEAR -&gt; social money)</text>
+  <text x="22" y="862" fill="#c9d1d9" xml:space="preserve">                   delivered quality 0.9165, reputation now 54</text>
+  <text x="22" y="882" fill="#c9d1d9" xml:space="preserve"></text>
+  <text x="22" y="902" fill="#58a6ff" xml:space="preserve">---------------- ROUND 3 ----------------</text>
+  <text x="22" y="922" fill="#c9d1d9" xml:space="preserve">  JOB POSTED      job-charlie-3  skill=writing  budget=1.2000 NEAR  reputation gate&gt;=52</text>
+  <text x="22" y="942" fill="#c9d1d9" xml:space="preserve">                   "Summarise swarm governance notes"</text>
+  <text x="22" y="962" fill="#c9d1d9" xml:space="preserve">  BID             atlas.near      price= 0.6871 NEAR  quality=0.628  rep=53</text>
+  <text x="22" y="982" fill="#c9d1d9" xml:space="preserve">  NO BID          borealis.near   not attractive</text>
+  <text x="22" y="1002" fill="#f85149" xml:space="preserve">  BID REJECTED    cinder.near     reason="reputation gate"  (rep=50)</text>
+  <text x="22" y="1022" fill="#c9d1d9" xml:space="preserve">  NO BID          drift.near      not attractive</text>
+  <text x="22" y="1042" fill="#f85149" xml:space="preserve">  BID REJECTED    ember.near      reason="reputation gate"  (rep=50)</text>
+  <text x="22" y="1062" fill="#c9d1d9" xml:space="preserve">  VOTE            atlas.near      signed the digest it derived itself (quorum 4)</text>
+  <text x="22" y="1082" fill="#c9d1d9" xml:space="preserve">  VOTE            borealis.near   signed the digest it derived itself (quorum 4)</text>
+  <text x="22" y="1102" fill="#c9d1d9" xml:space="preserve">  VOTE            cinder.near     signed the digest it derived itself (quorum 4)</text>
+  <text x="22" y="1122" fill="#c9d1d9" xml:space="preserve">  VOTE            drift.near      signed the digest it derived itself (quorum 4)</text>
+  <text x="22" y="1142" fill="#c9d1d9" xml:space="preserve">  VOTE            ember.near      signed the digest it derived itself (quorum 4)</text>
+  <text x="22" y="1162" fill="#3fb950" xml:space="preserve">  AWARDED         atlas.near wins job-charlie-3 for 0.6871 NEAR (quality 0.6276, 5/4 votes)</text>
+  <text x="22" y="1182" fill="#3fb950" xml:space="preserve">  SETTLED         atlas.near paid 0.6871 NEAR (fee 0.0344 NEAR -&gt; social money)</text>
+  <text x="22" y="1202" fill="#c9d1d9" xml:space="preserve">                   delivered quality 0.6987, reputation now 55</text>
+  <text x="22" y="1222" fill="#c9d1d9" xml:space="preserve"></text>
+  <text x="22" y="1242" fill="#58a6ff" xml:space="preserve">---------------- ROUND 4 ----------------</text>
+  <text x="22" y="1262" fill="#c9d1d9" xml:space="preserve">  JOB POSTED      job-delta-4  skill=code  budget=2.4000 NEAR  reputation gate&gt;=0  [shielded payment]</text>
+  <text x="22" y="1282" fill="#c9d1d9" xml:space="preserve">                   "Reference escrow contract"</text>
+  <text x="22" y="1302" fill="#c9d1d9" xml:space="preserve">  NO BID          atlas.near      not attractive</text>
+  <text x="22" y="1322" fill="#c9d1d9" xml:space="preserve">  BID             borealis.near   price= 1.2549 NEAR  quality=0.889  rep=50</text>
+  <text x="22" y="1342" fill="#c9d1d9" xml:space="preserve">  NO BID          cinder.near     not attractive</text>
+  <text x="22" y="1362" fill="#c9d1d9" xml:space="preserve">  NO BID          drift.near      not attractive</text>
+  <text x="22" y="1382" fill="#c9d1d9" xml:space="preserve">  BID             ember.near      price= 1.3539 NEAR  quality=0.471  rep=50</text>
+  <text x="22" y="1402" fill="#c9d1d9" xml:space="preserve">  VOTE            atlas.near      signed the digest it derived itself (quorum 4)</text>
+  <text x="22" y="1422" fill="#c9d1d9" xml:space="preserve">  VOTE            borealis.near   signed the digest it derived itself (quorum 4)</text>
+  <text x="22" y="1442" fill="#c9d1d9" xml:space="preserve">  VOTE            cinder.near     signed the digest it derived itself (quorum 4)</text>
+  <text x="22" y="1462" fill="#c9d1d9" xml:space="preserve">  VOTE            drift.near      signed the digest it derived itself (quorum 4)</text>
+  <text x="22" y="1482" fill="#c9d1d9" xml:space="preserve">  VOTE            ember.near      signed the digest it derived itself (quorum 4)</text>
+  <text x="22" y="1502" fill="#3fb950" xml:space="preserve">  AWARDED         borealis.near wins job-delta-4 for 1.2549 NEAR (quality 0.889, 5/4 votes)</text>
+  <text x="22" y="1522" fill="#3fb950" xml:space="preserve">  SETTLED         borealis.near paid 1.2549 NEAR (fee 0.0627 NEAR -&gt; social money)</text>
+  <text x="22" y="1542" fill="#c9d1d9" xml:space="preserve">                   delivered quality 0.9391, reputation now 54, revealed amount 1.9000 NEAR</text>
+  <text x="22" y="1562" fill="#c9d1d9" xml:space="preserve"></text>
+  <text x="22" y="1582" fill="#58a6ff" xml:space="preserve">---------------- ROUND 5 ----------------</text>
+  <text x="22" y="1602" fill="#c9d1d9" xml:space="preserve">  JOB POSTED      job-echo-5  skill=translation  budget=0.9000 NEAR  reputation gate&gt;=0</text>
+  <text x="22" y="1622" fill="#c9d1d9" xml:space="preserve">                   "Translate validator handbook"</text>
+  <text x="22" y="1642" fill="#c9d1d9" xml:space="preserve">  NO BID          atlas.near      not attractive</text>
+  <text x="22" y="1662" fill="#c9d1d9" xml:space="preserve">  NO BID          borealis.near   not attractive</text>
+  <text x="22" y="1682" fill="#c9d1d9" xml:space="preserve">  BID             cinder.near     price= 0.5100 NEAR  quality=0.522  rep=50</text>
+  <text x="22" y="1702" fill="#c9d1d9" xml:space="preserve">  NO BID          drift.near      not attractive</text>
+  <text x="22" y="1722" fill="#c9d1d9" xml:space="preserve">  NO BID          ember.near      not attractive</text>
+  <text x="22" y="1742" fill="#c9d1d9" xml:space="preserve">  VOTE            atlas.near      signed the digest it derived itself (quorum 4)</text>
+  <text x="22" y="1762" fill="#d29922" xml:space="preserve">  VOTE WITHHELD   borealis.near   winner quality 0.5224 below my bar 0.55</text>
+  <text x="22" y="1782" fill="#c9d1d9" xml:space="preserve">  VOTE            cinder.near     signed the digest it derived itself (quorum 4)</text>
+  <text x="22" y="1802" fill="#d29922" xml:space="preserve">  VOTE WITHHELD   drift.near      winner quality 0.5224 below my bar 0.6</text>
+  <text x="22" y="1822" fill="#c9d1d9" xml:space="preserve">  VOTE            ember.near      signed the digest it derived itself (quorum 4)</text>
+  <text x="22" y="1842" fill="#f85149" xml:space="preserve">  NO CONSENSUS    job-echo-5: 3 votes &lt; quorum 4 -- no supermajority: the job is NOT awarded (the demo re-posts it with revised terms in a later round)</text>
+  <text x="22" y="1862" fill="#c9d1d9" xml:space="preserve"></text>
+  <text x="22" y="1882" fill="#58a6ff" xml:space="preserve">---------------- ROUND 6 ----------------</text>
+  <text x="22" y="1902" fill="#c9d1d9" xml:space="preserve">  JOB POSTED      job-foxtrot-6  skill=ops  budget=2.0000 NEAR  reputation gate&gt;=0</text>
+  <text x="22" y="1922" fill="#c9d1d9" xml:space="preserve">                   "Rotate validator set (re-posted after job-echo-5 failed to reach consensus)"</text>
+  <text x="22" y="1942" fill="#c9d1d9" xml:space="preserve">  NO BID          atlas.near      not attractive</text>
+  <text x="22" y="1962" fill="#c9d1d9" xml:space="preserve">  BID             borealis.near   price= 1.2749 NEAR  quality=0.581  rep=54</text>
+  <text x="22" y="1982" fill="#c9d1d9" xml:space="preserve">  NO BID          cinder.near     not attractive</text>
+  <text x="22" y="2002" fill="#c9d1d9" xml:space="preserve">  NO BID          drift.near      not attractive</text>
+  <text x="22" y="2022" fill="#c9d1d9" xml:space="preserve">  BID             ember.near      price= 1.0635 NEAR  quality=0.414  rep=50</text>
+  <text x="22" y="2042" fill="#c9d1d9" xml:space="preserve">  VOTE            atlas.near      signed the digest it derived itself (quorum 4)</text>
+  <text x="22" y="2062" fill="#c9d1d9" xml:space="preserve">  VOTE            borealis.near   signed the digest it derived itself (quorum 4)</text>
+  <text x="22" y="2082" fill="#c9d1d9" xml:space="preserve">  VOTE            cinder.near     signed the digest it derived itself (quorum 4)</text>
+  <text x="22" y="2102" fill="#d29922" xml:space="preserve">  VOTE WITHHELD   drift.near      winner quality 0.5808 below my bar 0.6</text>
+  <text x="22" y="2122" fill="#c9d1d9" xml:space="preserve">  VOTE            ember.near      signed the digest it derived itself (quorum 4)</text>
+  <text x="22" y="2142" fill="#3fb950" xml:space="preserve">  AWARDED         borealis.near wins job-foxtrot-6 for 1.2749 NEAR (quality 0.5808, 4/4 votes)</text>
+  <text x="22" y="2162" fill="#3fb950" xml:space="preserve">  SETTLED         borealis.near paid 1.2749 NEAR (fee 0.0637 NEAR -&gt; social money)</text>
+  <text x="22" y="2182" fill="#c9d1d9" xml:space="preserve">                   delivered quality 0.6528, reputation now 56</text>
+  <text x="22" y="2202" fill="#c9d1d9" xml:space="preserve"></text>
+  <text x="22" y="2222" fill="#58a6ff" xml:space="preserve">---------------- ROUND 7 ----------------</text>
+  <text x="22" y="2242" fill="#bc8cff" xml:space="preserve">  COLLECTIVE BUY  purchase-compute-1: unit 0.9000 NEAR, target 8 units, tiers [{"minUnits":3,"discount_bps":1000},{"minUnits":6,"discount_bps":2200}]</text>
+  <text x="22" y="2262" fill="#c9d1d9" xml:space="preserve">  BUY BID         atlas.near      units=2  values unit at 0.9132 NEAR  max spend 1.8264 NEAR</text>
+  <text x="22" y="2282" fill="#c9d1d9" xml:space="preserve">  BUY BID         borealis.near   units=2  values unit at 0.9489 NEAR  max spend 1.8979 NEAR</text>
+  <text x="22" y="2302" fill="#c9d1d9" xml:space="preserve">  BUY BID         cinder.near     units=1  values unit at 1.1966 NEAR  max spend 1.1966 NEAR</text>
+  <text x="22" y="2322" fill="#c9d1d9" xml:space="preserve">  BUY BID         drift.near      units=2  values unit at 1.0087 NEAR  max spend 2.0174 NEAR</text>
+  <text x="22" y="2342" fill="#c9d1d9" xml:space="preserve">  BUY BID         ember.near      units=1  values unit at 1.0736 NEAR  max spend 1.0736 NEAR</text>
+  <text x="22" y="2362" fill="#bc8cff" xml:space="preserve">  BUY SETTLED     8 units @ 0.7020 NEAR each (gross 5.6160 NEAR)</text>
+  <text x="22" y="2382" fill="#c9d1d9" xml:space="preserve">                   social-money subsidy 2.2158 NEAR, total utility 4611804, fairness(gini) 0.114</text>
+  <text x="22" y="2402" fill="#c9d1d9" xml:space="preserve">                     cinder.near     units=1  pays  0.4250 NEAR  utility 771619</text>
+  <text x="22" y="2422" fill="#c9d1d9" xml:space="preserve">                     ember.near      units=1  pays  0.4250 NEAR  utility 648574</text>
+  <text x="22" y="2442" fill="#c9d1d9" xml:space="preserve">                     drift.near      units=2  pays  0.8500 NEAR  utility 1167379</text>
+  <text x="22" y="2462" fill="#c9d1d9" xml:space="preserve">                     borealis.near   units=2  pays  0.8500 NEAR  utility 1047837</text>
+  <text x="22" y="2482" fill="#c9d1d9" xml:space="preserve">                     atlas.near      units=2  pays  0.8500 NEAR  utility 976395</text>
+  <text x="22" y="2502" fill="#c9d1d9" xml:space="preserve"></text>
+  <text x="22" y="2522" fill="#58a6ff" xml:space="preserve">---------------- ROUND 8 ----------------</text>
+  <text x="22" y="2542" fill="#58a6ff" xml:space="preserve">  PRIVATE COLUMN  atlas.near      submitted column sum 1905687221</text>
+  <text x="22" y="2562" fill="#58a6ff" xml:space="preserve">  PRIVATE COLUMN  borealis.near   submitted column sum 5749625403</text>
+  <text x="22" y="2582" fill="#58a6ff" xml:space="preserve">  PRIVATE COLUMN  cinder.near     submitted column sum 7492226126</text>
+  <text x="22" y="2602" fill="#58a6ff" xml:space="preserve">  PRIVATE COLUMN  drift.near      submitted column sum 10254876366</text>
+  <text x="22" y="2622" fill="#58a6ff" xml:space="preserve">  PRIVATE COLUMN  ember.near      submitted column sum 2305842983813522922</text>
+  <text x="22" y="2642" fill="#3fb950" xml:space="preserve">  AGGREGATE       2244087 published (matches true sum: true, individual values published: 0)</text>
+  <text x="22" y="2662" fill="#c9d1d9" xml:space="preserve">  private_job_posted {"round":8,"type":"private_job_posted","job_id":"job-golf-7","budget":2200000,"note":"escrow amount is committed to, not published"}</text>
+  <text x="22" y="2682" fill="#c9d1d9" xml:space="preserve">  BID             atlas.near      price= 1.1159 NEAR  quality=0.793  rep=57</text>
+  <text x="22" y="2702" fill="#c9d1d9" xml:space="preserve">  BID             drift.near      price= 1.4171 NEAR  quality=0.806  rep=56</text>
+  <text x="22" y="2722" fill="#3fb950" xml:space="preserve">  AWARDED         drift.near wins job-golf-7 for 1.4171 NEAR (quality 0.8062, 5/4 votes)</text>
+  <text x="22" y="2742" fill="#58a6ff" xml:space="preserve">  ESCROW (public) amount=null  commitment=6a63269b28155356...  amount hidden until the completion reveal</text>
+  <text x="22" y="2762" fill="#3fb950" xml:space="preserve">  SETTLED         drift.near paid 1.4171 NEAR (fee 0.0709 NEAR -&gt; social money)</text>
+  <text x="22" y="2782" fill="#c9d1d9" xml:space="preserve">                   delivered quality 0.7937, reputation now 59, revealed amount 1.7500 NEAR</text>
+  <text x="22" y="2802" fill="#c9d1d9" xml:space="preserve"></text>
+  <text x="22" y="2822" fill="#58a6ff" xml:space="preserve">---------------- FINAL STATE ----------------</text>
+  <text x="22" y="2842" fill="#6e7681" xml:space="preserve">  balances:</text>
+  <text x="22" y="2862" fill="#c9d1d9" xml:space="preserve">    atlas.near                   7.6401 NEAR</text>
+  <text x="22" y="2882" fill="#c9d1d9" xml:space="preserve">    borealis.near                6.5533 NEAR</text>
+  <text x="22" y="2902" fill="#c9d1d9" xml:space="preserve">    cinder.near                  3.5750 NEAR</text>
+  <text x="22" y="2922" fill="#c9d1d9" xml:space="preserve">    drift.near                   5.3711 NEAR</text>
+  <text x="22" y="2942" fill="#c9d1d9" xml:space="preserve">    ember.near                   2.0750 NEAR</text>
+  <text x="22" y="2962" fill="#c9d1d9" xml:space="preserve">    treasury (social money)      2.6195 NEAR</text>
+  <text x="22" y="2982" fill="#c9d1d9" xml:space="preserve">    house.near                   79.2000 NEAR</text>
+  <text x="22" y="3002" fill="#6e7681" xml:space="preserve">  reputation scores:</text>
+  <text x="22" y="3022" fill="#c9d1d9" xml:space="preserve">    atlas.near                   57</text>
+  <text x="22" y="3042" fill="#c9d1d9" xml:space="preserve">    borealis.near                58</text>
+  <text x="22" y="3062" fill="#c9d1d9" xml:space="preserve">    cinder.near                  52</text>
+  <text x="22" y="3082" fill="#c9d1d9" xml:space="preserve">    drift.near                   59</text>
+  <text x="22" y="3102" fill="#c9d1d9" xml:space="preserve">    ember.near                   52</text>
+  <text x="22" y="3122" fill="#c9d1d9" xml:space="preserve">  chain receipts: 108</text>
+  </g>
+</svg>

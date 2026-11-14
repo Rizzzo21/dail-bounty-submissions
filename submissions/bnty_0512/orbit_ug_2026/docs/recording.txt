@@ -1,0 +1,159 @@
+================================================================
+ NEAR SWARM MARKET -- agent coordination demo
+ seed: near-swarm-2026   rounds: 8
+================================================================
+
+Legend: [round] event ...
+
+
+---------------- SETUP ----------------
+  POOL PREFUNDED  12000000 uNEAR in one lump -- lump sum: no per-escrow transfer size is ever published
+  AGENTS          registered: atlas.near, borealis.near, cinder.near, drift.near, ember.near
+
+---------------- ROUND 1 ----------------
+  JOB POSTED      job-alpha-1  skill=research  budget=3.0000 NEAR  reputation gate>=0
+                   "Market survey on on-chain agent hiring"
+  BID             atlas.near      price= 1.9341 NEAR  quality=0.853  rep=50
+  NO BID          borealis.near   not attractive
+  BID             cinder.near     price= 1.6004 NEAR  quality=0.390  rep=50
+  NO BID          drift.near      not attractive
+  NO BID          ember.near      not attractive
+  VOTE            atlas.near      signed the digest it derived itself (quorum 4)
+  VOTE            borealis.near   signed the digest it derived itself (quorum 4)
+  VOTE            cinder.near     signed the digest it derived itself (quorum 4)
+  VOTE            drift.near      signed the digest it derived itself (quorum 4)
+  VOTE            ember.near      signed the digest it derived itself (quorum 4)
+  AWARDED         atlas.near wins job-alpha-1 for 1.9341 NEAR (quality 0.8525, 5/4 votes)
+  SETTLED         atlas.near paid 1.9341 NEAR (fee 0.0967 NEAR -> social money)
+                   delivered quality 0.8112, reputation now 53
+
+---------------- ROUND 2 ----------------
+  JOB POSTED      job-bravo-2  skill=analysis  budget=2.6000 NEAR  reputation gate>=0
+                   "Reputation-weighted settlement audit"
+  BID             atlas.near      price= 1.6305 NEAR  quality=0.737  rep=53
+  NO BID          borealis.near   not attractive
+  NO BID          cinder.near     not attractive
+  BID             drift.near      price= 1.4472 NEAR  quality=0.768  rep=50
+  NO BID          ember.near      not attractive
+  VOTE            atlas.near      signed the digest it derived itself (quorum 4)
+  VOTE            borealis.near   signed the digest it derived itself (quorum 4)
+  VOTE            cinder.near     signed the digest it derived itself (quorum 4)
+  VOTE            drift.near      signed the digest it derived itself (quorum 4)
+  VOTE            ember.near      signed the digest it derived itself (quorum 4)
+  AWARDED         drift.near wins job-bravo-2 for 1.4472 NEAR (quality 0.7682, 5/4 votes)
+  SETTLED         drift.near paid 1.4472 NEAR (fee 0.0724 NEAR -> social money)
+                   delivered quality 0.9165, reputation now 54
+
+---------------- ROUND 3 ----------------
+  JOB POSTED      job-charlie-3  skill=writing  budget=1.2000 NEAR  reputation gate>=52
+                   "Summarise swarm governance notes"
+  BID             atlas.near      price= 0.6871 NEAR  quality=0.628  rep=53
+  NO BID          borealis.near   not attractive
+  BID REJECTED    cinder.near     reason="reputation gate"  (rep=50)
+  NO BID          drift.near      not attractive
+  BID REJECTED    ember.near      reason="reputation gate"  (rep=50)
+  VOTE            atlas.near      signed the digest it derived itself (quorum 4)
+  VOTE            borealis.near   signed the digest it derived itself (quorum 4)
+  VOTE            cinder.near     signed the digest it derived itself (quorum 4)
+  VOTE            drift.near      signed the digest it derived itself (quorum 4)
+  VOTE            ember.near      signed the digest it derived itself (quorum 4)
+  AWARDED         atlas.near wins job-charlie-3 for 0.6871 NEAR (quality 0.6276, 5/4 votes)
+  SETTLED         atlas.near paid 0.6871 NEAR (fee 0.0344 NEAR -> social money)
+                   delivered quality 0.6987, reputation now 55
+
+---------------- ROUND 4 ----------------
+  JOB POSTED      job-delta-4  skill=code  budget=2.4000 NEAR  reputation gate>=0  [shielded payment]
+                   "Reference escrow contract"
+  NO BID          atlas.near      not attractive
+  BID             borealis.near   price= 1.2549 NEAR  quality=0.889  rep=50
+  NO BID          cinder.near     not attractive
+  NO BID          drift.near      not attractive
+  BID             ember.near      price= 1.3539 NEAR  quality=0.471  rep=50
+  VOTE            atlas.near      signed the digest it derived itself (quorum 4)
+  VOTE            borealis.near   signed the digest it derived itself (quorum 4)
+  VOTE            cinder.near     signed the digest it derived itself (quorum 4)
+  VOTE            drift.near      signed the digest it derived itself (quorum 4)
+  VOTE            ember.near      signed the digest it derived itself (quorum 4)
+  AWARDED         borealis.near wins job-delta-4 for 1.2549 NEAR (quality 0.889, 5/4 votes)
+  SETTLED         borealis.near paid 1.2549 NEAR (fee 0.0627 NEAR -> social money)
+                   delivered quality 0.9391, reputation now 54, revealed amount 1.9000 NEAR
+
+---------------- ROUND 5 ----------------
+  JOB POSTED      job-echo-5  skill=translation  budget=0.9000 NEAR  reputation gate>=0
+                   "Translate validator handbook"
+  NO BID          atlas.near      not attractive
+  NO BID          borealis.near   not attractive
+  BID             cinder.near     price= 0.5100 NEAR  quality=0.522  rep=50
+  NO BID          drift.near      not attractive
+  NO BID          ember.near      not attractive
+  VOTE            atlas.near      signed the digest it derived itself (quorum 4)
+  VOTE WITHHELD   borealis.near   winner quality 0.5224 below my bar 0.55
+  VOTE            cinder.near     signed the digest it derived itself (quorum 4)
+  VOTE WITHHELD   drift.near      winner quality 0.5224 below my bar 0.6
+  VOTE            ember.near      signed the digest it derived itself (quorum 4)
+  NO CONSENSUS    job-echo-5: 3 votes < quorum 4 -- no supermajority: the job is NOT awarded (the demo re-posts it with revised terms in a later round)
+
+---------------- ROUND 6 ----------------
+  JOB POSTED      job-foxtrot-6  skill=ops  budget=2.0000 NEAR  reputation gate>=0
+                   "Rotate validator set (re-posted after job-echo-5 failed to reach consensus)"
+  NO BID          atlas.near      not attractive
+  BID             borealis.near   price= 1.2749 NEAR  quality=0.581  rep=54
+  NO BID          cinder.near     not attractive
+  NO BID          drift.near      not attractive
+  BID             ember.near      price= 1.0635 NEAR  quality=0.414  rep=50
+  VOTE            atlas.near      signed the digest it derived itself (quorum 4)
+  VOTE            borealis.near   signed the digest it derived itself (quorum 4)
+  VOTE            cinder.near     signed the digest it derived itself (quorum 4)
+  VOTE WITHHELD   drift.near      winner quality 0.5808 below my bar 0.6
+  VOTE            ember.near      signed the digest it derived itself (quorum 4)
+  AWARDED         borealis.near wins job-foxtrot-6 for 1.2749 NEAR (quality 0.5808, 4/4 votes)
+  SETTLED         borealis.near paid 1.2749 NEAR (fee 0.0637 NEAR -> social money)
+                   delivered quality 0.6528, reputation now 56
+
+---------------- ROUND 7 ----------------
+  COLLECTIVE BUY  purchase-compute-1: unit 0.9000 NEAR, target 8 units, tiers [{"minUnits":3,"discount_bps":1000},{"minUnits":6,"discount_bps":2200}]
+  BUY BID         atlas.near      units=2  values unit at 0.9132 NEAR  max spend 1.8264 NEAR
+  BUY BID         borealis.near   units=2  values unit at 0.9489 NEAR  max spend 1.8979 NEAR
+  BUY BID         cinder.near     units=1  values unit at 1.1966 NEAR  max spend 1.1966 NEAR
+  BUY BID         drift.near      units=2  values unit at 1.0087 NEAR  max spend 2.0174 NEAR
+  BUY BID         ember.near      units=1  values unit at 1.0736 NEAR  max spend 1.0736 NEAR
+  BUY SETTLED     8 units @ 0.7020 NEAR each (gross 5.6160 NEAR)
+                   social-money subsidy 2.2158 NEAR, total utility 4611804, fairness(gini) 0.114
+                     cinder.near     units=1  pays  0.4250 NEAR  utility 771619
+                     ember.near      units=1  pays  0.4250 NEAR  utility 648574
+                     drift.near      units=2  pays  0.8500 NEAR  utility 1167379
+                     borealis.near   units=2  pays  0.8500 NEAR  utility 1047837
+                     atlas.near      units=2  pays  0.8500 NEAR  utility 976395
+
+---------------- ROUND 8 ----------------
+  PRIVATE COLUMN  atlas.near      submitted column sum 1905687221
+  PRIVATE COLUMN  borealis.near   submitted column sum 5749625403
+  PRIVATE COLUMN  cinder.near     submitted column sum 7492226126
+  PRIVATE COLUMN  drift.near      submitted column sum 10254876366
+  PRIVATE COLUMN  ember.near      submitted column sum 2305842983813522922
+  AGGREGATE       2244087 published (matches true sum: true, individual values published: 0)
+  private_job_posted {"round":8,"type":"private_job_posted","job_id":"job-golf-7","budget":2200000,"note":"escrow amount is committed to, not published"}
+  BID             atlas.near      price= 1.1159 NEAR  quality=0.793  rep=57
+  BID             drift.near      price= 1.4171 NEAR  quality=0.806  rep=56
+  AWARDED         drift.near wins job-golf-7 for 1.4171 NEAR (quality 0.8062, 5/4 votes)
+  ESCROW (public) amount=null  commitment=6a63269b28155356...  amount hidden until the completion reveal
+  SETTLED         drift.near paid 1.4171 NEAR (fee 0.0709 NEAR -> social money)
+                   delivered quality 0.7937, reputation now 59, revealed amount 1.7500 NEAR
+
+---------------- FINAL STATE ----------------
+  balances:
+    atlas.near                   7.6401 NEAR
+    borealis.near                6.5533 NEAR
+    cinder.near                  3.5750 NEAR
+    drift.near                   5.3711 NEAR
+    ember.near                   2.0750 NEAR
+    treasury (social money)      2.6195 NEAR
+    house.near                   79.2000 NEAR
+  reputation scores:
+    atlas.near                   57
+    borealis.near                58
+    cinder.near                  52
+    drift.near                   59
+    ember.near                   52
+  chain receipts: 108
+

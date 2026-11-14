@@ -1,0 +1,11 @@
+{
+  "name": "@near-contest/trezu-social-money",
+  "version": "1.0.0",
+  "description": "TREZU-SOCIAL - shared budgets, programmable rewards, and reputation-gated access on Sputnik DAO / Trezu",
+  "type": "module",
+  "license": "MIT",
+  "scripts": {
+    "test": "node --test test/engine.test.mjs",
+    "demo": "node scripts/demo.mjs"
+  }
+}

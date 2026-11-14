@@ -1,0 +1,637 @@
+{
+ "bounty": "bnty_0421",
+ "protocol": "ritual",
+ "scenarios": [
+  {
+   "events": [
+    {
+     "hash": "911e451fb5f4cf4bf0577fe45f8723edfa0796fe278ae8b3d9509b41a73a1e5f",
+     "payload": {
+      "epoch": 1,
+      "kind": "CHANT",
+      "ritual": "rit_1_CHANT_251783c6"
+     },
+     "prevHash": "0000000000000000000000000000000000000000000000000000000000000000",
+     "seq": 0,
+     "type": "ritual_opened"
+    },
+    {
+     "hash": "88daf5f67beb5b95e054c674f7ae87a2df8fc361b55d7b7e520115ae423e1a87",
+     "payload": {
+      "address": "acc_1556bf65ddb0d60f",
+      "epoch": 1,
+      "kind": "CHANT",
+      "ritual": "rit_1_CHANT_251783c6",
+      "votes": 1,
+      "weight": 1
+     },
+     "prevHash": "911e451fb5f4cf4bf0577fe45f8723edfa0796fe278ae8b3d9509b41a73a1e5f",
+     "seq": 1,
+     "type": "ritual_signed"
+    },
+    {
+     "hash": "6feb96164e8310653e0c286a7201575ffc2455829a1abf840c0866237e215021",
+     "payload": {
+      "address": "acc_1aeb73bfe7b16184",
+      "epoch": 1,
+      "kind": "CHANT",
+      "ritual": "rit_1_CHANT_251783c6",
+      "votes": 2,
+      "weight": 1
+     },
+     "prevHash": "88daf5f67beb5b95e054c674f7ae87a2df8fc361b55d7b7e520115ae423e1a87",
+     "seq": 2,
+     "type": "ritual_signed"
+    },
+    {
+     "hash": "d74e9b86defbe24060c5a972cc07c469cefbac6ac7f3199345f4acd78d862412",
+     "payload": {
+      "address": "acc_d3883226314c1f2f",
+      "epoch": 1,
+      "kind": "CHANT",
+      "ritual": "rit_1_CHANT_251783c6",
+      "votes": 3,
+      "weight": 1
+     },
+     "prevHash": "6feb96164e8310653e0c286a7201575ffc2455829a1abf840c0866237e215021",
+     "seq": 3,
+     "type": "ritual_signed"
+    },
+    {
+     "hash": "cf82c6ae63db078f882be2b6a1b5123ec36817296eee12ff6e1b8bc587af969c",
+     "payload": {
+      "address": "acc_6912163fabd8aa90",
+      "epoch": 1,
+      "kind": "CHANT",
+      "ritual": "rit_1_CHANT_251783c6",
+      "votes": 4,
+      "weight": 1
+     },
+     "prevHash": "d74e9b86defbe24060c5a972cc07c469cefbac6ac7f3199345f4acd78d862412",
+     "seq": 4,
+     "type": "ritual_signed"
+    },
+    {
+     "hash": "d84525d8a7cd9b1604395ecba0a05396e8592d793cc75866b13fb225940bdfef",
+     "payload": {
+      "address": "acc_1a68438569415650",
+      "epoch": 1,
+      "kind": "CHANT",
+      "ritual": "rit_1_CHANT_251783c6",
+      "votes": 5,
+      "weight": 1
+     },
+     "prevHash": "cf82c6ae63db078f882be2b6a1b5123ec36817296eee12ff6e1b8bc587af969c",
+     "seq": 5,
+     "type": "ritual_signed"
+    },
+    {
+     "hash": "645a17fbba4ebd780f8375e655c0e3f1451ad72d0c61064a74a3680cba1713db",
+     "payload": {
+      "address": "acc_62d277b8f8a7412c",
+      "epoch": 1,
+      "kind": "CHANT",
+      "ritual": "rit_1_CHANT_251783c6",
+      "votes": 6,
+      "weight": 1
+     },
+     "prevHash": "d84525d8a7cd9b1604395ecba0a05396e8592d793cc75866b13fb225940bdfef",
+     "seq": 6,
+     "type": "ritual_signed"
+    },
+    {
+     "hash": "6367f9e4653ea233049f1d94e5fcf658aebb8ffe43cf2ba4fc7b963a1ff3c660",
+     "payload": {
+      "chantFees": 600,
+      "eligibleHolders": 9,
+      "minted": 333333,
+      "participation": 0.666667,
+      "ritual": "rit_1_CHANT_251783c6",
+      "signers": 6,
+      "stewardCut": 6667,
+      "supplyAfter": 8238333
+     },
+     "prevHash": "645a17fbba4ebd780f8375e655c0e3f1451ad72d0c61064a74a3680cba1713db",
+     "seq": 7,
+     "type": "chant_fired"
+    },
+    {
+     "hash": "14d1245a2d390f3cb1991c90f48c0f073a049c43c14effb1ee2e17d3ee15fa68",
+     "payload": {
+      "minted": 9400,
+      "ritual": "rit_1_CHANT_251783c6",
+      "supplyAfter": 8247733,
+      "treasuryTokens": 10000
+     },
+     "prevHash": "6367f9e4653ea233049f1d94e5fcf658aebb8ffe43cf2ba4fc7b963a1ff3c660",
+     "seq": 8,
+     "type": "treasury_rule_liquidity_floor"
+    },
+    {
+     "hash": "f6f92a807ed137e8953c8bc1d023888c978ad1b595057b2f58b0994dadbe7bc5",
+     "payload": {
+      "price": 0.4,
+      "ritual": "rit_1_CHANT_251783c6",
+      "supply": 8247733,
+      "treasuryTokens": 10000,
+      "treasuryUsdc": 0
+     },
+     "prevHash": "14d1245a2d390f3cb1991c90f48c0f073a049c43c14effb1ee2e17d3ee15fa68",
+     "seq": 9,
+     "type": "ritual_settled"
+    }
+   ],
+   "final_state_hash": "f6f92a807ed137e8953c8bc1d023888c978ad1b595057b2f58b0994dadbe7bc5",
+   "name": "chant",
+   "supply_after": 8247733,
+   "supply_before": 7905000,
+   "treasury": {
+    "boughtBackBurned": 0,
+    "fees": 0,
+    "mintedForFloor": 9400,
+    "ritualFees": 600,
+    "tokens": 10000,
+    "usdc": 0
+   }
+  },
+  {
+   "events": [
+    {
+     "hash": "23947d87e9684ffaccae9e7f0fc7ab0eda5600c404f9d9af5d444bd0f1e77a39",
+     "payload": {
+      "amountIn": 80000,
+      "amountOut": 29880.63149788,
+      "dir": "y_to_x",
+      "fee": 2400,
+      "howlTax": 0,
+      "priceAfter": 0.44545524,
+      "supplyAfter": 7905000,
+      "trader": "acc_b3fe590186df8f33"
+     },
+     "prevHash": "0000000000000000000000000000000000000000000000000000000000000000",
+     "seq": 0,
+     "type": "swap"
+    },
+    {
+     "hash": "b2c8d3469c2a566160f916b00ee8c3618b3886b97966c2f5bc90e14b2ced0147",
+     "payload": {
+      "amountIn": 80000,
+      "amountOut": 33257.36966087,
+      "dir": "y_to_x",
+      "fee": 2400,
+      "howlTax": 0,
+      "priceAfter": 0.49316885,
+      "supplyAfter": 7905000,
+      "trader": "acc_b3fe590186df8f33"
+     },
+     "prevHash": "23947d87e9684ffaccae9e7f0fc7ab0eda5600c404f9d9af5d444bd0f1e77a39",
+     "seq": 1,
+     "type": "swap"
+    },
+    {
+     "hash": "c40cec1d32bf8223faa07fb71e35d15f7271f80a1f4ae251d859c270256d0667",
+     "payload": {
+      "amountIn": 80000,
+      "amountOut": 36795.69038415,
+      "dir": "y_to_x",
+      "fee": 2400,
+      "howlTax": 0,
+      "priceAfter": 0.54355998,
+      "supplyAfter": 7905000,
+      "trader": "acc_b3fe590186df8f33"
+     },
+     "prevHash": "b2c8d3469c2a566160f916b00ee8c3618b3886b97966c2f5bc90e14b2ced0147",
+     "seq": 2,
+     "type": "swap"
+    },
+    {
+     "hash": "7619b2a7ad751ab8e281a5f7284f7418c2ffb047620ffc5a7098f8837b234e2f",
+     "payload": {
+      "amountIn": 80000,
+      "amountOut": 40525.17841725,
+      "dir": "y_to_x",
+      "fee": 2400,
+      "howlTax": 0,
+      "priceAfter": 0.59713656,
+      "supplyAfter": 7905000,
+      "trader": "acc_b3fe590186df8f33"
+     },
+     "prevHash": "c40cec1d32bf8223faa07fb71e35d15f7271f80a1f4ae251d859c270256d0667",
+     "seq": 3,
+     "type": "swap"
+    },
+    {
+     "hash": "43bc328c982d59d2d6040a979220f179b0aea145827438a3be6e8492617d05d9",
+     "payload": {
+      "amountIn": 80000,
+      "amountOut": 44481.549983,
+      "dir": "y_to_x",
+      "fee": 2400,
+      "howlTax": 0,
+      "priceAfter": 0.65452397,
+      "supplyAfter": 7905000,
+      "trader": "acc_b3fe590186df8f33"
+     },
+     "prevHash": "7619b2a7ad751ab8e281a5f7284f7418c2ffb047620ffc5a7098f8837b234e2f",
+     "seq": 4,
+     "type": "swap"
+    },
+    {
+     "hash": "8f03efea4fcf54e15c6a4fc010d5cc4ae28c1385c939bf6fe0fe6c0e75962513",
+     "payload": {
+      "amountIn": 80000,
+      "amountOut": 48708.60083419,
+      "dir": "y_to_x",
+      "fee": 2400,
+      "howlTax": 0,
+      "priceAfter": 0.71650539,
+      "supplyAfter": 7905000,
+      "trader": "acc_b3fe590186df8f33"
+     },
+     "prevHash": "43bc328c982d59d2d6040a979220f179b0aea145827438a3be6e8492617d05d9",
+     "seq": 5,
+     "type": "swap"
+    },
+    {
+     "hash": "8b08b11f2919482c05f43f5f38b449213e326bd433325ad4a679f9ea8e03a002",
+     "payload": {
+      "amountIn": 80000,
+      "amountOut": 53260.93866194,
+      "dir": "y_to_x",
+      "fee": 2400,
+      "howlTax": 0,
+      "priceAfter": 0.78408021,
+      "supplyAfter": 7905000,
+      "trader": "acc_b3fe590186df8f33"
+     },
+     "prevHash": "8f03efea4fcf54e15c6a4fc010d5cc4ae28c1385c939bf6fe0fe6c0e75962513",
+     "seq": 6,
+     "type": "swap"
+    },
+    {
+     "hash": "c2a609d930d48a52f0d5e4e2550b4706f9a248e004b560d70836da81b634e0ad",
+     "payload": {
+      "amountIn": 80000,
+      "amountOut": 58207.90736478,
+      "dir": "y_to_x",
+      "fee": 2400,
+      "howlTax": 0,
+      "priceAfter": 0.85855057,
+      "supplyAfter": 7905000,
+      "trader": "acc_b3fe590186df8f33"
+     },
+     "prevHash": "8b08b11f2919482c05f43f5f38b449213e326bd433325ad4a679f9ea8e03a002",
+     "seq": 7,
+     "type": "swap"
+    },
+    {
+     "hash": "c2b61c5556765f23b3d4fed49dc3b24e6a72f1a859c6d5df670a2520c76e697d",
+     "payload": {
+      "epoch": 1,
+      "kind": "CHANT",
+      "ritual": "rit_1_CHANT_e78bf288"
+     },
+     "prevHash": "c2a609d930d48a52f0d5e4e2550b4706f9a248e004b560d70836da81b634e0ad",
+     "seq": 8,
+     "type": "ritual_opened"
+    },
+    {
+     "hash": "912e03bb78f8174c9acdcbdb395e314cf8d4821cc5891181a8762345346688e1",
+     "payload": {
+      "address": "acc_1556bf65ddb0d60f",
+      "epoch": 1,
+      "kind": "CHANT",
+      "ritual": "rit_1_CHANT_e78bf288",
+      "votes": 1,
+      "weight": 1
+     },
+     "prevHash": "c2b61c5556765f23b3d4fed49dc3b24e6a72f1a859c6d5df670a2520c76e697d",
+     "seq": 9,
+     "type": "ritual_signed"
+    },
+    {
+     "hash": "4e360586f2dc35eb6437c52e7b8c2ac777fed73583f9b3033b1279508fba30ea",
+     "payload": {
+      "address": "acc_1aeb73bfe7b16184",
+      "epoch": 1,
+      "kind": "CHANT",
+      "ritual": "rit_1_CHANT_e78bf288",
+      "votes": 2,
+      "weight": 1
+     },
+     "prevHash": "912e03bb78f8174c9acdcbdb395e314cf8d4821cc5891181a8762345346688e1",
+     "seq": 10,
+     "type": "ritual_signed"
+    },
+    {
+     "hash": "0c3a5d856aa6d59983497796c405c7ca7c446c660491909998eaa76f450babce",
+     "payload": {
+      "address": "acc_d3883226314c1f2f",
+      "epoch": 1,
+      "kind": "CHANT",
+      "ritual": "rit_1_CHANT_e78bf288",
+      "votes": 3,
+      "weight": 1
+     },
+     "prevHash": "4e360586f2dc35eb6437c52e7b8c2ac777fed73583f9b3033b1279508fba30ea",
+     "seq": 11,
+     "type": "ritual_signed"
+    },
+    {
+     "hash": "2432554d70c82b1147abb27b8fab0fb193d9833c21b11de579916d6ed16c0a65",
+     "payload": {
+      "chantFees": 300,
+      "eligibleHolders": 9,
+      "minted": 166667,
+      "participation": 0.333333,
+      "ritual": "rit_1_CHANT_e78bf288",
+      "signers": 3,
+      "stewardCut": 3333,
+      "supplyAfter": 8071667
+     },
+     "prevHash": "0c3a5d856aa6d59983497796c405c7ca7c446c660491909998eaa76f450babce",
+     "seq": 12,
+     "type": "chant_fired"
+    },
+    {
+     "hash": "4ad7527e7d6345925bf888e339707a77aef8b3d1fb33c796c6384a18023e0993",
+     "payload": {
+      "minted": 9700,
+      "ritual": "rit_1_CHANT_e78bf288",
+      "supplyAfter": 8081367,
+      "treasuryTokens": 10000
+     },
+     "prevHash": "2432554d70c82b1147abb27b8fab0fb193d9833c21b11de579916d6ed16c0a65",
+     "seq": 13,
+     "type": "treasury_rule_liquidity_floor"
+    },
+    {
+     "hash": "6469a9db0d35386e8b6886ce796fa4f473e1a9d3256d0fa48c5f91d1ef11a3b1",
+     "payload": {
+      "burned": 7854.99690144,
+      "ritual": "rit_1_CHANT_e78bf288",
+      "spent": 9200,
+      "supplyAfter": 8073512.00309856,
+      "treasuryUsdc": 10000
+     },
+     "prevHash": "4ad7527e7d6345925bf888e339707a77aef8b3d1fb33c796c6384a18023e0993",
+     "seq": 14,
+     "type": "treasury_rule_buyback"
+    },
+    {
+     "hash": "2862fcbd16a9c37efd1a20c96abc1bdc9bfb6a99c3b48fe1071d63bbc4a0c9b9",
+     "payload": {
+      "price": 0.86823099,
+      "ritual": "rit_1_CHANT_e78bf288",
+      "supply": 8073512.00309856,
+      "treasuryTokens": 10000,
+      "treasuryUsdc": 10000
+     },
+     "prevHash": "6469a9db0d35386e8b6886ce796fa4f473e1a9d3256d0fa48c5f91d1ef11a3b1",
+     "seq": 15,
+     "type": "ritual_settled"
+    }
+   ],
+   "final_state_hash": "2862fcbd16a9c37efd1a20c96abc1bdc9bfb6a99c3b48fe1071d63bbc4a0c9b9",
+   "name": "storm",
+   "supply_after": 8073512.00309856,
+   "supply_before": 7905000,
+   "treasury": {
+    "boughtBackBurned": 7854.99690144,
+    "fees": 19200,
+    "mintedForFloor": 9700,
+    "ritualFees": 300,
+    "tokens": 10000,
+    "usdc": 10000
+   }
+  },
+  {
+   "events": [
+    {
+     "hash": "395e719766addc5937e47ad87fbaf9d1b884adb646335e33c84156fb7cbd5649",
+     "payload": {
+      "epoch": 1,
+      "kind": "BURN",
+      "ritual": "rit_1_BURN_e765a03f"
+     },
+     "prevHash": "0000000000000000000000000000000000000000000000000000000000000000",
+     "seq": 0,
+     "type": "ritual_opened"
+    },
+    {
+     "hash": "3d5e63890e1ade5e573ff0d0fbb0b60a0f2443600c6aa43940658d668d13ed50",
+     "payload": {
+      "address": "acc_1556bf65ddb0d60f",
+      "epoch": 1,
+      "kind": "BURN",
+      "ritual": "rit_1_BURN_e765a03f",
+      "votes": 1,
+      "weight": 1
+     },
+     "prevHash": "395e719766addc5937e47ad87fbaf9d1b884adb646335e33c84156fb7cbd5649",
+     "seq": 1,
+     "type": "ritual_signed"
+    },
+    {
+     "hash": "243b03394550f6f675d986512c85911561c30fedf32f604f227e244af8cffe67",
+     "payload": {
+      "address": "acc_1aeb73bfe7b16184",
+      "epoch": 1,
+      "kind": "BURN",
+      "ritual": "rit_1_BURN_e765a03f",
+      "votes": 2,
+      "weight": 1
+     },
+     "prevHash": "3d5e63890e1ade5e573ff0d0fbb0b60a0f2443600c6aa43940658d668d13ed50",
+     "seq": 2,
+     "type": "ritual_signed"
+    },
+    {
+     "hash": "9e25c57b6734b3d6a5128470ef08afae82d1b48423e9b123f65e2c50f93c9109",
+     "payload": {
+      "address": "acc_6912163fabd8aa90",
+      "epoch": 1,
+      "kind": "BURN",
+      "ritual": "rit_1_BURN_e765a03f",
+      "votes": 3,
+      "weight": 1
+     },
+     "prevHash": "243b03394550f6f675d986512c85911561c30fedf32f604f227e244af8cffe67",
+     "seq": 3,
+     "type": "ritual_signed"
+    },
+    {
+     "hash": "c52ca016efe900715eb4c72a63a6a1fe7ce6a7be0355c94ef6ca9bd988eefa12",
+     "payload": {
+      "burned": 15000,
+      "ritual": "rit_1_BURN_e765a03f",
+      "signers": 3,
+      "supplyAfter": 7890000
+     },
+     "prevHash": "9e25c57b6734b3d6a5128470ef08afae82d1b48423e9b123f65e2c50f93c9109",
+     "seq": 4,
+     "type": "burn_fired"
+    },
+    {
+     "hash": "d2f71b53803c7e7d228736df8750b6a418f678dfdd674821dc73e16aea61ad4a",
+     "payload": {
+      "minted": 10000,
+      "ritual": "rit_1_BURN_e765a03f",
+      "supplyAfter": 7900000,
+      "treasuryTokens": 10000
+     },
+     "prevHash": "c52ca016efe900715eb4c72a63a6a1fe7ce6a7be0355c94ef6ca9bd988eefa12",
+     "seq": 5,
+     "type": "treasury_rule_liquidity_floor"
+    },
+    {
+     "hash": "89974813f25f3f23d27507822f023b974abb2edf23a618fd653dbe60a49fb6e3",
+     "payload": {
+      "price": 0.4,
+      "ritual": "rit_1_BURN_e765a03f",
+      "supply": 7900000,
+      "treasuryTokens": 10000,
+      "treasuryUsdc": 0
+     },
+     "prevHash": "d2f71b53803c7e7d228736df8750b6a418f678dfdd674821dc73e16aea61ad4a",
+     "seq": 6,
+     "type": "ritual_settled"
+    }
+   ],
+   "final_state_hash": "89974813f25f3f23d27507822f023b974abb2edf23a618fd653dbe60a49fb6e3",
+   "name": "quorum",
+   "supply_after": 7900000,
+   "supply_before": 7905000,
+   "treasury": {
+    "boughtBackBurned": 0,
+    "fees": 0,
+    "mintedForFloor": 10000,
+    "ritualFees": 0,
+    "tokens": 10000,
+    "usdc": 0
+   }
+  },
+  {
+   "events": [
+    {
+     "hash": "b3d054e3b0588d31c689529feb108a308f4d019aacf092f5da35f5a89d9ba2f4",
+     "payload": {
+      "epoch": 1,
+      "kind": "HOWL",
+      "ritual": "rit_1_HOWL_fc775b68"
+     },
+     "prevHash": "0000000000000000000000000000000000000000000000000000000000000000",
+     "seq": 0,
+     "type": "ritual_opened"
+    },
+    {
+     "hash": "c72505f8216937129df9b751d45f99d45a8ecd808c4bc1f918d6160be867d44b",
+     "payload": {
+      "address": "acc_1556bf65ddb0d60f",
+      "epoch": 1,
+      "kind": "HOWL",
+      "ritual": "rit_1_HOWL_fc775b68",
+      "votes": 1,
+      "weight": 1
+     },
+     "prevHash": "b3d054e3b0588d31c689529feb108a308f4d019aacf092f5da35f5a89d9ba2f4",
+     "seq": 1,
+     "type": "ritual_signed"
+    },
+    {
+     "hash": "b0f4a974287731e7930ddbfc41cd5de5f4ddbbb4e1a4a8f57f7f961f60f71e57",
+     "payload": {
+      "address": "acc_1aeb73bfe7b16184",
+      "epoch": 1,
+      "kind": "HOWL",
+      "ritual": "rit_1_HOWL_fc775b68",
+      "votes": 2,
+      "weight": 1
+     },
+     "prevHash": "c72505f8216937129df9b751d45f99d45a8ecd808c4bc1f918d6160be867d44b",
+     "seq": 2,
+     "type": "ritual_signed"
+    },
+    {
+     "hash": "b3e1da71374e2d24da46254bc5bd635d6f97159d209ad61ae3a53ac0fffba74b",
+     "payload": {
+      "address": "acc_d3883226314c1f2f",
+      "epoch": 1,
+      "kind": "HOWL",
+      "ritual": "rit_1_HOWL_fc775b68",
+      "votes": 3,
+      "weight": 1
+     },
+     "prevHash": "b0f4a974287731e7930ddbfc41cd5de5f4ddbbb4e1a4a8f57f7f961f60f71e57",
+     "seq": 3,
+     "type": "ritual_signed"
+    },
+    {
+     "hash": "01a7226af41d025cb272d9f573b955686c591bcd3b76fb407adcb2605254743e",
+     "payload": {
+      "note": "while the window is open, pool fees carry an extra howl tax that is burned",
+      "ritual": "rit_1_HOWL_fc775b68",
+      "windowUntilEpoch": 2
+     },
+     "prevHash": "b3e1da71374e2d24da46254bc5bd635d6f97159d209ad61ae3a53ac0fffba74b",
+     "seq": 4,
+     "type": "howl_fired"
+    },
+    {
+     "hash": "986c1e1d8ccbbe1965bfbf635aa2b14d2fd44d2aaae3098ead8b5d1db5c730df",
+     "payload": {
+      "minted": 10000,
+      "ritual": "rit_1_HOWL_fc775b68",
+      "supplyAfter": 7915000,
+      "treasuryTokens": 10000
+     },
+     "prevHash": "01a7226af41d025cb272d9f573b955686c591bcd3b76fb407adcb2605254743e",
+     "seq": 5,
+     "type": "treasury_rule_liquidity_floor"
+    },
+    {
+     "hash": "df5cc0a55847a34104790a11f7a752aaa5caf906e089da94e4cb7519f7cc16e4",
+     "payload": {
+      "price": 0.4,
+      "ritual": "rit_1_HOWL_fc775b68",
+      "supply": 7915000,
+      "treasuryTokens": 10000,
+      "treasuryUsdc": 0
+     },
+     "prevHash": "986c1e1d8ccbbe1965bfbf635aa2b14d2fd44d2aaae3098ead8b5d1db5c730df",
+     "seq": 6,
+     "type": "ritual_settled"
+    },
+    {
+     "hash": "1497cc22b0795f400f5c635f2302df7b18d997bfdcb6286245c48ef542476406",
+     "payload": {
+      "amountIn": 50000,
+      "amountOut": 18940.68830852,
+      "dir": "y_to_x",
+      "fee": 1500,
+      "howlTax": 189.40688309,
+      "priceAfter": 0.42830621,
+      "supplyAfter": 7914810.59311691,
+      "trader": "acc_1a68438569415650"
+     },
+     "prevHash": "df5cc0a55847a34104790a11f7a752aaa5caf906e089da94e4cb7519f7cc16e4",
+     "seq": 7,
+     "type": "swap"
+    }
+   ],
+   "final_state_hash": "1497cc22b0795f400f5c635f2302df7b18d997bfdcb6286245c48ef542476406",
+   "name": "howl",
+   "supply_after": 7914810.59311691,
+   "supply_before": 7905000,
+   "treasury": {
+    "boughtBackBurned": 0,
+    "fees": 1500,
+    "mintedForFloor": 10000,
+    "ritualFees": 0,
+    "tokens": 10000,
+    "usdc": 1500
+   }
+  }
+ ],
+ "track": "Memecoins With Mechanics"
+}

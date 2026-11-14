@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="766" height="816" viewBox="0 0 766 816">
+  <rect width="766" height="816" fill="#0b0f14"/>
+  <g font-family="'DejaVu Sans Mono','Menlo','Consolas',monospace" font-size="12.5">
+  <text x="18" y="33" fill="#d7e3f4" xml:space="preserve">STEP 0 - THE PASSPORT CHECKS ITS EVIDENCE</text>
+  <text x="18" y="48" fill="#d7e3f4" xml:space="preserve">  it reads two published artifacts and re-hashes every record in them</text>
+  <text x="18" y="63" fill="#d7e3f4" xml:space="preserve">  anchor-events.jsonl      18 records  (bnty_0414 ANCHOR, published)</text>
+  <text x="18" y="78" fill="#d7e3f4" xml:space="preserve">  ritual-scenarios.json    4 records  (bnty_0421 RITUAL, published)</text>
+  <text x="18" y="93" fill="#d7e3f4" xml:space="preserve">  15 claims traced to those records, 0 refused</text>
+  <text x="18" y="108" fill="#d7e3f4" xml:space="preserve"></text>
+  <text x="18" y="123" fill="#d7e3f4" xml:space="preserve">STEP 1 - PASSPORT LOOKUP</text>
+  <text x="18" y="138" fill="#d7e3f4" xml:space="preserve">  GET the passport of agent-ava</text>
+  <text x="18" y="153" fill="#d7e3f4" xml:space="preserve">    settlement   90.01  needs  70  pass   (1 attestation)</text>
+  <text x="18" y="168" fill="#d7e3f4" xml:space="preserve">    disclosure   90.01  needs  60  pass   (1 attestation)</text>
+  <text x="18" y="183" fill="#d7e3f4" xml:space="preserve">    community    28.43  needs  50  FAIL   (1 attestation)</text>
+  <text x="18" y="198" fill="#d7e3f4" xml:space="preserve">    privacy      85.28  needs  65  pass   (1 attestation)</text>
+  <text x="18" y="213" fill="#d7e3f4" xml:space="preserve">    composite   77.52  &lt;- a number for humans, not a gate</text>
+  <text x="18" y="228" fill="#d7e3f4" xml:space="preserve">    gates       REFUSED (community)</text>
+  <text x="18" y="243" fill="#d7e3f4" xml:space="preserve"></text>
+  <text x="18" y="258" fill="#d7e3f4" xml:space="preserve">STEP 2 - ESCROW HISTORY</text>
+  <text x="18" y="273" fill="#d7e3f4" xml:space="preserve">  client-echo opens an escrow for agent-bob, gated on settlement + community</text>
+  <text x="18" y="288" fill="#d7e3f4" xml:space="preserve">  funded 300 credits</text>
+  <text x="18" y="303" fill="#d7e3f4" xml:space="preserve">  released -&gt; 1,300 credits now sit with agent-bob</text>
+  <text x="18" y="318" fill="#d7e3f4" xml:space="preserve">  client-echo opens the same escrow for agent-ava</text>
+  <text x="18" y="333" fill="#d7e3f4" xml:space="preserve">  funded 500 credits</text>
+  <text x="18" y="348" fill="#d7e3f4" xml:space="preserve">  release -&gt; REFUSED: community scores 28.4252, needs 50</text>
+  <text x="18" y="363" fill="#d7e3f4" xml:space="preserve">  note the composite score of agent-ava was 77.52 - it is not consulted</text>
+  <text x="18" y="378" fill="#d7e3f4" xml:space="preserve"></text>
+  <text x="18" y="393" fill="#d7e3f4" xml:space="preserve">  the escrow history of client-echo:</text>
+  <text x="18" y="408" fill="#d7e3f4" xml:space="preserve">    esc_91157dfe2c9b82c6cb0d7863  RELEASED 300 credits  [settlement, community]</text>
+  <text x="18" y="423" fill="#d7e3f4" xml:space="preserve">       1808380800  opened           gated on settlement, community</text>
+  <text x="18" y="438" fill="#d7e3f4" xml:space="preserve">       1808380860  funded           300 credits from client-echo</text>
+  <text x="18" y="453" fill="#d7e3f4" xml:space="preserve">       1808380920  released         300 credits to agent-bob (approved by registry)</text>
+  <text x="18" y="468" fill="#d7e3f4" xml:space="preserve">    esc_d5962caa278894f5d17f9f83  FUNDED   500 credits  [settlement, community]</text>
+  <text x="18" y="483" fill="#d7e3f4" xml:space="preserve">       1808380800  opened           gated on settlement, community</text>
+  <text x="18" y="498" fill="#d7e3f4" xml:space="preserve">       1808380860  funded           500 credits from client-echo</text>
+  <text x="18" y="513" fill="#d7e3f4" xml:space="preserve">       1808380920  release_refused  community scores 28.4252, needs 50</text>
+  <text x="18" y="528" fill="#d7e3f4" xml:space="preserve"></text>
+  <text x="18" y="543" fill="#d7e3f4" xml:space="preserve">STEP 3 - REPUTATION SCORE</text>
+  <text x="18" y="558" fill="#d7e3f4" xml:space="preserve">  the passport is exported and signed by the registry</text>
+  <text x="18" y="573" fill="#d7e3f4" xml:space="preserve">    card id            9d1687032765aa11f12abc3f785896a3</text>
+  <text x="18" y="588" fill="#d7e3f4" xml:space="preserve">    score as read      77.52  (gates: refused - community)</text>
+  <text x="18" y="603" fill="#d7e3f4" xml:space="preserve">    chain link         prevCardHash 0000000000000000...</text>
+  <text x="18" y="618" fill="#d7e3f4" xml:space="preserve">  anybody can verify it, offline:  ok=true  (content true, signature true, scores recomputed true)</text>
+  <text x="18" y="633" fill="#d7e3f4" xml:space="preserve">  tamper with the composite -&gt;  ok=false  (content false, signature false, scores recomputed false)</text>
+  <text x="18" y="648" fill="#d7e3f4" xml:space="preserve">  the same card read 180 days later -&gt; composite 19.38 (scores recomputed, never stored)</text>
+  <text x="18" y="663" fill="#d7e3f4" xml:space="preserve"></text>
+  <text x="18" y="678" fill="#7fd1ff" xml:space="preserve">SUMMARY - the books</text>
+  <text x="18" y="693" fill="#d7e3f4" xml:space="preserve">  attestations on file    15</text>
+  <text x="18" y="708" fill="#d7e3f4" xml:space="preserve">  escrows                 2 (1 released, 1 refused)</text>
+  <text x="18" y="723" fill="#d7e3f4" xml:space="preserve">  events                  22, hash chain VERIFIED</text>
+  <text x="18" y="738" fill="#d7e3f4" xml:space="preserve">  final state hash        2258e0d2e672758b95ae054f1e2e86e5ebfcc35d6406b0e7ca545390d2af2755</text>
+  <text x="18" y="753" fill="#d7e3f4" xml:space="preserve"></text>
+  <text x="18" y="768" fill="#d7e3f4" xml:space="preserve">  every number above comes from running the code; nothing is hard-coded.</text>
+  <text x="18" y="783" fill="#d7e3f4" xml:space="preserve">  re-run: node scripts/demo.mjs   (identical output, byte for byte)</text>
+  <text x="18" y="798" fill="#d7e3f4" xml:space="preserve"></text>
+  </g>
+</svg>

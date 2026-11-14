@@ -1,0 +1,8 @@
+{
+  "name": "trezu-policy-extension-contract",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Minimal NEAR policy-extension contract for the TREZU-SOCIAL entry (bnty_0569)",
+  "scripts": { "build": "asb" },
+  "devDependencies": { "near-sdk-as": "^3.2.3", "asbuild": "^0.2.0" }
+}

@@ -1,0 +1,12 @@
+{
+  "network": "testnet",
+  "contract_account": "trezu-policy-orbit.testnet",
+  "explorer": "https://nearvalidate.org/txns/<hash>?network=testnet",
+  "txs": {
+    "create": "9fuZtfM7rDftZcV71GfinDddU6Bx2F32xRj3otPqYw2H",
+    "deploy": "39nkSsMGW2vmB4Uuze5iF93SvxrXSXPFYkptRmhR6vNp",
+    "spend": "APbbVyFqydbAnJraAhyTf9Fa9YycmJUV3y3V7PbWphHH",
+    "reward": "81BJpbDqYQmCCLXkAEZBwfsC7UD5DTREcvygVi35c546",
+    "gate": "AdsChVNw3dpdLETPAXZ2wNNsnkyHiutRjNtnrJuqUxbu"
+  }
+}

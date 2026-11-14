@@ -1,0 +1,577 @@
+{
+  "protocol": "anchor",
+  "track": "Real-World Money",
+  "bounty": "bnty_0414",
+  "asset": "t-bill-2026q4",
+  "timestamps": {
+    "issue": 1800000000,
+    "maturity": 1807776000
+  },
+  "final_state_hash": "abfedc4d03c52713b9feea491318a5f4d06967b826195300d5f439cd92d5ea71",
+  "coverage": {
+    "reserve": 259836.84931507,
+    "claims": 259836.84931507,
+    "covered": true
+  },
+  "audit": {
+    "ok": true,
+    "debit": 920122.46575342,
+    "credit": 920122.46575342,
+    "accounts": {
+      "wallet:acc_29f630fec6e3f1bb": 894.43630137,
+      "reserve:t-bill-2026q4": 259836.84931507,
+      "position:t-bill-2026q4:acc_29f630fec6e3f1bb": 0,
+      "issued:t-bill-2026q4": -257000,
+      "wallet:acc_fb30138b1b83315f": -250000,
+      "position:t-bill-2026q4:acc_fb30138b1b83315f": 252773.97260274,
+      "wallet:acc_5b4d23c3f11fcb3c": -7040,
+      "position:t-bill-2026q4:acc_5b4d23c3f11fcb3c": 7062.87671233,
+      "yield:t-bill-2026q4": -2836.84931507,
+      "coupon:income": -3939.04109589,
+      "fee:t-bill-2026q4": 247.75547945
+    },
+    "mismatched": []
+  },
+  "events": [
+    {
+      "seq": 0,
+      "type": "asset_registered",
+      "payload": {
+        "id": "t-bill-2026q4",
+        "name": "US Treasury Bill 2026Q4",
+        "kind": "T-BILL",
+        "totalSupply": 1000000,
+        "maturity": 1807776000,
+        "yieldBps": 450,
+        "nav": 1
+      },
+      "prevHash": "0000000000000000000000000000000000000000000000000000000000000000",
+      "hash": "639974ad2f25d923e7158366198103353a964b129d0aacc663015fbd2e8ad725"
+    },
+    {
+      "seq": 1,
+      "type": "party_cleared",
+      "payload": {
+        "address": "acc_29f630fec6e3f1bb",
+        "status": "VERIFIED",
+        "jurisdiction": "US"
+      },
+      "prevHash": "639974ad2f25d923e7158366198103353a964b129d0aacc663015fbd2e8ad725",
+      "hash": "147c44135c5c164f32533743d14c68e50f15a24a84956f59430800c9861bba8a"
+    },
+    {
+      "seq": 2,
+      "type": "party_cleared",
+      "payload": {
+        "address": "acc_fb30138b1b83315f",
+        "status": "VERIFIED",
+        "jurisdiction": "TW"
+      },
+      "prevHash": "147c44135c5c164f32533743d14c68e50f15a24a84956f59430800c9861bba8a",
+      "hash": "4c42f8f7c402a6fa7b3e5ea872c12d86c44972b569f3fe72c4734fa2a2f90c85"
+    },
+    {
+      "seq": 3,
+      "type": "party_cleared",
+      "payload": {
+        "address": "acc_f729aaa44ee9f550",
+        "status": "VERIFIED",
+        "jurisdiction": "SG"
+      },
+      "prevHash": "4c42f8f7c402a6fa7b3e5ea872c12d86c44972b569f3fe72c4734fa2a2f90c85",
+      "hash": "28f2e93fead7d4a78335d9b59dae2b5338b3900cb64065c85e9af769b001db9b"
+    },
+    {
+      "seq": 4,
+      "type": "party_cleared",
+      "payload": {
+        "address": "acc_5b4d23c3f11fcb3c",
+        "status": "VERIFIED",
+        "jurisdiction": "TW"
+      },
+      "prevHash": "28f2e93fead7d4a78335d9b59dae2b5338b3900cb64065c85e9af769b001db9b",
+      "hash": "cb96762065f9fe1a152be4831fe58d6e2d4ed58ce4e4a991979abe899ba8950d"
+    },
+    {
+      "seq": 5,
+      "type": "action_rejected",
+      "payload": {
+        "action": "subscribe",
+        "investor": "acc_712cb91f2325ff39",
+        "assetId": "t-bill-2026q4",
+        "reason": "acc_712cb91f2325ff39 is UNVERIFIED - a cleared address is required"
+      },
+      "prevHash": "cb96762065f9fe1a152be4831fe58d6e2d4ed58ce4e4a991979abe899ba8950d",
+      "hash": "5d6459b603b25b945203430b0563f701e308f10491826d3829c084265d0f1a99"
+    },
+    {
+      "seq": 6,
+      "type": "subscribed",
+      "payload": {
+        "investor": "acc_29f630fec6e3f1bb",
+        "assetId": "t-bill-2026q4",
+        "amount": 100000,
+        "units": 100000,
+        "issued": 100000
+      },
+      "prevHash": "5d6459b603b25b945203430b0563f701e308f10491826d3829c084265d0f1a99",
+      "hash": "55bf35600ca315656e1cacf76cc8cc7138b3b2bc895ff38a9b30a92a1f3422c8"
+    },
+    {
+      "seq": 7,
+      "type": "subscribed",
+      "payload": {
+        "investor": "acc_fb30138b1b83315f",
+        "assetId": "t-bill-2026q4",
+        "amount": 250000,
+        "units": 250000,
+        "issued": 350000
+      },
+      "prevHash": "55bf35600ca315656e1cacf76cc8cc7138b3b2bc895ff38a9b30a92a1f3422c8",
+      "hash": "2149eb2cb3f3a105b136e9095ff41af159bd9100fb60cf17620266e40cb91908"
+    },
+    {
+      "seq": 8,
+      "type": "subscribed",
+      "payload": {
+        "investor": "acc_5b4d23c3f11fcb3c",
+        "assetId": "t-bill-2026q4",
+        "amount": 5000,
+        "units": 5000,
+        "issued": 355000
+      },
+      "prevHash": "2149eb2cb3f3a105b136e9095ff41af159bd9100fb60cf17620266e40cb91908",
+      "hash": "8868bba620e240db3015ab099e66cfcb1da7fd543f7063e284be9791fdf0126d"
+    },
+    {
+      "seq": 9,
+      "type": "nav_published",
+      "payload": {
+        "assetId": "t-bill-2026q4",
+        "nav": 1.02,
+        "timestamp": 1805184000
+      },
+      "prevHash": "8868bba620e240db3015ab099e66cfcb1da7fd543f7063e284be9791fdf0126d",
+      "hash": "ee2f5bf9f83b30a9f3dcb490c7f81f9b522513543c4a4f84944a976eddd0d426"
+    },
+    {
+      "seq": 10,
+      "type": "transferred",
+      "payload": {
+        "from": "acc_29f630fec6e3f1bb",
+        "to": "acc_5b4d23c3f11fcb3c",
+        "assetId": "t-bill-2026q4",
+        "units": 2000,
+        "price": 2040,
+        "nav": 1.02
+      },
+      "prevHash": "ee2f5bf9f83b30a9f3dcb490c7f81f9b522513543c4a4f84944a976eddd0d426",
+      "hash": "10dd011404327f879cc9fb694236ca757ce1a72589fbb5f47759e692e0f247c3"
+    },
+    {
+      "seq": 11,
+      "type": "action_rejected",
+      "payload": {
+        "action": "transfer",
+        "from": "acc_29f630fec6e3f1bb",
+        "to": "acc_5b4d23c3f11fcb3c",
+        "assetId": "t-bill-2026q4",
+        "reason": "this signed transfer from acc_29f630fec6e3f1bb has already been executed - replay refused"
+      },
+      "prevHash": "10dd011404327f879cc9fb694236ca757ce1a72589fbb5f47759e692e0f247c3",
+      "hash": "f364b7fac6199897638c92f5aac951c6e4fd43e307ff66844237ba84c4a8153b"
+    },
+    {
+      "seq": 12,
+      "type": "action_rejected",
+      "payload": {
+        "action": "transfer",
+        "from": "acc_fb30138b1b83315f",
+        "to": "acc_712cb91f2325ff39",
+        "assetId": "t-bill-2026q4",
+        "reason": "acc_712cb91f2325ff39 is UNVERIFIED - a cleared address is required"
+      },
+      "prevHash": "f364b7fac6199897638c92f5aac951c6e4fd43e307ff66844237ba84c4a8153b",
+      "hash": "42e78de6e1220daddfe7e937efb5cd523a0ae027d720a94086b87b69df46b81d"
+    },
+    {
+      "seq": 13,
+      "type": "yield_accrued",
+      "payload": {
+        "assetId": "t-bill-2026q4",
+        "address": "acc_29f630fec6e3f1bb",
+        "accrued": 362.46575342,
+        "total": 1102.19178082
+      },
+      "prevHash": "42e78de6e1220daddfe7e937efb5cd523a0ae027d720a94086b87b69df46b81d",
+      "hash": "b02334a0de7cbcce9110caf4b1172353e9c9273fb32e62c4f7e24895678eed4d"
+    },
+    {
+      "seq": 14,
+      "type": "yield_accrued",
+      "payload": {
+        "assetId": "t-bill-2026q4",
+        "address": "acc_fb30138b1b83315f",
+        "accrued": 2773.97260274,
+        "total": 2773.97260274
+      },
+      "prevHash": "b02334a0de7cbcce9110caf4b1172353e9c9273fb32e62c4f7e24895678eed4d",
+      "hash": "72a8fb08695f8225a46dfbda6a4c0ffaf1a29ff9fcb518acaffa1a97ada961f6"
+    },
+    {
+      "seq": 15,
+      "type": "yield_accrued",
+      "payload": {
+        "assetId": "t-bill-2026q4",
+        "address": "acc_5b4d23c3f11fcb3c",
+        "accrued": 62.87671233,
+        "total": 62.87671233
+      },
+      "prevHash": "72a8fb08695f8225a46dfbda6a4c0ffaf1a29ff9fcb518acaffa1a97ada961f6",
+      "hash": "bc817e56ba398708162b086e44e674e2486834a184978471a7c29b9ad91badcf"
+    },
+    {
+      "seq": 16,
+      "type": "party_frozen",
+      "payload": {
+        "address": "acc_fb30138b1b83315f",
+        "frozen": true,
+        "reason": "sanctions review"
+      },
+      "prevHash": "bc817e56ba398708162b086e44e674e2486834a184978471a7c29b9ad91badcf",
+      "hash": "3b2741d9a292381b37967e53f20a6e12af94ea6590838565b5aafe8ac616a739"
+    },
+    {
+      "seq": 17,
+      "type": "action_rejected",
+      "payload": {
+        "action": "redeem",
+        "holder": "acc_fb30138b1b83315f",
+        "assetId": "t-bill-2026q4",
+        "reason": "acc_fb30138b1b83315f is frozen"
+      },
+      "prevHash": "3b2741d9a292381b37967e53f20a6e12af94ea6590838565b5aafe8ac616a739",
+      "hash": "6ae0c4906c9d8fea976de73d3d9c6929445938ffcc43512064d99137586a17f4"
+    },
+    {
+      "seq": 18,
+      "type": "redeemed",
+      "payload": {
+        "holder": "acc_29f630fec6e3f1bb",
+        "assetId": "t-bill-2026q4",
+        "gross": 99102.19178082,
+        "fee": 247.75547945,
+        "net": 98854.43630137
+      },
+      "prevHash": "6ae0c4906c9d8fea976de73d3d9c6929445938ffcc43512064d99137586a17f4",
+      "hash": "abfedc4d03c52713b9feea491318a5f4d06967b826195300d5f439cd92d5ea71"
+    }
+  ],
+  "ledger": {
+    "accounts": {
+      "wallet:acc_29f630fec6e3f1bb": 894.43630137,
+      "reserve:t-bill-2026q4": 259836.84931507,
+      "position:t-bill-2026q4:acc_29f630fec6e3f1bb": 0,
+      "issued:t-bill-2026q4": -257000,
+      "wallet:acc_fb30138b1b83315f": -250000,
+      "position:t-bill-2026q4:acc_fb30138b1b83315f": 252773.97260274,
+      "wallet:acc_5b4d23c3f11fcb3c": -7040,
+      "position:t-bill-2026q4:acc_5b4d23c3f11fcb3c": 7062.87671233,
+      "yield:t-bill-2026q4": -2836.84931507,
+      "coupon:income": -3939.04109589,
+      "fee:t-bill-2026q4": 247.75547945
+    },
+    "entries": [
+      {
+        "seq": 0,
+        "memo": "subscription 100000 units of t-bill-2026q4",
+        "assetId": "t-bill-2026q4",
+        "holder": "acc_29f630fec6e3f1bb",
+        "timestamp": 1800000000,
+        "legs": [
+          {
+            "account": "wallet:acc_29f630fec6e3f1bb",
+            "debit": 0,
+            "credit": 100000
+          },
+          {
+            "account": "reserve:t-bill-2026q4",
+            "debit": 100000,
+            "credit": 0
+          },
+          {
+            "account": "position:t-bill-2026q4:acc_29f630fec6e3f1bb",
+            "debit": 100000,
+            "credit": 0
+          },
+          {
+            "account": "issued:t-bill-2026q4",
+            "debit": 0,
+            "credit": 100000
+          }
+        ],
+        "debit": 200000,
+        "credit": 200000
+      },
+      {
+        "seq": 1,
+        "memo": "subscription 250000 units of t-bill-2026q4",
+        "assetId": "t-bill-2026q4",
+        "holder": "acc_fb30138b1b83315f",
+        "timestamp": 1800000000,
+        "legs": [
+          {
+            "account": "wallet:acc_fb30138b1b83315f",
+            "debit": 0,
+            "credit": 250000
+          },
+          {
+            "account": "reserve:t-bill-2026q4",
+            "debit": 250000,
+            "credit": 0
+          },
+          {
+            "account": "position:t-bill-2026q4:acc_fb30138b1b83315f",
+            "debit": 250000,
+            "credit": 0
+          },
+          {
+            "account": "issued:t-bill-2026q4",
+            "debit": 0,
+            "credit": 250000
+          }
+        ],
+        "debit": 500000,
+        "credit": 500000
+      },
+      {
+        "seq": 2,
+        "memo": "subscription 5000 units of t-bill-2026q4",
+        "assetId": "t-bill-2026q4",
+        "holder": "acc_5b4d23c3f11fcb3c",
+        "timestamp": 1800000000,
+        "legs": [
+          {
+            "account": "wallet:acc_5b4d23c3f11fcb3c",
+            "debit": 0,
+            "credit": 5000
+          },
+          {
+            "account": "reserve:t-bill-2026q4",
+            "debit": 5000,
+            "credit": 0
+          },
+          {
+            "account": "position:t-bill-2026q4:acc_5b4d23c3f11fcb3c",
+            "debit": 5000,
+            "credit": 0
+          },
+          {
+            "account": "issued:t-bill-2026q4",
+            "debit": 0,
+            "credit": 5000
+          }
+        ],
+        "debit": 10000,
+        "credit": 10000
+      },
+      {
+        "seq": 3,
+        "memo": "yield accrual on 100000 units",
+        "assetId": "t-bill-2026q4",
+        "holder": "acc_29f630fec6e3f1bb",
+        "timestamp": 1805184000,
+        "legs": [
+          {
+            "account": "position:t-bill-2026q4:acc_29f630fec6e3f1bb",
+            "debit": 739.7260274,
+            "credit": 0
+          },
+          {
+            "account": "reserve:t-bill-2026q4",
+            "debit": 739.7260274,
+            "credit": 0
+          },
+          {
+            "account": "yield:t-bill-2026q4",
+            "debit": 0,
+            "credit": 739.7260274
+          },
+          {
+            "account": "coupon:income",
+            "debit": 0,
+            "credit": 739.7260274
+          }
+        ],
+        "debit": 1479.4520548,
+        "credit": 1479.4520548
+      },
+      {
+        "seq": 4,
+        "memo": "transfer 2000 units of t-bill-2026q4 at 2040 USDC",
+        "assetId": "t-bill-2026q4",
+        "holder": "acc_29f630fec6e3f1bb",
+        "timestamp": 1805184000,
+        "legs": [
+          {
+            "account": "position:t-bill-2026q4:acc_29f630fec6e3f1bb",
+            "debit": 0,
+            "credit": 2000
+          },
+          {
+            "account": "position:t-bill-2026q4:acc_5b4d23c3f11fcb3c",
+            "debit": 2000,
+            "credit": 0
+          },
+          {
+            "account": "wallet:acc_29f630fec6e3f1bb",
+            "debit": 2040,
+            "credit": 0
+          },
+          {
+            "account": "wallet:acc_5b4d23c3f11fcb3c",
+            "debit": 0,
+            "credit": 2040
+          }
+        ],
+        "debit": 4040,
+        "credit": 4040
+      },
+      {
+        "seq": 5,
+        "memo": "yield accrual on 98000 units",
+        "assetId": "t-bill-2026q4",
+        "holder": "acc_29f630fec6e3f1bb",
+        "timestamp": 1807776000,
+        "legs": [
+          {
+            "account": "position:t-bill-2026q4:acc_29f630fec6e3f1bb",
+            "debit": 362.46575342,
+            "credit": 0
+          },
+          {
+            "account": "reserve:t-bill-2026q4",
+            "debit": 362.46575342,
+            "credit": 0
+          },
+          {
+            "account": "yield:t-bill-2026q4",
+            "debit": 0,
+            "credit": 362.46575342
+          },
+          {
+            "account": "coupon:income",
+            "debit": 0,
+            "credit": 362.46575342
+          }
+        ],
+        "debit": 724.93150684,
+        "credit": 724.93150684
+      },
+      {
+        "seq": 6,
+        "memo": "yield accrual on 250000 units",
+        "assetId": "t-bill-2026q4",
+        "holder": "acc_fb30138b1b83315f",
+        "timestamp": 1807776000,
+        "legs": [
+          {
+            "account": "position:t-bill-2026q4:acc_fb30138b1b83315f",
+            "debit": 2773.97260274,
+            "credit": 0
+          },
+          {
+            "account": "reserve:t-bill-2026q4",
+            "debit": 2773.97260274,
+            "credit": 0
+          },
+          {
+            "account": "yield:t-bill-2026q4",
+            "debit": 0,
+            "credit": 2773.97260274
+          },
+          {
+            "account": "coupon:income",
+            "debit": 0,
+            "credit": 2773.97260274
+          }
+        ],
+        "debit": 5547.94520548,
+        "credit": 5547.94520548
+      },
+      {
+        "seq": 7,
+        "memo": "yield accrual on 7000 units",
+        "assetId": "t-bill-2026q4",
+        "holder": "acc_5b4d23c3f11fcb3c",
+        "timestamp": 1807776000,
+        "legs": [
+          {
+            "account": "position:t-bill-2026q4:acc_5b4d23c3f11fcb3c",
+            "debit": 62.87671233,
+            "credit": 0
+          },
+          {
+            "account": "reserve:t-bill-2026q4",
+            "debit": 62.87671233,
+            "credit": 0
+          },
+          {
+            "account": "yield:t-bill-2026q4",
+            "debit": 0,
+            "credit": 62.87671233
+          },
+          {
+            "account": "coupon:income",
+            "debit": 0,
+            "credit": 62.87671233
+          }
+        ],
+        "debit": 125.75342466,
+        "credit": 125.75342466
+      },
+      {
+        "seq": 8,
+        "memo": "redemption of 99102.19178082 USDC (fee 247.75547945)",
+        "assetId": "t-bill-2026q4",
+        "holder": "acc_29f630fec6e3f1bb",
+        "timestamp": 1807776000,
+        "legs": [
+          {
+            "account": "wallet:acc_29f630fec6e3f1bb",
+            "debit": 98854.43630137,
+            "credit": 0
+          },
+          {
+            "account": "fee:t-bill-2026q4",
+            "debit": 247.75547945,
+            "credit": 0
+          },
+          {
+            "account": "reserve:t-bill-2026q4",
+            "debit": 0,
+            "credit": 99102.19178082
+          },
+          {
+            "account": "position:t-bill-2026q4:acc_29f630fec6e3f1bb",
+            "debit": 0,
+            "credit": 99102.19178082
+          },
+          {
+            "account": "issued:t-bill-2026q4",
+            "debit": 98000,
+            "credit": 0
+          },
+          {
+            "account": "yield:t-bill-2026q4",
+            "debit": 1102.19178082,
+            "credit": 0
+          }
+        ],
+        "debit": 198204.38356164,
+        "credit": 198204.38356164
+      }
+    ],
+    "sequence": 9
+  }
+}

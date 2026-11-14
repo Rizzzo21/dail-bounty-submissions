@@ -1,0 +1,888 @@
+{
+  "seed": "near-swarm-2026",
+  "rounds": 8,
+  "trace": [
+    {
+      "round": 0,
+      "type": "privacy_pool_prefunded",
+      "contract": "shield-pool.near",
+      "amount": 12000000,
+      "note": "lump sum: no per-escrow transfer size is ever published"
+    },
+    {
+      "round": 0,
+      "type": "agents_registered",
+      "agents": [
+        "atlas.near",
+        "borealis.near",
+        "cinder.near",
+        "drift.near",
+        "ember.near"
+      ]
+    },
+    {
+      "round": 1,
+      "type": "job_posted",
+      "job_id": "job-alpha-1",
+      "label": "Market survey on on-chain agent hiring",
+      "skill": "research",
+      "budget": 3000000,
+      "min_reputation": 0,
+      "shielded": false
+    },
+    {
+      "round": 1,
+      "type": "bid_placed",
+      "job_id": "job-alpha-1",
+      "agent_id": "atlas.near",
+      "price": 1934140,
+      "quality": 0.8525,
+      "score": 50
+    },
+    {
+      "round": 1,
+      "type": "bid_skipped",
+      "job_id": "job-alpha-1",
+      "agent_id": "borealis.near",
+      "reason": "not attractive"
+    },
+    {
+      "round": 1,
+      "type": "bid_placed",
+      "job_id": "job-alpha-1",
+      "agent_id": "cinder.near",
+      "price": 1600351,
+      "quality": 0.3902,
+      "score": 50
+    },
+    {
+      "round": 1,
+      "type": "bid_skipped",
+      "job_id": "job-alpha-1",
+      "agent_id": "drift.near",
+      "reason": "not attractive"
+    },
+    {
+      "round": 1,
+      "type": "bid_skipped",
+      "job_id": "job-alpha-1",
+      "agent_id": "ember.near",
+      "reason": "not attractive"
+    },
+    {
+      "round": 1,
+      "type": "vote_cast",
+      "job_id": "job-alpha-1",
+      "agent_id": "atlas.near",
+      "quorum": 4
+    },
+    {
+      "round": 1,
+      "type": "vote_cast",
+      "job_id": "job-alpha-1",
+      "agent_id": "borealis.near",
+      "quorum": 4
+    },
+    {
+      "round": 1,
+      "type": "vote_cast",
+      "job_id": "job-alpha-1",
+      "agent_id": "cinder.near",
+      "quorum": 4
+    },
+    {
+      "round": 1,
+      "type": "vote_cast",
+      "job_id": "job-alpha-1",
+      "agent_id": "drift.near",
+      "quorum": 4
+    },
+    {
+      "round": 1,
+      "type": "vote_cast",
+      "job_id": "job-alpha-1",
+      "agent_id": "ember.near",
+      "quorum": 4
+    },
+    {
+      "round": 1,
+      "type": "job_awarded",
+      "job_id": "job-alpha-1",
+      "winner": "atlas.near",
+      "price": 1934140,
+      "quality": 0.8525,
+      "votes_for": 5,
+      "quorum": 4,
+      "digest": "2c7057f971eb97bf"
+    },
+    {
+      "round": 1,
+      "type": "job_settled",
+      "job_id": "job-alpha-1",
+      "winner": "atlas.near",
+      "price": 1934140,
+      "fee_to_social_money": 96707,
+      "delivered_quality": 0.8112,
+      "reputation_score": 53,
+      "revealed_amount": null
+    },
+    {
+      "round": 2,
+      "type": "job_posted",
+      "job_id": "job-bravo-2",
+      "label": "Reputation-weighted settlement audit",
+      "skill": "analysis",
+      "budget": 2600000,
+      "min_reputation": 0,
+      "shielded": false
+    },
+    {
+      "round": 2,
+      "type": "bid_placed",
+      "job_id": "job-bravo-2",
+      "agent_id": "atlas.near",
+      "price": 1630499,
+      "quality": 0.7372,
+      "score": 53
+    },
+    {
+      "round": 2,
+      "type": "bid_skipped",
+      "job_id": "job-bravo-2",
+      "agent_id": "borealis.near",
+      "reason": "not attractive"
+    },
+    {
+      "round": 2,
+      "type": "bid_skipped",
+      "job_id": "job-bravo-2",
+      "agent_id": "cinder.near",
+      "reason": "not attractive"
+    },
+    {
+      "round": 2,
+      "type": "bid_placed",
+      "job_id": "job-bravo-2",
+      "agent_id": "drift.near",
+      "price": 1447212,
+      "quality": 0.7682,
+      "score": 50
+    },
+    {
+      "round": 2,
+      "type": "bid_skipped",
+      "job_id": "job-bravo-2",
+      "agent_id": "ember.near",
+      "reason": "not attractive"
+    },
+    {
+      "round": 2,
+      "type": "vote_cast",
+      "job_id": "job-bravo-2",
+      "agent_id": "atlas.near",
+      "quorum": 4
+    },
+    {
+      "round": 2,
+      "type": "vote_cast",
+      "job_id": "job-bravo-2",
+      "agent_id": "borealis.near",
+      "quorum": 4
+    },
+    {
+      "round": 2,
+      "type": "vote_cast",
+      "job_id": "job-bravo-2",
+      "agent_id": "cinder.near",
+      "quorum": 4
+    },
+    {
+      "round": 2,
+      "type": "vote_cast",
+      "job_id": "job-bravo-2",
+      "agent_id": "drift.near",
+      "quorum": 4
+    },
+    {
+      "round": 2,
+      "type": "vote_cast",
+      "job_id": "job-bravo-2",
+      "agent_id": "ember.near",
+      "quorum": 4
+    },
+    {
+      "round": 2,
+      "type": "job_awarded",
+      "job_id": "job-bravo-2",
+      "winner": "drift.near",
+      "price": 1447212,
+      "quality": 0.7682,
+      "votes_for": 5,
+      "quorum": 4,
+      "digest": "8f6ee1f23fd4d0c6"
+    },
+    {
+      "round": 2,
+      "type": "job_settled",
+      "job_id": "job-bravo-2",
+      "winner": "drift.near",
+      "price": 1447212,
+      "fee_to_social_money": 72361,
+      "delivered_quality": 0.9165,
+      "reputation_score": 54,
+      "revealed_amount": null
+    },
+    {
+      "round": 3,
+      "type": "job_posted",
+      "job_id": "job-charlie-3",
+      "label": "Summarise swarm governance notes",
+      "skill": "writing",
+      "budget": 1200000,
+      "min_reputation": 52,
+      "shielded": false
+    },
+    {
+      "round": 3,
+      "type": "bid_placed",
+      "job_id": "job-charlie-3",
+      "agent_id": "atlas.near",
+      "price": 687090,
+      "quality": 0.6276,
+      "score": 53
+    },
+    {
+      "round": 3,
+      "type": "bid_skipped",
+      "job_id": "job-charlie-3",
+      "agent_id": "borealis.near",
+      "reason": "not attractive"
+    },
+    {
+      "round": 3,
+      "type": "bid_rejected",
+      "job_id": "job-charlie-3",
+      "agent_id": "cinder.near",
+      "error": "reputation gate",
+      "score": 50
+    },
+    {
+      "round": 3,
+      "type": "bid_skipped",
+      "job_id": "job-charlie-3",
+      "agent_id": "drift.near",
+      "reason": "not attractive"
+    },
+    {
+      "round": 3,
+      "type": "bid_rejected",
+      "job_id": "job-charlie-3",
+      "agent_id": "ember.near",
+      "error": "reputation gate",
+      "score": 50
+    },
+    {
+      "round": 3,
+      "type": "vote_cast",
+      "job_id": "job-charlie-3",
+      "agent_id": "atlas.near",
+      "quorum": 4
+    },
+    {
+      "round": 3,
+      "type": "vote_cast",
+      "job_id": "job-charlie-3",
+      "agent_id": "borealis.near",
+      "quorum": 4
+    },
+    {
+      "round": 3,
+      "type": "vote_cast",
+      "job_id": "job-charlie-3",
+      "agent_id": "cinder.near",
+      "quorum": 4
+    },
+    {
+      "round": 3,
+      "type": "vote_cast",
+      "job_id": "job-charlie-3",
+      "agent_id": "drift.near",
+      "quorum": 4
+    },
+    {
+      "round": 3,
+      "type": "vote_cast",
+      "job_id": "job-charlie-3",
+      "agent_id": "ember.near",
+      "quorum": 4
+    },
+    {
+      "round": 3,
+      "type": "job_awarded",
+      "job_id": "job-charlie-3",
+      "winner": "atlas.near",
+      "price": 687090,
+      "quality": 0.6276,
+      "votes_for": 5,
+      "quorum": 4,
+      "digest": "8a3a33986db03b1f"
+    },
+    {
+      "round": 3,
+      "type": "job_settled",
+      "job_id": "job-charlie-3",
+      "winner": "atlas.near",
+      "price": 687090,
+      "fee_to_social_money": 34355,
+      "delivered_quality": 0.6987,
+      "reputation_score": 55,
+      "revealed_amount": null
+    },
+    {
+      "round": 4,
+      "type": "job_posted",
+      "job_id": "job-delta-4",
+      "label": "Reference escrow contract",
+      "skill": "code",
+      "budget": 2400000,
+      "min_reputation": 0,
+      "shielded": true
+    },
+    {
+      "round": 4,
+      "type": "bid_skipped",
+      "job_id": "job-delta-4",
+      "agent_id": "atlas.near",
+      "reason": "not attractive"
+    },
+    {
+      "round": 4,
+      "type": "bid_placed",
+      "job_id": "job-delta-4",
+      "agent_id": "borealis.near",
+      "price": 1254850,
+      "quality": 0.889,
+      "score": 50
+    },
+    {
+      "round": 4,
+      "type": "bid_skipped",
+      "job_id": "job-delta-4",
+      "agent_id": "cinder.near",
+      "reason": "not attractive"
+    },
+    {
+      "round": 4,
+      "type": "bid_skipped",
+      "job_id": "job-delta-4",
+      "agent_id": "drift.near",
+      "reason": "not attractive"
+    },
+    {
+      "round": 4,
+      "type": "bid_placed",
+      "job_id": "job-delta-4",
+      "agent_id": "ember.near",
+      "price": 1353855,
+      "quality": 0.4713,
+      "score": 50
+    },
+    {
+      "round": 4,
+      "type": "vote_cast",
+      "job_id": "job-delta-4",
+      "agent_id": "atlas.near",
+      "quorum": 4
+    },
+    {
+      "round": 4,
+      "type": "vote_cast",
+      "job_id": "job-delta-4",
+      "agent_id": "borealis.near",
+      "quorum": 4
+    },
+    {
+      "round": 4,
+      "type": "vote_cast",
+      "job_id": "job-delta-4",
+      "agent_id": "cinder.near",
+      "quorum": 4
+    },
+    {
+      "round": 4,
+      "type": "vote_cast",
+      "job_id": "job-delta-4",
+      "agent_id": "drift.near",
+      "quorum": 4
+    },
+    {
+      "round": 4,
+      "type": "vote_cast",
+      "job_id": "job-delta-4",
+      "agent_id": "ember.near",
+      "quorum": 4
+    },
+    {
+      "round": 4,
+      "type": "job_awarded",
+      "job_id": "job-delta-4",
+      "winner": "borealis.near",
+      "price": 1254850,
+      "quality": 0.889,
+      "votes_for": 5,
+      "quorum": 4,
+      "digest": "537c6ca9e5d49c6b"
+    },
+    {
+      "round": 4,
+      "type": "job_settled",
+      "job_id": "job-delta-4",
+      "winner": "borealis.near",
+      "price": 1254850,
+      "fee_to_social_money": 62743,
+      "delivered_quality": 0.9391,
+      "reputation_score": 54,
+      "revealed_amount": 1900000
+    },
+    {
+      "round": 5,
+      "type": "job_posted",
+      "job_id": "job-echo-5",
+      "label": "Translate validator handbook",
+      "skill": "translation",
+      "budget": 900000,
+      "min_reputation": 0,
+      "shielded": false
+    },
+    {
+      "round": 5,
+      "type": "bid_skipped",
+      "job_id": "job-echo-5",
+      "agent_id": "atlas.near",
+      "reason": "not attractive"
+    },
+    {
+      "round": 5,
+      "type": "bid_skipped",
+      "job_id": "job-echo-5",
+      "agent_id": "borealis.near",
+      "reason": "not attractive"
+    },
+    {
+      "round": 5,
+      "type": "bid_placed",
+      "job_id": "job-echo-5",
+      "agent_id": "cinder.near",
+      "price": 509969,
+      "quality": 0.5224,
+      "score": 50
+    },
+    {
+      "round": 5,
+      "type": "bid_skipped",
+      "job_id": "job-echo-5",
+      "agent_id": "drift.near",
+      "reason": "not attractive"
+    },
+    {
+      "round": 5,
+      "type": "bid_skipped",
+      "job_id": "job-echo-5",
+      "agent_id": "ember.near",
+      "reason": "not attractive"
+    },
+    {
+      "round": 5,
+      "type": "vote_cast",
+      "job_id": "job-echo-5",
+      "agent_id": "atlas.near",
+      "quorum": 4
+    },
+    {
+      "round": 5,
+      "type": "vote_withheld",
+      "job_id": "job-echo-5",
+      "agent_id": "borealis.near",
+      "reason": "winner quality 0.5224 below my bar 0.55"
+    },
+    {
+      "round": 5,
+      "type": "vote_cast",
+      "job_id": "job-echo-5",
+      "agent_id": "cinder.near",
+      "quorum": 4
+    },
+    {
+      "round": 5,
+      "type": "vote_withheld",
+      "job_id": "job-echo-5",
+      "agent_id": "drift.near",
+      "reason": "winner quality 0.5224 below my bar 0.6"
+    },
+    {
+      "round": 5,
+      "type": "vote_cast",
+      "job_id": "job-echo-5",
+      "agent_id": "ember.near",
+      "quorum": 4
+    },
+    {
+      "round": 5,
+      "type": "consensus_failed",
+      "job_id": "job-echo-5",
+      "votes_for": 3,
+      "quorum": 4,
+      "note": "no supermajority: the job is NOT awarded (the demo re-posts it with revised terms in a later round)"
+    },
+    {
+      "round": 6,
+      "type": "job_posted",
+      "job_id": "job-foxtrot-6",
+      "label": "Rotate validator set (re-posted after job-echo-5 failed to reach consensus)",
+      "skill": "ops",
+      "budget": 2000000,
+      "min_reputation": 0,
+      "shielded": false
+    },
+    {
+      "round": 6,
+      "type": "bid_skipped",
+      "job_id": "job-foxtrot-6",
+      "agent_id": "atlas.near",
+      "reason": "not attractive"
+    },
+    {
+      "round": 6,
+      "type": "bid_placed",
+      "job_id": "job-foxtrot-6",
+      "agent_id": "borealis.near",
+      "price": 1274949,
+      "quality": 0.5808,
+      "score": 54
+    },
+    {
+      "round": 6,
+      "type": "bid_skipped",
+      "job_id": "job-foxtrot-6",
+      "agent_id": "cinder.near",
+      "reason": "not attractive"
+    },
+    {
+      "round": 6,
+      "type": "bid_skipped",
+      "job_id": "job-foxtrot-6",
+      "agent_id": "drift.near",
+      "reason": "not attractive"
+    },
+    {
+      "round": 6,
+      "type": "bid_placed",
+      "job_id": "job-foxtrot-6",
+      "agent_id": "ember.near",
+      "price": 1063494,
+      "quality": 0.4138,
+      "score": 50
+    },
+    {
+      "round": 6,
+      "type": "vote_cast",
+      "job_id": "job-foxtrot-6",
+      "agent_id": "atlas.near",
+      "quorum": 4
+    },
+    {
+      "round": 6,
+      "type": "vote_cast",
+      "job_id": "job-foxtrot-6",
+      "agent_id": "borealis.near",
+      "quorum": 4
+    },
+    {
+      "round": 6,
+      "type": "vote_cast",
+      "job_id": "job-foxtrot-6",
+      "agent_id": "cinder.near",
+      "quorum": 4
+    },
+    {
+      "round": 6,
+      "type": "vote_withheld",
+      "job_id": "job-foxtrot-6",
+      "agent_id": "drift.near",
+      "reason": "winner quality 0.5808 below my bar 0.6"
+    },
+    {
+      "round": 6,
+      "type": "vote_cast",
+      "job_id": "job-foxtrot-6",
+      "agent_id": "ember.near",
+      "quorum": 4
+    },
+    {
+      "round": 6,
+      "type": "job_awarded",
+      "job_id": "job-foxtrot-6",
+      "winner": "borealis.near",
+      "price": 1274949,
+      "quality": 0.5808,
+      "votes_for": 4,
+      "quorum": 4,
+      "digest": "bddaf6408869291f"
+    },
+    {
+      "round": 6,
+      "type": "job_settled",
+      "job_id": "job-foxtrot-6",
+      "winner": "borealis.near",
+      "price": 1274949,
+      "fee_to_social_money": 63747,
+      "delivered_quality": 0.6528,
+      "reputation_score": 56,
+      "revealed_amount": null
+    },
+    {
+      "round": 7,
+      "type": "purchase_opened",
+      "purchase_id": "purchase-compute-1",
+      "unit_base": 900000,
+      "units_target": 8,
+      "tiers": [
+        {
+          "minUnits": 3,
+          "discount_bps": 1000
+        },
+        {
+          "minUnits": 6,
+          "discount_bps": 2200
+        }
+      ]
+    },
+    {
+      "round": 7,
+      "type": "purchase_bid",
+      "purchase_id": "purchase-compute-1",
+      "agent_id": "atlas.near",
+      "units": 2,
+      "valuation_per_unit": 913218,
+      "max_spend": 1826436
+    },
+    {
+      "round": 7,
+      "type": "purchase_bid",
+      "purchase_id": "purchase-compute-1",
+      "agent_id": "borealis.near",
+      "units": 2,
+      "valuation_per_unit": 948939,
+      "max_spend": 1897878
+    },
+    {
+      "round": 7,
+      "type": "purchase_bid",
+      "purchase_id": "purchase-compute-1",
+      "agent_id": "cinder.near",
+      "units": 1,
+      "valuation_per_unit": 1196640,
+      "max_spend": 1196640
+    },
+    {
+      "round": 7,
+      "type": "purchase_bid",
+      "purchase_id": "purchase-compute-1",
+      "agent_id": "drift.near",
+      "units": 2,
+      "valuation_per_unit": 1008710,
+      "max_spend": 2017420
+    },
+    {
+      "round": 7,
+      "type": "purchase_bid",
+      "purchase_id": "purchase-compute-1",
+      "agent_id": "ember.near",
+      "units": 1,
+      "valuation_per_unit": 1073594,
+      "max_spend": 1073594
+    },
+    {
+      "round": 7,
+      "type": "purchase_settled",
+      "purchase_id": "purchase-compute-1",
+      "units": 8,
+      "unit_price": 702000,
+      "gross_cost": 5616000,
+      "social_money_subsidy": 2215836,
+      "total_utility": 4611804,
+      "fairness_gini": 0.114,
+      "allocation": [
+        {
+          "agent_id": "cinder.near",
+          "units": 1,
+          "cost": 425021,
+          "valuation_per_unit": 1196640,
+          "utility": 771619
+        },
+        {
+          "agent_id": "ember.near",
+          "units": 1,
+          "cost": 425020,
+          "valuation_per_unit": 1073594,
+          "utility": 648574
+        },
+        {
+          "agent_id": "drift.near",
+          "units": 2,
+          "cost": 850041,
+          "valuation_per_unit": 1008710,
+          "utility": 1167379
+        },
+        {
+          "agent_id": "borealis.near",
+          "units": 2,
+          "cost": 850041,
+          "valuation_per_unit": 948939,
+          "utility": 1047837
+        },
+        {
+          "agent_id": "atlas.near",
+          "units": 2,
+          "cost": 850041,
+          "valuation_per_unit": 913218,
+          "utility": 976395
+        }
+      ]
+    },
+    {
+      "round": 8,
+      "type": "private_column_submitted",
+      "round_id": "private-round-1",
+      "agent_id": "atlas.near",
+      "column_sum": "1905687221"
+    },
+    {
+      "round": 8,
+      "type": "private_column_submitted",
+      "round_id": "private-round-1",
+      "agent_id": "borealis.near",
+      "column_sum": "5749625403"
+    },
+    {
+      "round": 8,
+      "type": "private_column_submitted",
+      "round_id": "private-round-1",
+      "agent_id": "cinder.near",
+      "column_sum": "7492226126"
+    },
+    {
+      "round": 8,
+      "type": "private_column_submitted",
+      "round_id": "private-round-1",
+      "agent_id": "drift.near",
+      "column_sum": "10254876366"
+    },
+    {
+      "round": 8,
+      "type": "private_column_submitted",
+      "round_id": "private-round-1",
+      "agent_id": "ember.near",
+      "column_sum": "2305842983813522922"
+    },
+    {
+      "round": 8,
+      "type": "private_aggregate_published",
+      "round_id": "private-round-1",
+      "aggregate": "2244087",
+      "matches_sum_of_private_values": true,
+      "individual_values_published": 0
+    },
+    {
+      "round": 8,
+      "type": "private_job_posted",
+      "job_id": "job-golf-7",
+      "budget": 2200000,
+      "note": "escrow amount is committed to, not published"
+    },
+    {
+      "round": 8,
+      "type": "bid_placed",
+      "job_id": "job-golf-7",
+      "agent_id": "atlas.near",
+      "price": 1115943,
+      "quality": 0.7934,
+      "score": 57
+    },
+    {
+      "round": 8,
+      "type": "bid_placed",
+      "job_id": "job-golf-7",
+      "agent_id": "drift.near",
+      "price": 1417149,
+      "quality": 0.8062,
+      "score": 56
+    },
+    {
+      "round": 8,
+      "type": "job_awarded",
+      "job_id": "job-golf-7",
+      "winner": "drift.near",
+      "price": 1417149,
+      "quality": 0.8062,
+      "votes_for": 5,
+      "quorum": 4
+    },
+    {
+      "round": 8,
+      "type": "shielded_escrow_state",
+      "job_id": "job-golf-7",
+      "public_amount": null,
+      "commitment": "6a63269b28155356",
+      "note": "amount hidden until the completion reveal"
+    },
+    {
+      "round": 8,
+      "type": "job_settled",
+      "job_id": "job-golf-7",
+      "winner": "drift.near",
+      "price": 1417149,
+      "fee_to_social_money": 70857,
+      "delivered_quality": 0.7937,
+      "revealed_amount": 1750000,
+      "reputation_score": 59
+    },
+    {
+      "round": 8,
+      "type": "simulation_finished",
+      "final_balances": {
+        "atlas.near": 7640127,
+        "borealis.near": 6553268,
+        "cinder.near": 3574979,
+        "drift.near": 5371102,
+        "ember.near": 2074980,
+        "treasury (social money)": 2619544,
+        "house.near": 79200000
+      },
+      "final_scores": {
+        "atlas.near": 57,
+        "borealis.near": 58,
+        "cinder.near": 52,
+        "drift.near": 59,
+        "ember.near": 52
+      }
+    }
+  ],
+  "final_balances": {
+    "atlas.near": 7640127,
+    "borealis.near": 6553268,
+    "cinder.near": 3574979,
+    "drift.near": 5371102,
+    "ember.near": 2074980,
+    "treasury (social money)": 2619544,
+    "house.near": 79200000
+  },
+  "final_scores": {
+    "atlas.near": 57,
+    "borealis.near": 58,
+    "cinder.near": 52,
+    "drift.near": 59,
+    "ember.near": 52
+  },
+  "chain_receipts": 108
+}

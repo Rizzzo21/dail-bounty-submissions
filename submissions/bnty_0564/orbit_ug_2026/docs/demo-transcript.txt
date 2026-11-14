@@ -1,0 +1,47 @@
+=== BLIND-ESCROW (bnty_0412) DETERMINISTIC DEMO TRANSCRIPT ===
+Chain Integrity Verified: true
+Final State Merkle Head:  0264d1ddbf3274b7a1385fd6bb1e542715f589dad9ab5a4926f5d47eb364d539
+
+[STEP 1] private_job
+  Summary: Buyer posts confidential job #701: the payload is encrypted with AES-256-GCM (real ciphertext, not a summary string) and the public state carries only `sha256(ciphertext)`, the payload IV and the key id; the plaintext prompt never touches the public transcript
+  Metrics: {"job_id":"701","ciphertext_bytes":296,"public_plaintext_leaked":false,"status":"COMMITTED","ciphertext_sha256":"850cb6c8b677e3f2c7a441350b8c32d1207ec87adc0f45c55fa10fff9e123323","iv_hex":"2be47d854910776cd01d4d60","key_id":"85a99e68637879b4","tampered_ciphertext_rejected":true}
+  commitment: 92e8d2473770145999bc93d1bf7b374d67348ef3de28e308e5bff7982cff6ff6
+  commitment_preimage: 750|3ed774c71e0a22f286fa3b0b7cd014b1f0ffd741c1f97f442f974f3b5aa24181|701
+  commitment_formula: SHA-256(amount || "|" || blinding_factor_hex || "|" || job_id)
+  recompute_command: printf '%s' "750|3ed774c71e0a22f286fa3b0b7cd014b1f0ffd741c1f97f442f974f3b5aa24181|701" | sha256sum
+  Hash:    76da90af29edac886be1abd3213f5651470677601b1fe45ad444815c7606a99a
+
+[STEP 2] shielded_payment
+  Summary: Buyer locks 750 USDC behind the shielded note `C = SHA-256(amount || "|" || blinding_factor || "|" || job_id)`; the escrow pool recomputes C from the opening and accepts the note, while an opening with a different blinding factor is REFUSED
+  Metrics: {"job_id":"701","shielded_amount_usdc":750,"commitment_verified":true,"forged_opening_accepted":false,"commitment":"92e8d2473770145999bc93d1bf7b374d67348ef3de28e308e5bff7982cff6ff6","status":"LOCKED"}
+  opening_amount: 750
+  opening_blinding_factor: 3ed774c71e0a22f286fa3b0b7cd014b1f0ffd741c1f97f442f974f3b5aa24181
+  opening_job_id: 701
+  recomputed_commitment: 92e8d2473770145999bc93d1bf7b374d67348ef3de28e308e5bff7982cff6ff6
+  forged_opening_blinding_factor: 3ed774c71e0a22f286fa3b0b7cd014b1f0ffd741c1f97f442f974f3b5aa24100
+  forged_opening_recomputed_commitment: 77c9b12ababf9e93f55d89ae57c06857f2774ba55f148ef31ac2a3f36462cee5
+  escrow_pool_reserve_usdc: 750
+  Hash:    49f8f09541a57c0425aa26002287655b88324db8ff70b4f6ebb4d6e64ca51855
+
+[STEP 3] completion_reveal
+  Summary: Worker submits an Ed25519 attestation over the commitment hex plus an Ed25519 result proof over `SHA-256("BLIND-ESCROW/RESULT/v1|"||job_id||"|"||ciphertext_hex)`; atomicReveal() re-verifies the attestation, the result proof and the opening against the stored commitment C, then decrypts the payload for the buyer and releases the escrowed amount to the worker
+  Metrics: {"job_id":"701","enclave_proof_valid":true,"worker_released_usdc":750,"buyer_decrypted_ok":true,"status":"SETTLED","attestation_valid":true,"forged_attestation_rejected":true,"result_commitment":"c046d334221ae7cc72b94ed40c8c5361c1c4e70278271f4bedc66b16906023a1","result_proof_valid":true}
+  attestation_public_key_hex: 62bc36b63061a798f9299b688996c4b374f5ae03e46c5c864599a1a977a77272
+  attestation_signature_hex: a73386159d42e558258f5932b89a3bd6eefe28da2ba9b4bc1cf9ac077ca259f61546d94c78cb1bbefe06dca5bfac5aa10f489c4473b3205954aa452ac890f804
+  attestation_signed_message: utf8("92e8d2473770145999bc93d1bf7b374d67348ef3de28e308e5bff7982cff6ff6")
+  result_commitment_formula: SHA-256("BLIND-ESCROW/RESULT/v1|" || job_id || "|" || ciphertext_hex)
+  result_signature_hex: ef604e22bc2cb9d558429d5bde194ef06facbae0fde32f2d84490bec1d1916c67525f558b5a180b7e4ef96565278a4c38c714552efb23c1dc9d4e8c15922330b
+  released_usdc: 750
+  Hash:    0264d1ddbf3274b7a1385fd6bb1e542715f589dad9ab5a4926f5d47eb364d539
+on-chain deployment:
+  contract account: blind-escrow-orbit.testnet
+  deploy tx: 7AsayMMoetQz1tjfKvVWXjbGJeGd86sjS2dMztofEvnm
+  pool funding tx: GqtJjTNN3ppmTdEJWrHXYCKyjN1Fstxr7qAW72Bqz7cG
+  open_job tx: BUi4NRojnYffXkvcBDwmJxP7YvsQgaqE1JEEWUUWK92y
+  forged opening tx (REFUSED): E5ADPW1gR5fwDrPzWa85SiD8kYwiBGzXEyfJFj7s2G6T
+  forged opening refused: true
+  settle tx (payout): 491W4LhJVWKNVtF1JP3Tw2pvjU4nZ9AT5hZSefsXMuU4
+  contract wasm sha256: 6c618e1bbadbde12c70cd5ecc6cf3fafd82a49fbbe2b68d537040eb4f620bf5f
+  commitment (on-chain == off-chain): 92e8d2473770145999bc93d1bf7b374d67348ef3de28e308e5bff7982cff6ff6
+  cross-check match: true
+  full record: docs/deployment.json

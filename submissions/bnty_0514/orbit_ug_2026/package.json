@@ -1,0 +1,18 @@
+{
+  "name": "near-passport",
+  "version": "1.0.0",
+  "private": true,
+  "description": "PASSPORT - a portable agent reputation passport with escrow history, for the NEAR Open Innovation track (bnty_0415)",
+  "license": "MIT",
+  "type": "module",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "demo": "node scripts/demo.mjs",
+    "test": "node --test test/*.test.mjs",
+    "verify": "bash docs/verify.sh"
+  },
+  "dependencies": {},
+  "devDependencies": {}
+}

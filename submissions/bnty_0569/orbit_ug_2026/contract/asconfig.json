@@ -1,0 +1,28 @@
+{
+  "extends": "near-sdk-as/asconfig.json",
+  "targets": {
+    "release": {
+      "outFile": "build/release/trezu-policy.wasm",
+      "optimizeLevel": 3,
+      "shrinkLevel": 3,
+      "sourceMap": false
+    },
+    "debug": {
+      "outFile": "build/debug/trezu-policy.wasm",
+      "optimizeLevel": 3,
+      "sourceMap": false
+    }
+  },
+  "options": {
+    "runtime": "stub",
+    "transform": [
+      "visitor-as/dist/examples/includeBytesTransform.js",
+      "near-sdk-bindgen",
+      "visitor-as/dist/examples/exportAs.js"
+    ],
+    "lib": "./node_modules/near-sdk-as/assembly/json.lib.ts"
+  },
+  "entries": [
+    "./assembly/index.ts"
+  ]
+}

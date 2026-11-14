@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="766" height="876" viewBox="0 0 766 876">
+  <rect width="766" height="876" fill="#0b0f14"/>
+  <g font-family="'DejaVu Sans Mono','Menlo','Consolas',monospace" font-size="12.5">
+  <text x="18" y="33" fill="#d7e3f4" xml:space="preserve">STEP 1 - THE REGISTRY ISSUES A REAL-WORLD ASSET</text>
+  <text x="18" y="48" fill="#d7e3f4" xml:space="preserve">  asset                    US Treasury Bill 2026Q4 (T-BILL)</text>
+  <text x="18" y="63" fill="#d7e3f4" xml:space="preserve">  face value available     1,000,000 USDC</text>
+  <text x="18" y="78" fill="#d7e3f4" xml:space="preserve">  coupon                   4.50% a year</text>
+  <text x="18" y="93" fill="#d7e3f4" xml:space="preserve">  matures at              2027-04-15T08:00:00.000Z (90 days after issue)</text>
+  <text x="18" y="108" fill="#d7e3f4" xml:space="preserve"></text>
+  <text x="18" y="123" fill="#d7e3f4" xml:space="preserve">STEP 2 - THE COMPLIANCE GATE</text>
+  <text x="18" y="138" fill="#d7e3f4" xml:space="preserve">  cleared to hold         fund-avery (US), fund-birch (TW), fund-cobalt (SG), retail-dana (TW)</text>
+  <text x="18" y="153" fill="#d7e3f4" xml:space="preserve">  left uncleared          retail-eli (DE) - and DE is not an allowed jurisdiction for this asset anyway</text>
+  <text x="18" y="168" fill="#d7e3f4" xml:space="preserve">  retail-eli tries to buy  -&gt; REJECTED: retail-eli is UNVERIFIED - a cleared address is required</text>
+  <text x="18" y="183" fill="#d7e3f4" xml:space="preserve"></text>
+  <text x="18" y="198" fill="#d7e3f4" xml:space="preserve">STEP 3 - THE INVESTORS SUBSCRIBE</text>
+  <text x="18" y="213" fill="#d7e3f4" xml:space="preserve">  fund-avery   subscribed 100,000 USDC -&gt; 100,000 units</text>
+  <text x="18" y="228" fill="#d7e3f4" xml:space="preserve">  fund-birch   subscribed 250,000 USDC -&gt; 250,000 units</text>
+  <text x="18" y="243" fill="#d7e3f4" xml:space="preserve">  retail-dana  subscribed 5,000 USDC -&gt; 5,000 units</text>
+  <text x="18" y="258" fill="#d7e3f4" xml:space="preserve">  issuer reserve           355,000 USDC backing 355,000 USDC of claims (covered: true)</text>
+  <text x="18" y="273" fill="#d7e3f4" xml:space="preserve"></text>
+  <text x="18" y="288" fill="#d7e3f4" xml:space="preserve">STEP 4 - THE ORACLE PUBLISHES A NET ASSET VALUE</text>
+  <text x="18" y="303" fill="#d7e3f4" xml:space="preserve">  feed publishes NAV       1.0200 USDC per unit</text>
+  <text x="18" y="318" fill="#d7e3f4" xml:space="preserve">  fund-avery sells 2,000 units to retail-dana at 2,040 USDC (signed by the seller)</text>
+  <text x="18" y="333" fill="#d7e3f4" xml:space="preserve">  the same signed transfer, replayed -&gt; REJECTED: this signed transfer from fund-avery has already been executed - replay refused</text>
+  <text x="18" y="348" fill="#d7e3f4" xml:space="preserve">  fund-birch tries to sell to retail-eli -&gt; REJECTED: retail-eli is UNVERIFIED - a cleared address is required</text>
+  <text x="18" y="363" fill="#d7e3f4" xml:space="preserve"></text>
+  <text x="18" y="378" fill="#d7e3f4" xml:space="preserve">STEP 5 - THE YIELD ACCRUES (90 days after issue, 30 for the new holder)</text>
+  <text x="18" y="393" fill="#d7e3f4" xml:space="preserve">  fund-avery   98,000 units, accrued yield 1102.1918 USDC</text>
+  <text x="18" y="408" fill="#d7e3f4" xml:space="preserve">  fund-birch   250,000 units, accrued yield 2773.9726 USDC</text>
+  <text x="18" y="423" fill="#d7e3f4" xml:space="preserve">  retail-dana  7,000 units, accrued yield 62.8767 USDC</text>
+  <text x="18" y="438" fill="#d7e3f4" xml:space="preserve">  issuer reserve           358,939 USDC backing 358,939 USDC of claims (covered: true)</text>
+  <text x="18" y="453" fill="#d7e3f4" xml:space="preserve"></text>
+  <text x="18" y="468" fill="#d7e3f4" xml:space="preserve">STEP 6 - A FREEZE, AND THEN THE REDEMPTION</text>
+  <text x="18" y="483" fill="#d7e3f4" xml:space="preserve">  fund-birch tries to redeem -&gt; REJECTED: fund-birch is frozen</text>
+  <text x="18" y="498" fill="#d7e3f4" xml:space="preserve">  fund-avery redeems        face 98,000 + accrued yield 1102.1918</text>
+  <text x="18" y="513" fill="#d7e3f4" xml:space="preserve">                           gross 99102.1918 USDC, fee 247.7555, net 98854.4363</text>
+  <text x="18" y="528" fill="#d7e3f4" xml:space="preserve">  fund-avery USDC balance  500,894</text>
+  <text x="18" y="543" fill="#d7e3f4" xml:space="preserve"></text>
+  <text x="18" y="558" fill="#7fd1ff" xml:space="preserve">SUMMARY - the books</text>
+  <text x="18" y="573" fill="#d7e3f4" xml:space="preserve">  journal entries           9</text>
+  <text x="18" y="588" fill="#d7e3f4" xml:space="preserve">  debits 920,122 USDC = credits 920,122 USDC  (balanced: true)</text>
+  <text x="18" y="603" fill="#d7e3f4" xml:space="preserve">  accounts                  11</text>
+  <text x="18" y="618" fill="#d7e3f4" xml:space="preserve">  issuer reserve            259,837 USDC</text>
+  <text x="18" y="633" fill="#d7e3f4" xml:space="preserve">  claims outstanding        259,837 USDC (covered: true)</text>
+  <text x="18" y="648" fill="#d7e3f4" xml:space="preserve">  registry fees kept        248 USDC</text>
+  <text x="18" y="663" fill="#d7e3f4" xml:space="preserve">  event log                 19 events, hash chain VERIFIED</text>
+  <text x="18" y="678" fill="#d7e3f4" xml:space="preserve">  final state hash          abfedc4d03c52713b9feea491318a5f4d06967b826195300d5f439cd92d5ea71</text>
+  <text x="18" y="693" fill="#d7e3f4" xml:space="preserve"></text>
+  <text x="18" y="708" fill="#d7e3f4" xml:space="preserve">  the last journal entry, verbatim:</text>
+  <text x="18" y="723" fill="#d7e3f4" xml:space="preserve">    debit  98,854  wallet:acc_29f630fec6e3f1bb</text>
+  <text x="18" y="738" fill="#d7e3f4" xml:space="preserve">    debit  248  fee:t-bill-2026q4</text>
+  <text x="18" y="753" fill="#d7e3f4" xml:space="preserve">    credit 99,102  reserve:t-bill-2026q4</text>
+  <text x="18" y="768" fill="#d7e3f4" xml:space="preserve">    credit 99,102  position:t-bill-2026q4:acc_29f630fec6e3f1bb</text>
+  <text x="18" y="783" fill="#d7e3f4" xml:space="preserve">    debit  98,000  issued:t-bill-2026q4</text>
+  <text x="18" y="798" fill="#d7e3f4" xml:space="preserve">    debit  1,102  yield:t-bill-2026q4</text>
+  <text x="18" y="813" fill="#d7e3f4" xml:space="preserve"></text>
+  <text x="18" y="828" fill="#d7e3f4" xml:space="preserve">  every number above comes from running the code; nothing is hard-coded.</text>
+  <text x="18" y="843" fill="#d7e3f4" xml:space="preserve">  re-run: node scripts/demo.mjs   (identical output, byte for byte)</text>
+  <text x="18" y="858" fill="#d7e3f4" xml:space="preserve"></text>
+  </g>
+</svg>

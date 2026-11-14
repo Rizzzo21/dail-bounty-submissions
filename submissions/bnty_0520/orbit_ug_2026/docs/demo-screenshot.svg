@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="766" height="1101" viewBox="0 0 766 1101">
+  <rect width="766" height="1101" fill="#0b0f14"/>
+  <g font-family="'DejaVu Sans Mono','Menlo','Consolas',monospace" font-size="12.5">
+  <text x="18" y="33" fill="#d7e3f4" xml:space="preserve">================================================================</text>
+  <text x="18" y="48" fill="#d7e3f4" xml:space="preserve"> RITUAL - a memecoin whose supply is a function of what the</text>
+  <text x="18" y="63" fill="#d7e3f4" xml:space="preserve"> community does, and whose treasury runs explicit rules.</text>
+  <text x="18" y="78" fill="#d7e3f4" xml:space="preserve"> track: NEAR Hackathon, Memecoins With Mechanics (bnty_0421)</text>
+  <text x="18" y="93" fill="#d7e3f4" xml:space="preserve">================================================================</text>
+  <text x="18" y="108" fill="#d7e3f4" xml:space="preserve"></text>
+  <text x="18" y="123" fill="#ffd479" xml:space="preserve">RULE SET (every number lives in src/state.js)</text>
+  <text x="18" y="138" fill="#d7e3f4" xml:space="preserve">  quorum                    3 votes - one vote per address per epoch, a whale's vote capped at 1</text>
+  <text x="18" y="153" fill="#d7e3f4" xml:space="preserve">  min stake                 1,000 tokens</text>
+  <text x="18" y="168" fill="#d7e3f4" xml:space="preserve">  mint cap                  500,000 tokens per ritual, scaled by participation</text>
+  <text x="18" y="183" fill="#d7e3f4" xml:space="preserve">  steward                   2.0% of every mint</text>
+  <text x="18" y="198" fill="#d7e3f4" xml:space="preserve">  pool fee                  3.00% - collected in USDC, goes to the treasury</text>
+  <text x="18" y="213" fill="#d7e3f4" xml:space="preserve">  treasury floor            10,000 tokens - the treasury mints itself up to it</text>
+  <text x="18" y="228" fill="#d7e3f4" xml:space="preserve">  treasury ceiling          10,000 USDC - above it the treasury buys and burns tokens</text>
+  <text x="18" y="243" fill="#d7e3f4" xml:space="preserve">  chant fee                 100 tokens per signer, burn 5,000 tokens per signer</text>
+  <text x="18" y="258" fill="#d7e3f4" xml:space="preserve">  howl tax                  1.00% of every trade burned while a howl window is open</text>
+  <text x="18" y="273" fill="#d7e3f4" xml:space="preserve"></text>
+  <text x="18" y="288" fill="#7fd1ff" xml:space="preserve">SCENARIO 1 - THE CHANT: the community performs a ritual, the supply reacts</text>
+  <text x="18" y="303" fill="#ffd479" xml:space="preserve">  supply before            7,905,000</text>
+  <text x="18" y="318" fill="#d7e3f4" xml:space="preserve">  eligible holders         9 (the whale abstains; the steward holds no tokens)</text>
+  <text x="18" y="333" fill="#d7e3f4" xml:space="preserve">  chanters                 mara, ivo, sana, tomas, wren, kofi</text>
+  <text x="18" y="348" fill="#d7e3f4" xml:space="preserve">  ritual id                rit_1_CHANT_251783c6</text>
+  <text x="18" y="363" fill="#d7e3f4" xml:space="preserve">  votes                    6.00 of 3 needed -&gt; FIRED</text>
+  <text x="18" y="378" fill="#d7e3f4" xml:space="preserve">  participation            66.7% of eligible holders took part</text>
+  <text x="18" y="393" fill="#d7e3f4" xml:space="preserve">  minted to the community  333,333 tokens (cap 500,000, scaled by participation)</text>
+  <text x="18" y="408" fill="#d7e3f4" xml:space="preserve">  steward cut (2%)         6,667 tokens - disclosed, not hidden</text>
+  <text x="18" y="423" fill="#d7e3f4" xml:space="preserve">  chant fees to treasury   600 tokens (100 per signer)</text>
+  <text x="18" y="438" fill="#ffd479" xml:space="preserve">  RULE R1 liquidity floor  treasury minted 9,400 tokens up to its floor</text>
+  <text x="18" y="453" fill="#ffd479" xml:space="preserve">  supply after             8,247,733  (+342,733 tokens)</text>
+  <text x="18" y="468" fill="#d7e3f4" xml:space="preserve"></text>
+  <text x="18" y="483" fill="#7fd1ff" xml:space="preserve">SCENARIO 2 - THE STORM: usage funds the treasury, then a ritual makes it act</text>
+  <text x="18" y="498" fill="#ffd479" xml:space="preserve">  supply before            7,905,000</text>
+  <text x="18" y="513" fill="#d7e3f4" xml:space="preserve">  the whale trades 8 x 80,000 USDC into the pool (3% fee each)</text>
+  <text x="18" y="528" fill="#d7e3f4" xml:space="preserve">  fees collected           19,200 USDC -&gt; treasury USDC 19,200</text>
+  <text x="18" y="543" fill="#d7e3f4" xml:space="preserve">  price moved              0.858551 USDC per token</text>
+  <text x="18" y="558" fill="#d7e3f4" xml:space="preserve">  ...then the community chants again, and the treasury rules run on the fees</text>
+  <text x="18" y="573" fill="#ffd479" xml:space="preserve">  RULE R1 liquidity floor  treasury minted 9,700 tokens up to its floor</text>
+  <text x="18" y="588" fill="#ffd479" xml:space="preserve">  RULE R2 buyback          treasury spent 9,200 USDC of fees, bought and burned 7,855 tokens</text>
+  <text x="18" y="603" fill="#ffd479" xml:space="preserve">  supply after             8,073,512  (+168,512 tokens)</text>
+  <text x="18" y="618" fill="#d7e3f4" xml:space="preserve">  the mint and the buyback pull against each other - that is the point: the</text>
+  <text x="18" y="633" fill="#d7e3f4" xml:space="preserve">  rules, not a marketing plan, decide how much of the token exists.</text>
+  <text x="18" y="648" fill="#d7e3f4" xml:space="preserve"></text>
+  <text x="18" y="663" fill="#7fd1ff" xml:space="preserve">SCENARIO 3 - NO QUORUM: a ritual that nobody backs does nothing at all</text>
+  <text x="18" y="678" fill="#d7e3f4" xml:space="preserve">  2 signers for BURN       votes 2.00 of 3 -&gt; PENDING, nothing happened</text>
+  <text x="18" y="693" fill="#ffd479" xml:space="preserve">  supply unchanged         7,905,000 (was 7,905,000 - the ritual did nothing)</text>
+  <text x="18" y="708" fill="#d7e3f4" xml:space="preserve">  a third holder shows up later:</text>
+  <text x="18" y="723" fill="#d7e3f4" xml:space="preserve">  votes                    3.00 of 3 -&gt; FIRED</text>
+  <text x="18" y="738" fill="#d7e3f4" xml:space="preserve">  burned                   15,000 tokens (5,000 per signer)</text>
+  <text x="18" y="753" fill="#ffd479" xml:space="preserve">  RULE R1 liquidity floor  treasury minted 10,000 tokens up to its floor</text>
+  <text x="18" y="768" fill="#ffd479" xml:space="preserve">  supply after             7,900,000  (-5,000 tokens)</text>
+  <text x="18" y="783" fill="#d7e3f4" xml:space="preserve"></text>
+  <text x="18" y="798" fill="#7fd1ff" xml:space="preserve">SCENARIO 4 - THE HOWL: a ritual window burns a share of every trade</text>
+  <text x="18" y="813" fill="#d7e3f4" xml:space="preserve">  window open              epoch 1 -&gt; 2</text>
+  <text x="18" y="828" fill="#d7e3f4" xml:space="preserve">  a 50,000 USDC trade      fee 1,500 USDC + howl tax 189 tokens burned</text>
+  <text x="18" y="843" fill="#ffd479" xml:space="preserve">  RULE R1 liquidity floor  treasury minted 10,000 tokens up to its floor</text>
+  <text x="18" y="858" fill="#ffd479" xml:space="preserve">  supply after             7,914,811  (+9,811 tokens)</text>
+  <text x="18" y="873" fill="#d7e3f4" xml:space="preserve"></text>
+  <text x="18" y="888" fill="#7fd1ff" xml:space="preserve">SUMMARY - what the mechanic did to the supply</text>
+  <text x="18" y="903" fill="#d7e3f4" xml:space="preserve">  scenario        supply before      supply after        delta</text>
+  <text x="18" y="918" fill="#d7e3f4" xml:space="preserve">  chant             7,905,000        8,247,733      342,733</text>
+  <text x="18" y="933" fill="#d7e3f4" xml:space="preserve">  storm             7,905,000        8,073,512      168,512</text>
+  <text x="18" y="948" fill="#d7e3f4" xml:space="preserve">  quorum            7,905,000        7,900,000       -5,000</text>
+  <text x="18" y="963" fill="#d7e3f4" xml:space="preserve">  howl              7,905,000        7,914,811        9,811</text>
+  <text x="18" y="978" fill="#d7e3f4" xml:space="preserve"></text>
+  <text x="18" y="993" fill="#d7e3f4" xml:space="preserve">  event log                    10 events, hash chain VERIFIED</text>
+  <text x="18" y="1008" fill="#d7e3f4" xml:space="preserve">  final state hash (scenario 1) f6f92a807ed137e8953c8bc1d023888c978ad1b595057b2f58b0994dadbe7bc5</text>
+  <text x="18" y="1023" fill="#d7e3f4" xml:space="preserve">  state fingerprint (scenario 1) 643bed928f9b6433f69572fe90dcdbc33c8a17fc605d8322a8122bf5064ba7dd</text>
+  <text x="18" y="1038" fill="#d7e3f4" xml:space="preserve"></text>
+  <text x="18" y="1053" fill="#d7e3f4" xml:space="preserve">  every number above comes from running the code; nothing is hard-coded.</text>
+  <text x="18" y="1068" fill="#d7e3f4" xml:space="preserve">  re-run: node scripts/demo.mjs   (identical output, byte for byte)</text>
+  <text x="18" y="1083" fill="#d7e3f4" xml:space="preserve"></text>
+  </g>
+</svg>

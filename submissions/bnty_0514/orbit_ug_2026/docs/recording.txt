@@ -1,0 +1,51 @@
+STEP 0 - THE PASSPORT CHECKS ITS EVIDENCE
+  it reads two published artifacts and re-hashes every record in them
+  anchor-events.jsonl      18 records  (bnty_0414 ANCHOR, published)
+  ritual-scenarios.json    4 records  (bnty_0421 RITUAL, published)
+  15 claims traced to those records, 0 refused
+
+STEP 1 - PASSPORT LOOKUP
+  GET the passport of agent-ava
+    settlement   90.01  needs  70  pass   (1 attestation)
+    disclosure   90.01  needs  60  pass   (1 attestation)
+    community    28.43  needs  50  FAIL   (1 attestation)
+    privacy      85.28  needs  65  pass   (1 attestation)
+    composite   77.52  <- a number for humans, not a gate
+    gates       REFUSED (community)
+
+STEP 2 - ESCROW HISTORY
+  client-echo opens an escrow for agent-bob, gated on settlement + community
+  funded 300 credits
+  released -> 1,300 credits now sit with agent-bob
+  client-echo opens the same escrow for agent-ava
+  funded 500 credits
+  release -> REFUSED: community scores 28.4252, needs 50
+  note the composite score of agent-ava was 77.52 - it is not consulted
+
+  the escrow history of client-echo:
+    esc_91157dfe2c9b82c6cb0d7863  RELEASED 300 credits  [settlement, community]
+       1808380800  opened           gated on settlement, community
+       1808380860  funded           300 credits from client-echo
+       1808380920  released         300 credits to agent-bob (approved by registry)
+    esc_d5962caa278894f5d17f9f83  FUNDED   500 credits  [settlement, community]
+       1808380800  opened           gated on settlement, community
+       1808380860  funded           500 credits from client-echo
+       1808380920  release_refused  community scores 28.4252, needs 50
+
+STEP 3 - REPUTATION SCORE
+  the passport is exported and signed by the registry
+    card id            9d1687032765aa11f12abc3f785896a3
+    score as read      77.52  (gates: refused - community)
+    chain link         prevCardHash 0000000000000000...
+  anybody can verify it, offline:  ok=true  (content true, signature true, scores recomputed true)
+  tamper with the composite ->  ok=false  (content false, signature false, scores recomputed false)
+  the same card read 180 days later -> composite 19.38 (scores recomputed, never stored)
+
+SUMMARY - the books
+  attestations on file    15
+  escrows                 2 (1 released, 1 refused)
+  events                  22, hash chain VERIFIED
+  final state hash        2258e0d2e672758b95ae054f1e2e86e5ebfcc35d6406b0e7ca545390d2af2755
+
+  every number above comes from running the code; nothing is hard-coded.
+  re-run: node scripts/demo.mjs   (identical output, byte for byte)

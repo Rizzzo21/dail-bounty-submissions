@@ -1,0 +1,89 @@
+{
+  "contract": "blind-escrow-orbit.testnet",
+  "buyer": "blind-buyer-orbit.testnet",
+  "worker": "blind-worker-orbit.testnet",
+  "node_url": "https://rpc.testnet.fastnear.com",
+  "explorer": "https://nearblocks.io",
+  "started_at": "2026-11-10T04:21:00.910Z",
+  "accounts": {
+    "sponsor": "orbit-anchor.testnet",
+    "contract": null,
+    "buyer": null,
+    "worker": null
+  },
+  "topups": {
+    "contract": null,
+    "buyer": null,
+    "worker": null
+  },
+  "wasm_sha256": "6c618e1bbadbde12c70cd5ecc6cf3fafd82a49fbbe2b68d537040eb4f620bf5f",
+  "pool_funding_tx": "GqtJjTNN3ppmTdEJWrHXYCKyjN1Fstxr7qAW72Bqz7cG",
+  "pool_balance_after_funding": "1.3245053105409025e+25",
+  "open_job_tx": "BUi4NRojnYffXkvcBDwmJxP7YvsQgaqE1JEEWUUWK92y",
+  "job_after_open": {
+    "job_id": "701",
+    "commitment_hex": "92e8d2473770145999bc93d1bf7b374d67348ef3de28e308e5bff7982cff6ff6",
+    "worker": "blind-worker-orbit.testnet",
+    "ciphertext_b64": "mMy/ig7t9TIHyHwu5rCTSTqhUrGegwQiCc/jJYntYqyFgv0o2h+kw+VHUe/sWAr0crfR51gZjYGb6VrAF99GkM7Sm8l/MMro3/7uqxmPVA5/ifLyy9PgNSNVw9Ivq63GtX4RtfF49EZiYGnOXZxcbUgb4N/G7cc0/gA94jMHYOCEkea6FkePzIFSssJExl4hvxTXeaE8EyWvWriQYYZBsODjAO3sYPhm3WgU6OhZFIoNkrLWThgFvFL8+mLwkrqpzAsS/ywsBEb0gxCfDSFWuqz/dde8p2v2WcxTMd/LWo2PC1t6Lc65X/sXC5B+ArZPyQ1zpXIayeJ+z1J2tFyMQ2Oa8uoWNVJdF3NpVX6MOxGFbUbFpCgq7/Pr6p1mDvWa+u8WpypqLEw=",
+    "iv_b64": "K+R9hUkQd2zQHU1g",
+    "opened": false,
+    "opened_amount_units": 0,
+    "opened_blinding_hex": "",
+    "nonce": 7,
+    "pool_balance_yocto": 1.3245053105409025e+25
+  },
+  "negative_case_tx": "E5ADPW1gR5fwDrPzWa85SiD8kYwiBGzXEyfJFj7s2G6T",
+  "negative_case_status": {
+    "Failure": {
+      "ActionError": {
+        "index": 0,
+        "kind": {
+          "FunctionCallError": {
+            "ExecutionError": "Smart contract panicked: opening rejected: recomputed commitment does not match"
+          }
+        }
+      }
+    }
+  },
+  "negative_case_failure": "{\"ActionError\":{\"index\":0,\"kind\":{\"FunctionCallError\":{\"ExecutionError\":\"Smart contract panicked: opening rejected: recomputed commitment does not match\"}}}}",
+  "negative_case_refused": true,
+  "settle_tx": "491W4LhJVWKNVtF1JP3Tw2pvjU4nZ9AT5hZSefsXMuU4",
+  "job_after_settle": {
+    "job_id": "701",
+    "commitment_hex": "92e8d2473770145999bc93d1bf7b374d67348ef3de28e308e5bff7982cff6ff6",
+    "worker": "blind-worker-orbit.testnet",
+    "ciphertext_b64": "mMy/ig7t9TIHyHwu5rCTSTqhUrGegwQiCc/jJYntYqyFgv0o2h+kw+VHUe/sWAr0crfR51gZjYGb6VrAF99GkM7Sm8l/MMro3/7uqxmPVA5/ifLyy9PgNSNVw9Ivq63GtX4RtfF49EZiYGnOXZxcbUgb4N/G7cc0/gA94jMHYOCEkea6FkePzIFSssJExl4hvxTXeaE8EyWvWriQYYZBsODjAO3sYPhm3WgU6OhZFIoNkrLWThgFvFL8+mLwkrqpzAsS/ywsBEb0gxCfDSFWuqz/dde8p2v2WcxTMd/LWo2PC1t6Lc65X/sXC5B+ArZPyQ1zpXIayeJ+z1J2tFyMQ2Oa8uoWNVJdF3NpVX6MOxGFbUbFpCgq7/Pr6p1mDvWa+u8WpypqLEw=",
+    "iv_b64": "K+R9hUkQd2zQHU1g",
+    "opened": true,
+    "opened_amount_units": 750,
+    "opened_blinding_hex": "3ed774c71e0a22f286fa3b0b7cd014b1f0ffd741c1f97f442f974f3b5aa24181",
+    "nonce": 8,
+    "pool_balance_yocto": 1.2495053105409024e+25
+  },
+  "crosscheck": {
+    "preimage": "750|3ed774c71e0a22f286fa3b0b7cd014b1f0ffd741c1f97f442f974f3b5aa24181|701",
+    "on_chain_sha256": "92e8d2473770145999bc93d1bf7b374d67348ef3de28e308e5bff7982cff6ff6",
+    "off_chain_sha256": "92e8d2473770145999bc93d1bf7b374d67348ef3de28e308e5bff7982cff6ff6",
+    "match": true
+  },
+  "worker_balance": "1999197575889266200000000",
+  "inputs": {
+    "job_id": "701",
+    "amount_units": "750",
+    "blinding_hex": "3ed774c71e0a22f286fa3b0b7cd014b1f0ffd741c1f97f442f974f3b5aa24181",
+    "commitment_hex": "92e8d2473770145999bc93d1bf7b374d67348ef3de28e308e5bff7982cff6ff6",
+    "commitment_b64": "kujSRzdwFFmZvJPRv3s3TWc0jvPeKOMI5b/3mCz/b/Y=",
+    "ciphertext_b64": "mMy/ig7t9TIHyHwu5rCTSTqhUrGegwQiCc/jJYntYqyFgv0o2h+kw+VHUe/sWAr0crfR51gZjYGb6VrAF99GkM7Sm8l/MMro3/7uqxmPVA5/ifLyy9PgNSNVw9Ivq63GtX4RtfF49EZiYGnOXZxcbUgb4N/G7cc0/gA94jMHYOCEkea6FkePzIFSssJExl4hvxTXeaE8EyWvWriQYYZBsODjAO3sYPhm3WgU6OhZFIoNkrLWThgFvFL8+mLwkrqpzAsS/ywsBEb0gxCfDSFWuqz/dde8p2v2WcxTMd/LWo2PC1t6Lc65X/sXC5B+ArZPyQ1zpXIayeJ+z1J2tFyMQ2Oa8uoWNVJdF3NpVX6MOxGFbUbFpCgq7/Pr6p1mDvWa+u8WpypqLEw=",
+    "iv_b64": "K+R9hUkQd2zQHU1g",
+    "ciphertext_bytes": 296,
+    "plaintext_sha256": null,
+    "preimage": "750|3ed774c71e0a22f286fa3b0b7cd014b1f0ffd741c1f97f442f974f3b5aa24181|701",
+    "source": "scripts/onchain-from-engine.mjs (src/crypto.mjs + src/engine.mjs)"
+  },
+  "finished_at": "2026-11-10T04:21:25.474Z",
+  "deploy_tx": "7AsayMMoetQz1tjfKvVWXjbGJeGd86sjS2dMztofEvnm",
+  "deploy_tx_note": "captured from the deploy run output; the deployed code hash was verified on-chain against the local wasm sha256",
+  "onchain_code_hash_verified": true,
+  "onchain_code_hash_base58": "8J5JxUENLfQ4Wjn49g29wnMZZ8z9HZpVyzwCAnb93qkJ",
+  "onchain_code_hash_matches_local_wasm": true
+}

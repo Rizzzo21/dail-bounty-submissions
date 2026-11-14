@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1700" height="1200" viewBox="0 0 1700 1200" font-kerning="normal">
+<rect x="0" y="0" width="1700" height="1200" fill="#f7f9fc"/>
+<text x="850" y="44" font-family="DejaVu Sans, Liberation Sans, Arial, sans-serif" font-size="27" font-weight="bold" fill="#10233f" text-anchor="middle" xml:space="preserve"><![CDATA[TREZU-SOCIAL - shared-budget governance as a Sputnik DAO v2 policy extension]]></text>
+<text x="850" y="72" font-family="DejaVu Sans, Liberation Sans, Arial, sans-serif" font-size="14.5" font-weight="normal" fill="#4a5a70" text-anchor="middle" xml:space="preserve"><![CDATA[one shared epoch budget, a reputation gate, a quorum-gated reward stream - all of it one policy extension]]></text>
+<text x="60" y="112" font-family="DejaVu Sans, Liberation Sans, Arial, sans-serif" font-size="19" font-weight="bold" fill="#5b3fa8" text-anchor="start" xml:space="preserve"><![CDATA[1 - THE SHARED EPOCH BUDGET]]></text>
+<rect x="430" y="124" width="840" height="112" rx="12" fill="#eaf2fb" stroke="#1f5fa8" stroke-width="2"/>
+<text x="850" y="156" font-family="DejaVu Sans Mono, Liberation Mono, monospace" font-size="17" font-weight="bold" fill="#10406f" text-anchor="middle" xml:space="preserve"><![CDATA[Shared epoch budget  q4-growth]]></text>
+<text x="850" y="186" font-family="DejaVu Sans Mono, Liberation Mono, monospace" font-size="15" font-weight="normal" fill="#10406f" text-anchor="middle" xml:space="preserve"><![CDATA[total 5,000 USDC  |  epoch Q4]]></text>
+<text x="850" y="212" font-family="DejaVu Sans Mono, Liberation Mono, monospace" font-size="15" font-weight="normal" fill="#10406f" text-anchor="middle" xml:space="preserve"><![CDATA[reputation gate: reputation >= 65]]></text>
+<text x="60" y="274" font-family="DejaVu Sans, Liberation Sans, Arial, sans-serif" font-size="19" font-weight="bold" fill="#5b3fa8" text-anchor="start" xml:space="preserve"><![CDATA[2 - THE REPUTATION GATE]]></text>
+<rect x="70" y="288" width="740" height="54" rx="10" fill="#e6f6f4" stroke="#0f766e" stroke-width="2"/>
+<text x="440" y="320" font-family="DejaVu Sans Mono, Liberation Mono, monospace" font-size="15.5" font-weight="normal" fill="#0b4f4a" text-anchor="middle" xml:space="preserve"><![CDATA[ops-alice.near  reputation 82 >= gate 65]]></text>
+<line x1="440" y1="344" x2="440" y2="384" stroke="#2f3e52" stroke-width="2.4" stroke-linecap="round"/>
+<path d="M 440 384 L 434.94 373.00 L 445.06 373.00 Z" fill="#2f3e52"/>
+<rect x="290" y="386" width="300" height="48" rx="24" fill="#0f766e" stroke="#0f766e" stroke-width="1"/>
+<text x="440" y="418" font-family="DejaVu Sans, Liberation Sans, Arial, sans-serif" font-size="19" font-weight="bold" fill="#ffffff" text-anchor="middle" xml:space="preserve"><![CDATA[APPROVED]]></text>
+<line x1="440" y1="434" x2="440" y2="474" stroke="#2f3e52" stroke-width="2.4" stroke-linecap="round"/>
+<path d="M 440 474 L 434.94 463.00 L 445.06 463.00 Z" fill="#2f3e52"/>
+<rect x="250" y="476" width="380" height="54" rx="10" fill="#e6f6f4" stroke="#0f766e" stroke-width="2"/>
+<text x="440" y="509" font-family="DejaVu Sans Mono, Liberation Mono, monospace" font-size="16" font-weight="normal" fill="#0b4f4a" text-anchor="middle" xml:space="preserve"><![CDATA[spend 1,200 USDC]]></text>
+<rect x="890" y="288" width="740" height="54" rx="10" fill="#fdf3e3" stroke="#a15c00" stroke-width="2"/>
+<text x="1260" y="320" font-family="DejaVu Sans Mono, Liberation Mono, monospace" font-size="15.5" font-weight="normal" fill="#7a4400" text-anchor="middle" xml:space="preserve"><![CDATA[newcomer-eve.near  reputation 41 < gate 65]]></text>
+<line x1="1260" y1="344" x2="1260" y2="384" stroke="#2f3e52" stroke-width="2.4" stroke-linecap="round"/>
+<path d="M 1260 384 L 1254.94 373.00 L 1265.06 373.00 Z" fill="#2f3e52"/>
+<rect x="1030" y="386" width="460" height="48" rx="24" fill="#a15c00" stroke="#a15c00" stroke-width="1"/>
+<text x="1260" y="418" font-family="DejaVu Sans, Liberation Sans, Arial, sans-serif" font-size="17" font-weight="bold" fill="#ffffff" text-anchor="middle" xml:space="preserve"><![CDATA[REFUSED (reputation_below_minimum)]]></text>
+<line x1="1260" y1="434" x2="1260" y2="474" stroke="#2f3e52" stroke-width="2.4" stroke-linecap="round"/>
+<path d="M 1260 474 L 1254.94 463.00 L 1265.06 463.00 Z" fill="#2f3e52"/>
+<rect x="970" y="476" width="580" height="54" rx="10" fill="#fdf3e3" stroke="#a15c00" stroke-width="2"/>
+<text x="1260" y="509" font-family="DejaVu Sans Mono, Liberation Mono, monospace" font-size="16" font-weight="normal" fill="#7a4400" text-anchor="middle" xml:space="preserve"><![CDATA[budget unchanged at 3,800 USDC]]></text>
+<text x="60" y="566" font-family="DejaVu Sans, Liberation Sans, Arial, sans-serif" font-size="19" font-weight="bold" fill="#5b3fa8" text-anchor="start" xml:space="preserve"><![CDATA[3 - STATE AFTER THE APPROVED SPEND]]></text>
+<line x1="440" y1="530" x2="440" y2="576" stroke="#2f3e52" stroke-width="2.4" stroke-linecap="round"/>
+<path d="M 440 576 L 434.94 565.00 L 445.06 565.00 Z" fill="#2f3e52"/>
+<line x1="1260" y1="530" x2="1260" y2="576" stroke="#2f3e52" stroke-width="2.4" stroke-linecap="round"/>
+<path d="M 1260 576 L 1254.94 565.00 L 1265.06 565.00 Z" fill="#2f3e52"/>
+<rect x="200" y="578" width="480" height="66" rx="10" fill="#eef2f7" stroke="#334155" stroke-width="2"/>
+<text x="440" y="617" font-family="DejaVu Sans Mono, Liberation Mono, monospace" font-size="15.5" font-weight="normal" fill="#1e293b" text-anchor="middle" xml:space="preserve"><![CDATA[remaining epoch budget  3,800 USDC]]></text>
+<rect x="880" y="578" width="560" height="66" rx="10" fill="#eef2f7" stroke="#334155" stroke-width="2"/>
+<text x="1160" y="617" font-family="DejaVu Sans Mono, Liberation Mono, monospace" font-size="15.5" font-weight="normal" fill="#1e293b" text-anchor="middle" xml:space="preserve"><![CDATA[multisig vault  50,000 -> 48,800 USDC]]></text>
+<text x="60" y="686" font-family="DejaVu Sans, Liberation Sans, Arial, sans-serif" font-size="19" font-weight="bold" fill="#5b3fa8" text-anchor="start" xml:space="preserve"><![CDATA[4 - THE REWARD STREAM]]></text>
+<rect x="180" y="700" width="400" height="64" rx="10" fill="#f1ebfd" stroke="#6d28d9" stroke-width="2"/>
+<text x="380" y="738" font-family="DejaVu Sans Mono, Liberation Mono, monospace" font-size="15" font-weight="normal" fill="#4c1d95" text-anchor="middle" xml:space="preserve"><![CDATA[milestone M-104  verified by 3/3 stewards]]></text>
+<line x1="580" y1="732" x2="618" y2="732" stroke="#2f3e52" stroke-width="2.4" stroke-linecap="round"/>
+<path d="M 618 732 L 607.00 737.06 L 607.00 726.94 Z" fill="#2f3e52"/>
+<rect x="620" y="700" width="460" height="64" rx="10" fill="#f1ebfd" stroke="#6d28d9" stroke-width="2"/>
+<text x="850" y="738" font-family="DejaVu Sans Mono, Liberation Mono, monospace" font-size="15" font-weight="normal" fill="#4c1d95" text-anchor="middle" xml:space="preserve"><![CDATA[reward engine releases 450 USDC + 18 reputation]]></text>
+<line x1="1080" y1="732" x2="1118" y2="732" stroke="#2f3e52" stroke-width="2.4" stroke-linecap="round"/>
+<path d="M 1118 732 L 1107.00 737.06 L 1107.00 726.94 Z" fill="#2f3e52"/>
+<rect x="1120" y="700" width="400" height="64" rx="10" fill="#f1ebfd" stroke="#6d28d9" stroke-width="2"/>
+<text x="1320" y="738" font-family="DejaVu Sans Mono, Liberation Mono, monospace" font-size="15" font-weight="normal" fill="#4c1d95" text-anchor="middle" xml:space="preserve"><![CDATA[builder-bob.near  reputation 60 -> 78]]></text>
+<line x1="1320" y1="764" x2="1320" y2="788" stroke="#2f3e52" stroke-width="2.4" stroke-linecap="round"/>
+<path d="M 1320 788 L 1314.94 777.00 L 1325.06 777.00 Z" fill="#2f3e52"/>
+<rect x="1140" y="790" width="520" height="58" rx="10" fill="#f1ebfd" stroke="#6d28d9" stroke-width="2"/>
+<text x="1400" y="825" font-family="DejaVu Sans Mono, Liberation Mono, monospace" font-size="15.5" font-weight="normal" fill="#4c1d95" text-anchor="middle" xml:space="preserve"><![CDATA[builder-bob.near reward balance  450 USDC]]></text>
+<rect x="60" y="858" width="1580" height="138" rx="14" fill="#eef0fb" stroke="#c3c8e8" stroke-width="2"/>
+<text x="90" y="886" font-family="DejaVu Sans, Liberation Sans, Arial, sans-serif" font-size="19" font-weight="bold" fill="#5b3fa8" text-anchor="start" xml:space="preserve"><![CDATA[5 - THE REAL SPUTNIK DAO v2 MAPPING]]></text>
+<text x="90" y="916" font-family="DejaVu Sans Mono, Liberation Mono, monospace" font-size="15.5" font-weight="normal" fill="#2b3350" text-anchor="start" xml:space="preserve"><![CDATA[shared epoch budget  <->  AddBounty proposal (bounty carries token + amount)]]></text>
+<text x="90" y="938" font-family="DejaVu Sans Mono, Liberation Mono, monospace" font-size="15.5" font-weight="normal" fill="#2b3350" text-anchor="start" xml:space="preserve"><![CDATA[reward payout        <->  bounty_done(id) -> BountyDone proposal -> payout when voted]]></text>
+<text x="90" y="960" font-family="DejaVu Sans Mono, Liberation Mono, monospace" font-size="15.5" font-weight="normal" fill="#2b3350" text-anchor="start" xml:space="preserve"><![CDATA[reputation gate      <->  a custom VOTING POLICY in the Sputnik DAO v2 policy engine]]></text>
+<text x="90" y="982" font-family="DejaVu Sans Mono, Liberation Mono, monospace" font-size="15.5" font-weight="normal" fill="#2b3350" text-anchor="start" xml:space="preserve"><![CDATA[multisig vault       <->  the DAO's own treasury / the bounty pool]]></text>
+<rect x="60" y="1008" width="1580" height="162" rx="12" fill="#10233f" stroke="#0a1a30" stroke-width="2"/>
+<text x="90" y="1040" font-family="DejaVu Sans Mono, Liberation Mono, monospace" font-size="17" font-weight="bold" fill="#8fd3ff" text-anchor="start" xml:space="preserve"><![CDATA[deployed on NEAR testnet: trezu-policy-orbit.testnet]]></text>
+<text x="90" y="1068" font-family="DejaVu Sans Mono, Liberation Mono, monospace" font-size="14" font-weight="normal" fill="#e6edf5" text-anchor="start" xml:space="preserve"><![CDATA[create account: 9fuZtfM7rDftZcV71GfinDddU6Bx2F32xRj3otPqYw2H]]></text>
+<text x="90" y="1090" font-family="DejaVu Sans Mono, Liberation Mono, monospace" font-size="14" font-weight="normal" fill="#e6edf5" text-anchor="start" xml:space="preserve"><![CDATA[deploy + init: 39nkSsMGW2vmB4Uuze5iF93SvxrXSXPFYkptRmhR6vNp]]></text>
+<text x="90" y="1112" font-family="DejaVu Sans Mono, Liberation Mono, monospace" font-size="14" font-weight="normal" fill="#e6edf5" text-anchor="start" xml:space="preserve"><![CDATA[spend (approved): APbbVyFqydbAnJraAhyTf9Fa9YycmJUV3y3V7PbWphHH]]></text>
+<text x="90" y="1134" font-family="DejaVu Sans Mono, Liberation Mono, monospace" font-size="14" font-weight="normal" fill="#e6edf5" text-anchor="start" xml:space="preserve"><![CDATA[reward payout: 81BJpbDqYQmCCLXkAEZBwfsC7UD5DTREcvygVi35c546]]></text>
+<text x="90" y="1156" font-family="DejaVu Sans Mono, Liberation Mono, monospace" font-size="14" font-weight="normal" fill="#e6edf5" text-anchor="start" xml:space="preserve"><![CDATA[reputation gate (refused): AdsChVNw3dpdLETPAXZ2wNNsnkyHiutRjNtnrJuqUxbu]]></text>
+<text x="1200" y="1040" font-family="DejaVu Sans Mono, Liberation Mono, monospace" font-size="14" font-weight="bold" fill="#8fd3ff" text-anchor="start" xml:space="preserve"><![CDATA[LEGEND]]></text>
+<rect x="1200" y="1057" width="22" height="13" rx="3" fill="#0f766e" stroke="#0f766e" stroke-width="1"/>
+<text x="1232" y="1068" font-family="DejaVu Sans Mono, Liberation Mono, monospace" font-size="14" font-weight="normal" fill="#e6edf5" text-anchor="start" xml:space="preserve"><![CDATA[approved path - reputation gate passed]]></text>
+<rect x="1200" y="1081" width="22" height="13" rx="3" fill="#a15c00" stroke="#a15c00" stroke-width="1"/>
+<text x="1232" y="1092" font-family="DejaVu Sans Mono, Liberation Mono, monospace" font-size="14" font-weight="normal" fill="#e6edf5" text-anchor="start" xml:space="preserve"><![CDATA[refused path - gate not met, state unchanged]]></text>
+<rect x="1200" y="1105" width="22" height="13" rx="3" fill="#6d28d9" stroke="#6d28d9" stroke-width="1"/>
+<text x="1232" y="1116" font-family="DejaVu Sans Mono, Liberation Mono, monospace" font-size="14" font-weight="normal" fill="#e6edf5" text-anchor="start" xml:space="preserve"><![CDATA[reward stream and policy extension]]></text>
+<rect x="1200" y="1129" width="22" height="13" rx="3" fill="#334155" stroke="#334155" stroke-width="1"/>
+<text x="1232" y="1140" font-family="DejaVu Sans Mono, Liberation Mono, monospace" font-size="14" font-weight="normal" fill="#e6edf5" text-anchor="start" xml:space="preserve"><![CDATA[shared budget, vault and derived state]]></text>
+<text x="850" y="1190" font-family="DejaVu Sans, Liberation Sans, Arial, sans-serif" font-size="14" font-weight="normal" fill="#4a5a70" text-anchor="middle" xml:space="preserve"><![CDATA[every number shown is computed by src/engine.mjs and reproduced by the deployed contract]]></text>
+</svg>

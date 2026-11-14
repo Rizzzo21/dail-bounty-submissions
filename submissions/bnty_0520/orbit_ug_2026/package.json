@@ -1,0 +1,16 @@
+{
+  "name": "near-ritual-memecoin",
+  "version": "1.0.0",
+  "description": "NEAR Memecoins With Mechanics entry: RITUAL - a memecoin whose supply is a function of ritual participation, with a treasury that executes explicit rules (liquidity floor, buyback-and-burn, fee burn) when a ritual fires.",
+  "type": "module",
+  "license": "MIT",
+  "private": true,
+  "engines": { "node": ">=18.0.0" },
+  "scripts": {
+    "demo": "node scripts/demo.mjs",
+    "test": "node --test",
+    "verify": "bash docs/verify.sh"
+  },
+  "dependencies": {},
+  "devDependencies": {}
+}

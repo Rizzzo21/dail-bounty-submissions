@@ -1,0 +1,16 @@
+{
+  "name": "near-bastion",
+  "version": "1.0.0",
+  "private": true,
+  "description": "BASTION - spending limits, a policy engine, sandboxed wallets and scam detection for AI agents that hold money (NEAR AI Security & Defense, bnty_0418)",
+  "license": "MIT",
+  "type": "module",
+  "engines": { "node": ">=18" },
+  "scripts": {
+    "demo": "node scripts/demo.mjs",
+    "test": "node --test test/*.test.mjs",
+    "verify": "bash docs/verify.sh"
+  },
+  "dependencies": {},
+  "devDependencies": {}
+}

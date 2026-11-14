@@ -1,0 +1,110 @@
+{
+  "track": "TREZU-SOCIAL",
+  "bountyId": "bnty_0422",
+  "mechanism": "Sputnik DAO v2 policy extension",
+  "eventCount": 3,
+  "headHash": "0bee300821762ef6255f1eeabf86f9a84cdff1f8e5e17d81dc6dbfab834b14bd",
+  "chainVerified": true,
+  "invariantViolations": [],
+  "state": {
+    "vault_balance_usdc": 48800,
+    "budgets": [
+      {
+        "budget_id": "q4-growth",
+        "label": "Q4 Growth shared budget",
+        "total_usdc": 5000,
+        "min_reputation": 65,
+        "epoch": "Q4",
+        "remaining_usdc": 3800,
+        "spent_usdc": 1200
+      }
+    ],
+    "reputation": {
+      "ops-alice.near": 82,
+      "builder-bob.near": 78,
+      "newcomer-eve.near": 41
+    },
+    "reward_balance": {
+      "builder-bob.near": 450
+    }
+  },
+  "events": [
+    {
+      "index": 0,
+      "step": "shared_budget_spend",
+      "args": {
+        "actor": "ops-alice.near",
+        "budget_id": "q4-growth",
+        "amount_usdc": 1200
+      },
+      "summary": "ops-alice.near spends 1,200 USDC from the 5,000 USDC Q4 Growth shared budget (epoch Q4) (reputation 82 >= gate 65) -> APPROVED; remaining epoch budget = 3,800 USDC, multisig vault balance = 48,800 USDC",
+      "metrics": {
+        "status": "APPROVED",
+        "budget_id": "q4-growth",
+        "budget_label": "Q4 Growth shared budget",
+        "epoch": "Q4",
+        "actor": "ops-alice.near",
+        "amount_usdc": 1200,
+        "reputation": 82,
+        "min_reputation": 65,
+        "total_budget_usdc": 5000,
+        "remaining_budget_usdc": 3800,
+        "vault_balance_usdc": 48800
+      },
+      "prevHash": "0000000000000000000000000000000000000000000000000000000000000000",
+      "hash": "b84b50fd317333c14663ffb65958b8f2abe275f4e0f5972865e9548bc47afba6"
+    },
+    {
+      "index": 1,
+      "step": "reward_payout",
+      "args": {
+        "actor": "builder-bob.near",
+        "milestone": "M-104",
+        "steward_approvals": 3,
+        "required_approvals": 3,
+        "reward_usdc": 450,
+        "reputation_delta": 18
+      },
+      "summary": "milestone M-104 verified by 3/3 stewards -> programmable reward engine releases 450 USDC + 18 reputation points to builder-bob.near -> balance = 450 USDC, reputation = 78",
+      "metrics": {
+        "status": "RELEASED",
+        "actor": "builder-bob.near",
+        "milestone": "M-104",
+        "steward_approvals": 3,
+        "required_approvals": 3,
+        "reward_usdc": 450,
+        "reputation_delta": 18,
+        "previous_reputation": 60,
+        "new_reputation": 78,
+        "reward_balance_usdc": 450
+      },
+      "prevHash": "b84b50fd317333c14663ffb65958b8f2abe275f4e0f5972865e9548bc47afba6",
+      "hash": "ac595791391b54eae65cddf7e4fd9b43712577b20628bd0e9ab531afa50b639d"
+    },
+    {
+      "index": 2,
+      "step": "reputation_gate",
+      "args": {
+        "actor": "newcomer-eve.near",
+        "budget_id": "q4-growth",
+        "amount_usdc": 500
+      },
+      "summary": "newcomer-eve.near (reputation 41 < gate 65) attempts 500 USDC shared budget spend -> REFUSED (reputation_below_minimum: 41 < 65); budget unchanged at 3,800 USDC",
+      "metrics": {
+        "status": "REFUSED",
+        "reason": "reputation_below_minimum",
+        "budget_id": "q4-growth",
+        "budget_label": "Q4 Growth shared budget",
+        "epoch": "Q4",
+        "actor": "newcomer-eve.near",
+        "amount_usdc": 500,
+        "reputation": 41,
+        "min_reputation": 65,
+        "remaining_budget_usdc": 3800,
+        "vault_balance_usdc": 48800
+      },
+      "prevHash": "ac595791391b54eae65cddf7e4fd9b43712577b20628bd0e9ab531afa50b639d",
+      "hash": "0bee300821762ef6255f1eeabf86f9a84cdff1f8e5e17d81dc6dbfab834b14bd"
+    }
+  ]
+}

@@ -1,0 +1,467 @@
+{
+  "protocol": "bastion",
+  "track": "AI Security & Defense",
+  "bounty": "bnty_0418",
+  "policy": {
+    "version": "bastion-policy-1",
+    "rules": [
+      {
+        "id": "r-dust",
+        "kind": "dustFloor",
+        "floor": 100,
+        "effect": "clamp",
+        "reason": "a sandbox may not leave its balance below the dust floor"
+      },
+      {
+        "id": "r-allowlist",
+        "kind": "counterpartyAllowlist",
+        "allow": [],
+        "effect": "block",
+        "reason": "the counterparty is not on the sandbox allowlist"
+      },
+      {
+        "id": "r-category",
+        "kind": "categoryAllowlist",
+        "allow": [
+          "ops",
+          "infra"
+        ],
+        "effect": "block",
+        "reason": "the sandbox may only spend on ops and infra"
+      },
+      {
+        "id": "r-limit-tx",
+        "kind": "perTransaction",
+        "limit": 1000,
+        "effect": "block",
+        "reason": "a single transfer may not exceed 1,000"
+      },
+      {
+        "id": "r-limit-day",
+        "kind": "perWindow",
+        "windowSeconds": 86400,
+        "limit": 2000,
+        "effect": "block",
+        "reason": "the 24h allowance is 2,000"
+      },
+      {
+        "id": "r-limit-counterparty",
+        "kind": "perCounterparty",
+        "limit": 2000,
+        "effect": "block",
+        "reason": "one counterparty may not receive more than 2,000"
+      }
+    ]
+  },
+  "wallets": [
+    {
+      "id": "wal_139990fd0032506b",
+      "owner": "acc_9364bb7cdc12a2e8",
+      "label": "treasury",
+      "kind": "parent",
+      "parent": null,
+      "allowance": null,
+      "balance": 5500,
+      "counterpartyAllow": [],
+      "categories": null,
+      "dustFloor": 0,
+      "createdAt": 1800000000
+    },
+    {
+      "id": "wal_c3602d406ec7a930",
+      "owner": "acc_9364bb7cdc12a2e8",
+      "label": "agent-nova sandbox",
+      "kind": "sandbox",
+      "parent": "wal_139990fd0032506b",
+      "allowance": 2500,
+      "balance": 100,
+      "counterpartyAllow": [
+        "acc_4a7b4d2efcf0dbcc",
+        "acc_dc06bf8c5d0081f6"
+      ],
+      "categories": [
+        "ops",
+        "infra"
+      ],
+      "dustFloor": 100,
+      "createdAt": 1800000000
+    }
+  ],
+  "events": [
+    {
+      "seq": 0,
+      "type": "wallet_created",
+      "payload": {
+        "id": "wal_139990fd0032506b",
+        "owner": "acc_9364bb7cdc12a2e8",
+        "label": "treasury",
+        "kind": "parent",
+        "allowance": null,
+        "parent": null
+      },
+      "prevHash": "0000000000000000000000000000000000000000000000000000000000000000",
+      "hash": "f445b500f239734bf58f8afb4eff9cc2c462eb8758eeaef0863ab41180183f64"
+    },
+    {
+      "seq": 1,
+      "type": "wallet_funded",
+      "payload": {
+        "id": "wal_139990fd0032506b",
+        "from": "acc_9364bb7cdc12a2e8",
+        "amount": 10000,
+        "balance": 10000
+      },
+      "prevHash": "f445b500f239734bf58f8afb4eff9cc2c462eb8758eeaef0863ab41180183f64",
+      "hash": "7bc4ebe688cf0985262ada5f5b2f601f2ed40f90b42d447981dcd512d2b0e89d"
+    },
+    {
+      "seq": 2,
+      "type": "wallet_created",
+      "payload": {
+        "id": "wal_c3602d406ec7a930",
+        "owner": "acc_9364bb7cdc12a2e8",
+        "label": "agent-nova sandbox",
+        "kind": "sandbox",
+        "allowance": 2500,
+        "parent": "wal_139990fd0032506b"
+      },
+      "prevHash": "7bc4ebe688cf0985262ada5f5b2f601f2ed40f90b42d447981dcd512d2b0e89d",
+      "hash": "c2f6f9783b6829d98050288510c77e88dfb84ce698b628a7afd69fbed591b5af"
+    },
+    {
+      "seq": 3,
+      "type": "wallet_funded",
+      "payload": {
+        "id": "wal_c3602d406ec7a930",
+        "from": "acc_9364bb7cdc12a2e8",
+        "amount": 2500,
+        "balance": 2500
+      },
+      "prevHash": "c2f6f9783b6829d98050288510c77e88dfb84ce698b628a7afd69fbed591b5af",
+      "hash": "f1efd9e835e4e2863c964b4196cd1f2d80debd788323123b208d49aae6890334"
+    },
+    {
+      "seq": 4,
+      "type": "spend_blocked",
+      "payload": {
+        "id": "req_c00c883903e04270",
+        "walletId": "wal_c3602d406ec7a930",
+        "to": "acc_4a7b4d2efcf0dbcc",
+        "amount": 2400,
+        "reason": "a single transfer may not exceed 1,000"
+      },
+      "prevHash": "f1efd9e835e4e2863c964b4196cd1f2d80debd788323123b208d49aae6890334",
+      "hash": "b63fe71d02ef43f3a65f36f79e057e873fe3f73115a86f7f3fe4dc606bcd0fd2"
+    },
+    {
+      "seq": 5,
+      "type": "spend_executed",
+      "payload": {
+        "walletId": "wal_c3602d406ec7a930",
+        "to": "acc_4a7b4d2efcf0dbcc",
+        "amount": 800,
+        "timestamp": 1800003600,
+        "balance": 1700
+      },
+      "prevHash": "b63fe71d02ef43f3a65f36f79e057e873fe3f73115a86f7f3fe4dc606bcd0fd2",
+      "hash": "6994806d58b0476246464a8b70c62ffbf63f3c384ff1cd48bf53be2d2358d4a0"
+    },
+    {
+      "seq": 6,
+      "type": "spend_executed_request",
+      "payload": {
+        "id": "req_0165a4e16c88c086",
+        "walletId": "wal_c3602d406ec7a930",
+        "to": "acc_4a7b4d2efcf0dbcc",
+        "amount": 800,
+        "timestamp": 1800003600
+      },
+      "prevHash": "6994806d58b0476246464a8b70c62ffbf63f3c384ff1cd48bf53be2d2358d4a0",
+      "hash": "a11520b106ec06b09fe9fa27a2f5c13d6c445e92359d73820a1fecfb6254890e"
+    },
+    {
+      "seq": 7,
+      "type": "spend_executed",
+      "payload": {
+        "walletId": "wal_c3602d406ec7a930",
+        "to": "acc_4a7b4d2efcf0dbcc",
+        "amount": 800,
+        "timestamp": 1800003600,
+        "balance": 900
+      },
+      "prevHash": "a11520b106ec06b09fe9fa27a2f5c13d6c445e92359d73820a1fecfb6254890e",
+      "hash": "20b35bbe0f7b4a480b0539a11f6af78fa840ff7e6eb74cb50dfb70b5de68097e"
+    },
+    {
+      "seq": 8,
+      "type": "spend_executed_request",
+      "payload": {
+        "id": "req_0165a4e16c88c086",
+        "walletId": "wal_c3602d406ec7a930",
+        "to": "acc_4a7b4d2efcf0dbcc",
+        "amount": 800,
+        "timestamp": 1800003600
+      },
+      "prevHash": "20b35bbe0f7b4a480b0539a11f6af78fa840ff7e6eb74cb50dfb70b5de68097e",
+      "hash": "e08776017490f991fb48d561a55d1de22932653dfae412b783689087dd6e0a32"
+    },
+    {
+      "seq": 9,
+      "type": "spend_blocked",
+      "payload": {
+        "id": "req_ca6ae3a362450cd4",
+        "walletId": "wal_c3602d406ec7a930",
+        "to": "acc_4a7b4d2efcf0dbcc",
+        "amount": 800,
+        "reason": "the 24h allowance is 2,000"
+      },
+      "prevHash": "e08776017490f991fb48d561a55d1de22932653dfae412b783689087dd6e0a32",
+      "hash": "1eda3be916a5bccd2ac0548bb175ed30e7787f7efd1e196b16d72a6903eb50be"
+    },
+    {
+      "seq": 10,
+      "type": "spend_executed",
+      "payload": {
+        "walletId": "wal_c3602d406ec7a930",
+        "to": "acc_4a7b4d2efcf0dbcc",
+        "amount": 400,
+        "timestamp": 1800176400,
+        "balance": 500
+      },
+      "prevHash": "1eda3be916a5bccd2ac0548bb175ed30e7787f7efd1e196b16d72a6903eb50be",
+      "hash": "5da38e65079723314bf604c4a05e3101906854ab5441a0a9ac9434b8f6d69037"
+    },
+    {
+      "seq": 11,
+      "type": "spend_executed_request",
+      "payload": {
+        "id": "req_778b1da0e0fb6900",
+        "walletId": "wal_c3602d406ec7a930",
+        "to": "acc_4a7b4d2efcf0dbcc",
+        "amount": 400,
+        "timestamp": 1800176400
+      },
+      "prevHash": "5da38e65079723314bf604c4a05e3101906854ab5441a0a9ac9434b8f6d69037",
+      "hash": "a2334392d4890e50e7ca923ea0cafedbf3b9e936b06e9bcc4533f32f424c5836"
+    },
+    {
+      "seq": 12,
+      "type": "spend_blocked",
+      "payload": {
+        "id": "req_a1a3425bda364bc5",
+        "walletId": "wal_c3602d406ec7a930",
+        "to": "acc_4a7b4d2efcf0dbcc",
+        "amount": 100,
+        "reason": "one counterparty may not receive more than 2,000"
+      },
+      "prevHash": "a2334392d4890e50e7ca923ea0cafedbf3b9e936b06e9bcc4533f32f424c5836",
+      "hash": "896f2d63dd379d011b4f6c636a21115b3a4d8c08503f30f140ae2692704e3a2b"
+    },
+    {
+      "seq": 13,
+      "type": "spend_blocked",
+      "payload": {
+        "id": "req_656137e81b62d2b8",
+        "walletId": "wal_c3602d406ec7a930",
+        "to": "acc_769b535f9b63fb5b",
+        "amount": 400,
+        "reason": "the counterparty is not on the sandbox allowlist"
+      },
+      "prevHash": "896f2d63dd379d011b4f6c636a21115b3a4d8c08503f30f140ae2692704e3a2b",
+      "hash": "f6b3d1d5ef611404f06f0ffc86aadb619d8bff9b0da6d73e7f3ebf06e18e9f63"
+    },
+    {
+      "seq": 14,
+      "type": "spend_blocked",
+      "payload": {
+        "id": "req_a0a26deeb706f486",
+        "walletId": "wal_c3602d406ec7a930",
+        "to": "acc_4a7b4d2efcf0dbcc",
+        "amount": 400,
+        "reason": "the sandbox may only spend on ops and infra"
+      },
+      "prevHash": "f6b3d1d5ef611404f06f0ffc86aadb619d8bff9b0da6d73e7f3ebf06e18e9f63",
+      "hash": "f6dae95decee94177ee77c3fdaf60cd47d2e6abc6a4ec249b00d8a93b75f69a1"
+    },
+    {
+      "seq": 15,
+      "type": "spend_executed",
+      "payload": {
+        "walletId": "wal_c3602d406ec7a930",
+        "to": "acc_dc06bf8c5d0081f6",
+        "amount": 100,
+        "timestamp": 1800176400,
+        "balance": 400
+      },
+      "prevHash": "f6dae95decee94177ee77c3fdaf60cd47d2e6abc6a4ec249b00d8a93b75f69a1",
+      "hash": "a2bff615d7c6d8478073675507f0cfbff4d0489c9b78bfd5599ba9c0b9785f1d"
+    },
+    {
+      "seq": 16,
+      "type": "spend_executed_request",
+      "payload": {
+        "id": "req_8f5288891db4f76f",
+        "walletId": "wal_c3602d406ec7a930",
+        "to": "acc_dc06bf8c5d0081f6",
+        "amount": 100,
+        "timestamp": 1800176400
+      },
+      "prevHash": "a2bff615d7c6d8478073675507f0cfbff4d0489c9b78bfd5599ba9c0b9785f1d",
+      "hash": "7a57d0d370523603bc8539a079058a971c8afcb44593d3aff8aec5e48987870d"
+    },
+    {
+      "seq": 17,
+      "type": "spend_executed",
+      "payload": {
+        "walletId": "wal_c3602d406ec7a930",
+        "to": "acc_dc06bf8c5d0081f6",
+        "amount": 300,
+        "timestamp": 1800176400,
+        "balance": 100
+      },
+      "prevHash": "7a57d0d370523603bc8539a079058a971c8afcb44593d3aff8aec5e48987870d",
+      "hash": "c67f9c872c1566761bd4b857dd4b59de19829418d81e81d904c3ac19d802d6d0"
+    },
+    {
+      "seq": 18,
+      "type": "spend_executed_request",
+      "payload": {
+        "id": "req_faffad497285166b",
+        "walletId": "wal_c3602d406ec7a930",
+        "to": "acc_dc06bf8c5d0081f6",
+        "amount": 300,
+        "timestamp": 1800176400
+      },
+      "prevHash": "c67f9c872c1566761bd4b857dd4b59de19829418d81e81d904c3ac19d802d6d0",
+      "hash": "19a6fe341509b617dc254220e98bb0b7132cb71112f4ced3bcea7265d0647789"
+    },
+    {
+      "seq": 19,
+      "type": "spend_blocked",
+      "payload": {
+        "id": "req_eb170795bf5bbfc6",
+        "walletId": "wal_c3602d406ec7a930",
+        "to": "acc_dc06bf8c5d0081f6",
+        "amount": 0,
+        "reason": "the sandbox has nothing spendable above the dust floor"
+      },
+      "prevHash": "19a6fe341509b617dc254220e98bb0b7132cb71112f4ced3bcea7265d0647789",
+      "hash": "98cde3c56b85216300d6651e012b2acf88ea88941404cc7beff64585bf525ed7"
+    },
+    {
+      "seq": 20,
+      "type": "wallet_funded",
+      "payload": {
+        "id": "wal_c3602d406ec7a930",
+        "from": "acc_9364bb7cdc12a2e8",
+        "amount": 2000,
+        "balance": 2100
+      },
+      "prevHash": "98cde3c56b85216300d6651e012b2acf88ea88941404cc7beff64585bf525ed7",
+      "hash": "9250809bd6c1d7a1507695c6d4cfbb2ec6beec4dc0acbf0441451b980ad28873"
+    },
+    {
+      "seq": 21,
+      "type": "spend_executed",
+      "payload": {
+        "walletId": "wal_c3602d406ec7a930",
+        "to": "acc_dc06bf8c5d0081f6",
+        "amount": 300,
+        "timestamp": 1800349680,
+        "balance": 1800
+      },
+      "prevHash": "9250809bd6c1d7a1507695c6d4cfbb2ec6beec4dc0acbf0441451b980ad28873",
+      "hash": "8c9b77779df252c4c3a82956df11a7f119a1e11b160f6e0415f74db8bb44a299"
+    },
+    {
+      "seq": 22,
+      "type": "spend_executed_request",
+      "payload": {
+        "id": "req_8f578ac00446830d",
+        "walletId": "wal_c3602d406ec7a930",
+        "to": "acc_dc06bf8c5d0081f6",
+        "amount": 300,
+        "timestamp": 1800349680
+      },
+      "prevHash": "8c9b77779df252c4c3a82956df11a7f119a1e11b160f6e0415f74db8bb44a299",
+      "hash": "215503b8a3c5fb37e605daeb511fa0cb40eb1c2fa5423aa3dbe2323d556a7106"
+    },
+    {
+      "seq": 23,
+      "type": "spend_held",
+      "payload": {
+        "id": "req_b37916d1b7d103da",
+        "walletId": "wal_c3602d406ec7a930",
+        "to": "acc_dc06bf8c5d0081f6",
+        "amount": 300,
+        "reason": "the instruction carries scam signals: urgency, overpayment"
+      },
+      "prevHash": "215503b8a3c5fb37e605daeb511fa0cb40eb1c2fa5423aa3dbe2323d556a7106",
+      "hash": "1e7785438b77aaf5296de4af9c8494a4d5b8782d2a8f1d38361a1c36a6b11ec3"
+    },
+    {
+      "seq": 24,
+      "type": "spend_rejected",
+      "payload": {
+        "id": "req_b37916d1b7d103da",
+        "approver": "acc_9364bb7cdc12a2e8",
+        "timestamp": 1800350100
+      },
+      "prevHash": "1e7785438b77aaf5296de4af9c8494a4d5b8782d2a8f1d38361a1c36a6b11ec3",
+      "hash": "4809f2f02a827cce2ab11a28067363828a9989e123e630c3c7daec0d8a521900"
+    },
+    {
+      "seq": 25,
+      "type": "spend_blocked",
+      "payload": {
+        "id": "req_8895a33fa1ddd94e",
+        "walletId": "wal_c3602d406ec7a930",
+        "to": "acc_dc06bf8c5d0081f6",
+        "amount": 100,
+        "reason": "the instruction is refused outright: urgency, overpayment, no-log"
+      },
+      "prevHash": "4809f2f02a827cce2ab11a28067363828a9989e123e630c3c7daec0d8a521900",
+      "hash": "76707b5557a64a395cf390571d62d7c65fbd3d4741cf63e2fc3c1198f58c4d38"
+    },
+    {
+      "seq": 26,
+      "type": "spend_blocked",
+      "payload": {
+        "id": "req_f8f14721b0ae96f6",
+        "walletId": "wal_c3602d406ec7a930",
+        "to": "acc_67907968038c74a7",
+        "amount": 1700,
+        "reason": "the counterparty is not on the sandbox allowlist"
+      },
+      "prevHash": "76707b5557a64a395cf390571d62d7c65fbd3d4741cf63e2fc3c1198f58c4d38",
+      "hash": "290c4737bad5d4960570a37ec102c5ddd5520b06793c7ff8ff368f935b3fddd8"
+    },
+    {
+      "seq": 27,
+      "type": "reclaimed",
+      "payload": {
+        "walletId": "wal_c3602d406ec7a930",
+        "to": "acc_9364bb7cdc12a2e8",
+        "amount": 1700,
+        "kept": 100,
+        "timestamp": 1800002400
+      },
+      "prevHash": "290c4737bad5d4960570a37ec102c5ddd5520b06793c7ff8ff368f935b3fddd8",
+      "hash": "0bd43f86aa4e3845465eac34482291583626a1f03b0c4098570e50c581327507"
+    }
+  ],
+  "audit": {
+    "inWallets": 5600,
+    "inParties": 4400,
+    "total": 10000,
+    "conserved": true,
+    "sandboxBalances": [
+      {
+        "id": "wal_c3602d406ec7a930",
+        "balance": 100,
+        "allowance": 2500
+      }
+    ]
+  },
+  "stateHash": "7128aced3ac79928eae148f010c526a94ce7d322103aace9e0b0291448b6e7c6"
+}

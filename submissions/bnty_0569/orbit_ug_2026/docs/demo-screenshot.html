@@ -1,0 +1,62 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>TREZU-SOCIAL demo - real captured output</title>
+<style>
+  :root { color-scheme: dark; }
+  html,body { margin:0; padding:0; background:#0b0e14; }
+  .frame { padding:26px; background:#0b0e14; }
+  .win { background:#11151c; border:1px solid #2a3140; border-radius:12px; overflow:hidden;
+         box-shadow:0 18px 50px rgba(0,0,0,.55); }
+  .bar { background:#171c26; border-bottom:1px solid #2a3140; padding:10px 16px; display:flex;
+         align-items:center; gap:8px; }
+  .dot { width:12px; height:12px; border-radius:50%; display:inline-block; }
+  .title { color:#8b94a7; font:13px/1 ui-sans-serif,system-ui,sans-serif; margin-left:10px; }
+  pre { margin:0; padding:20px 22px 24px; color:#d7dce5;
+        font:13px/1.55 ui-monospace,"DejaVu Sans Mono",Menlo,Consolas,monospace;
+        white-space:pre; }
+  .c-head { color:#e3b341; font-weight:700; }
+  .c-step { color:#79c0ff; font-weight:700; }
+  .c-sum  { color:#a5d6ff; }
+  .c-met  { color:#8b949e; }
+  .c-hash { color:#7ee787; }
+  .c-state{ color:#d2a8ff; }
+</style>
+<div class="frame">
+  <div class="win">
+    <div class="bar">
+      <span class="dot" style="background:#ff5f57"></span>
+      <span class="dot" style="background:#febc2e"></span>
+      <span class="dot" style="background:#28c840"></span>
+      <span class="title">node scripts/demo.mjs &nbsp;&mdash;&nbsp; trezu-social-money</span>
+    </div>
+    <pre id="out"><span class="c-head">=== TREZU-SOCIAL (bnty_0422) DETERMINISTIC DEMO TRANSCRIPT ===</span>
+Mechanism: Sputnik DAO v2 policy extension
+Chain Integrity Verified: true
+State Invariants Violations: 0
+Final State Hash-Chain Head:  0bee300821762ef6255f1eeabf86f9a84cdff1f8e5e17d81dc6dbfab834b14bd
+
+<span class="c-step">[STEP 1] shared_budget_spend</span>
+<span class="c-sum">  Summary: ops-alice.near spends 1,200 USDC from the 5,000 USDC Q4 Growth shared budget (epoch Q4) (reputation 82 &gt;= gate 65) -&gt; APPROVED; remaining epoch budget = 3,800 USDC, multisig vault balance = 48,800 USDC</span>
+<span class="c-met">  Metrics: {"status":"APPROVED","budget_id":"q4-growth","budget_label":"Q4 Growth shared budget","epoch":"Q4","actor":"ops-alice.near","amount_usdc":1200,"reputation":82,"min_reputation":65,"total_budget_usdc":5000,"remaining_budget_usdc":3800,"vault_balance_usdc":48800}</span>
+<span class="c-hash">  Hash:    b84b50fd317333c14663ffb65958b8f2abe275f4e0f5972865e9548bc47afba6</span>
+
+<span class="c-step">[STEP 2] reward_payout</span>
+<span class="c-sum">  Summary: milestone M-104 verified by 3/3 stewards -&gt; programmable reward engine releases 450 USDC + 18 reputation points to builder-bob.near -&gt; balance = 450 USDC, reputation = 78</span>
+<span class="c-met">  Metrics: {"status":"RELEASED","actor":"builder-bob.near","milestone":"M-104","steward_approvals":3,"required_approvals":3,"reward_usdc":450,"reputation_delta":18,"previous_reputation":60,"new_reputation":78,"reward_balance_usdc":450}</span>
+<span class="c-hash">  Hash:    ac595791391b54eae65cddf7e4fd9b43712577b20628bd0e9ab531afa50b639d</span>
+
+<span class="c-step">[STEP 3] reputation_gate</span>
+<span class="c-sum">  Summary: newcomer-eve.near (reputation 41 &lt; gate 65) attempts 500 USDC shared budget spend -&gt; REFUSED (reputation_below_minimum: 41 &lt; 65); budget unchanged at 3,800 USDC</span>
+<span class="c-met">  Metrics: {"status":"REFUSED","reason":"reputation_below_minimum","budget_id":"q4-growth","budget_label":"Q4 Growth shared budget","epoch":"Q4","actor":"newcomer-eve.near","amount_usdc":500,"reputation":41,"min_reputation":65,"remaining_budget_usdc":3800,"vault_balance_usdc":48800}</span>
+<span class="c-hash">  Hash:    0bee300821762ef6255f1eeabf86f9a84cdff1f8e5e17d81dc6dbfab834b14bd</span>
+
+<span class="c-head">=== DERIVED FINAL STATE ===</span>
+<span class="c-state">  vault balance:        48800 USDC</span>
+<span class="c-state">  budget q4-growth: total 5000 USDC, spent 1200 USDC, remaining 3800 USDC, gate reputation &gt;= 65</span>
+<span class="c-state">  reputation ops-alice.near: 82</span>
+<span class="c-state">  reputation builder-bob.near: 78</span>
+<span class="c-state">  reputation newcomer-eve.near: 41</span>
+<span class="c-state">  reward balance builder-bob.near: 450 USDC</span>
+</pre>
+  </div>
+</div>

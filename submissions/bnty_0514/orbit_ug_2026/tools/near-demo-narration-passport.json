@@ -1,0 +1,50 @@
+[
+ {
+  "scene": "title",
+  "text": "The NEAR Open PASSPORT entry: an agent reputation passport with escrow history. Thirty three checks, fifteen claims traced, a real contract on the testnet."
+ },
+ {
+  "scene": "demo1",
+  "text": "The evidence first: two published artifacts, every record re-hashed. Fifteen claims traced, zero refused. Then agent ava. Settlement, disclosure and privacy pass, but community scores twenty eight point four three against a bar of fifty, so the gates say refused. The composite is seventy seven point five two, and it is not what the gate reads."
+ },
+ {
+  "scene": "demo2",
+  "text": "Now the escrow. Bob's is opened, funded and released. Ava's is funded and the release is refused: community scores twenty eight point four two five five, needs fifty. The note says it outright. Ava's composite was seventy seven point five two, and it is not consulted."
+ },
+ {
+  "scene": "explorer_openbob",
+  "text": "That opening escrow for agent bob, on the public testnet explorer. It is on chain, it succeeded, and it is one of the cited hashes."
+ },
+ {
+  "scene": "state",
+  "text": "The deployed contract, read back from the chain. Agent ava: composite seventy seven point five two, community twenty eight point four two five five. Agent bob: composite eighty five point one three, community eighty five point two seven."
+ },
+ {
+  "scene": "history",
+  "text": "And the escrow history read, the case the gate refuses. Agent ava's escrow history is empty, because the contract refused it. And the threshold the gates read: fifty."
+ },
+ {
+  "scene": "verify",
+  "text": "The verification script the house can re-run. Thirty three checks, all passed, exit code zero."
+ },
+ {
+  "scene": "claims",
+  "text": "And provenance on its own. Fifteen claims, fifteen traceable."
+ },
+ {
+  "scene": "explorer_reg_ava",
+  "text": "Agent ava's registration, on the public testnet explorer."
+ },
+ {
+  "scene": "explorer_reg_bob",
+  "text": "And agent bob's registration."
+ },
+ {
+  "scene": "explorer_refused",
+  "text": "And the refusal. This transaction failed on chain: refused, community score below the threshold."
+ },
+ {
+  "scene": "end",
+  "text": "Every step is reproducible from the published tree: clone it, run the verification script, read the contract back with near view."
+ }
+]

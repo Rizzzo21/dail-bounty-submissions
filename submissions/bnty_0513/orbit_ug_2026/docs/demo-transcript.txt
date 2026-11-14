@@ -1,0 +1,55 @@
+STEP 1 - THE REGISTRY ISSUES A REAL-WORLD ASSET
+  asset                    US Treasury Bill 2026Q4 (T-BILL)
+  face value available     1,000,000 USDC
+  coupon                   4.50% a year
+  matures at              2027-04-15T08:00:00.000Z (90 days after issue)
+
+STEP 2 - THE COMPLIANCE GATE
+  cleared to hold         fund-avery (US), fund-birch (TW), fund-cobalt (SG), retail-dana (TW)
+  left uncleared          retail-eli (DE) - and DE is not an allowed jurisdiction for this asset anyway
+  retail-eli tries to buy  -> REJECTED: retail-eli is UNVERIFIED - a cleared address is required
+
+STEP 3 - THE INVESTORS SUBSCRIBE
+  fund-avery   subscribed 100,000 USDC -> 100,000 units
+  fund-birch   subscribed 250,000 USDC -> 250,000 units
+  retail-dana  subscribed 5,000 USDC -> 5,000 units
+  issuer reserve           355,000 USDC backing 355,000 USDC of claims (covered: true)
+
+STEP 4 - THE ORACLE PUBLISHES A NET ASSET VALUE
+  feed publishes NAV       1.0200 USDC per unit
+  fund-avery sells 2,000 units to retail-dana at 2,040 USDC (signed by the seller)
+  the same signed transfer, replayed -> REJECTED: this signed transfer from fund-avery has already been executed - replay refused
+  fund-birch tries to sell to retail-eli -> REJECTED: retail-eli is UNVERIFIED - a cleared address is required
+
+STEP 5 - THE YIELD ACCRUES (90 days after issue, 30 for the new holder)
+  fund-avery   98,000 units, accrued yield 1102.1918 USDC
+  fund-birch   250,000 units, accrued yield 2773.9726 USDC
+  retail-dana  7,000 units, accrued yield 62.8767 USDC
+  issuer reserve           358,939 USDC backing 358,939 USDC of claims (covered: true)
+
+STEP 6 - A FREEZE, AND THEN THE REDEMPTION
+  fund-birch tries to redeem -> REJECTED: fund-birch is frozen
+  fund-avery redeems        face 98,000 + accrued yield 1102.1918
+                           gross 99102.1918 USDC, fee 247.7555, net 98854.4363
+  fund-avery USDC balance  500,894
+
+SUMMARY - the books
+  journal entries           9
+  debits 920,122 USDC = credits 920,122 USDC  (balanced: true)
+  accounts                  11
+  issuer reserve            259,837 USDC
+  claims outstanding        259,837 USDC (covered: true)
+  registry fees kept        248 USDC
+  event log                 19 events, hash chain VERIFIED
+  final state hash          abfedc4d03c52713b9feea491318a5f4d06967b826195300d5f439cd92d5ea71
+
+  the last journal entry, verbatim:
+    debit  98,854  wallet:acc_29f630fec6e3f1bb
+    debit  248  fee:t-bill-2026q4
+    credit 99,102  reserve:t-bill-2026q4
+    credit 99,102  position:t-bill-2026q4:acc_29f630fec6e3f1bb
+    debit  98,000  issued:t-bill-2026q4
+    debit  1,102  yield:t-bill-2026q4
+
+  every number above comes from running the code; nothing is hard-coded.
+  re-run: node scripts/demo.mjs   (identical output, byte for byte)
