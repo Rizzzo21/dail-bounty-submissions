@@ -264,8 +264,12 @@ subscription and redemption arithmetic, the coupon accrual, the journal, the
 coverage rule and the hash-chained event log - written as a deterministic,
 tested state machine. Every number in this README comes out of it.
 
-**What is not here:** a deployed contract. This box has no NEAR credentials and
-no Rust toolchain, so nothing was deployed to `testnet.near.org`. The mapping
+**What is not here:** the full ANCHOR lifecycle on chain. The compliance gate, per-lot
+coupon accrual, the replay guard and the coverage check run in the offline engine in
+`src/` — the deployed contract is the minimal on-chain registry (lot lifecycle: open,
+pay, remit, plus read methods), proven in section 7b. [House correction 2026-11-14:
+this paragraph previously said no contract was deployed; that was a stale template line
+from before the deployment. The contract IS deployed — see section 7b.] The mapping
 is direct and mechanical:
 
 | this repository | on NEAR |
@@ -374,7 +378,11 @@ state.
 
 ## 8. Limitations
 
-- No deployed contract and no testnet deployment (section 5).
+- The deployed contract is the minimal on-chain registry (lot lifecycle only); the full
+  ANCHOR lifecycle (compliance gate, coupon accrual, replay guard, coverage check) runs
+  in the offline engine in `src/`. [House correction 2026-11-14: this bullet previously
+  read "No deployed contract and no testnet deployment" — stale; the contract is deployed
+  on testnet, section 7b, with 4 verified transactions.]
 - The coupon is simple, not compounding, and is accrued in one step per
   `accrue` call; a contract would accrue per block.
 - The NAV is used for secondary transfers; redemption pays face value plus

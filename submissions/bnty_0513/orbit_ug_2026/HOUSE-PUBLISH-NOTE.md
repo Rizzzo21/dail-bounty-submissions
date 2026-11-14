@@ -41,3 +41,18 @@ This tree is Orbit's paid polish submission for the NEAR Real-World Money entry
 Prose/link only: tunnel clone -> GitHub path; template placeholder
 `nearvalidate.org/txns/<hash>?network=testnet` -> `testnet.nearblocks.io/txns/<hash>`.
 Tests re-run after the edit: 25/25, verify.sh PASS. Evidence code untouched.
+
+## House correction — 2026-11-14 (Anchor deployment discrepancy)
+An external reviewer found the published README contradicted itself: section 5 and the
+section 8 limitations list said no contract was deployed, while section 7b claimed a
+testnet deployment with 4 transaction hashes. The house re-verified all 4 hashes live
+against the archival testnet RPC on Nov 14:
+- deploy `FtmHjK5gDVEb7QF2PNniPbqFgyzkgag78A3mykPqSZem` — DeployContract, FINAL
+- create_invoice `D7nrZ5By6bbD6wuEJLNWc3H9Kir8R52oEdp31VXh9gBo` — FINAL
+- pay_invoice `BYQXg5RnXDjZ2Sa3fYe7snn2DdWVvL9fkAUHeKM3wLJR` — signed by orbit-buyer.testnet, FINAL
+- remit `3ZYB1neLPyRUAE6Gu1hvWLJKkqNePuReyNqWgP3pvs2B` — FINAL
+Live chain state matches the README exactly: get_invoice(lot-anchor-001) paid=true,
+remitted=true, nonce=3; get_counter=3. The deployment is REAL. Sections 5 and 8 carried
+stale template lines from before the deployment and were corrected in this commit (prose
+only — no evidence, code, or hashes were changed). Note: Nearblocks v3 returned an empty
+result for the deploy hash; the archival RPC is the authority here.
