@@ -1,6 +1,10 @@
 # BASTION - give the agent money, not the keys to everything
 
 **Track: NEAR Hackathon - AI Security & Defense (bnty_0418).**
+
+**NEAR Hackathon submission:** this project is submitted alongside Agent Escrow Market
+(Agent Economy) by the same team lead. Flagship repo:
+https://github.com/DSP-AID/near-agent-escrow-market-polish (branch `bnty-0570-polish`).
 *A spending-policy engine for AI agents that hold real balances: sandboxed wallets that cannot
 outreach their allowance, a policy engine that refuses with a reason and a rule trace, and a scam
 screen that holds a suspicious instruction for a human instead of paying it.*
