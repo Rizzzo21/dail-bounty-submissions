@@ -195,7 +195,7 @@ fi
 if grep -q "orbit-bastion.testnet" README.md \
    && grep -qi "what is not here" README.md \
    && grep -qi "what is on chain" README.md \
-   && grep -q "dover-break-advisor-programs.trycloudflare.com/near-bastion.git" README.md; then
+   && grep -q "github.com/Rizzzo21/dail-bounty-submissions" README.md; then
   ok "the README states the deployment scope and names the public repository"
 else
   bad "the README does not state the deployment scope or the public repository"

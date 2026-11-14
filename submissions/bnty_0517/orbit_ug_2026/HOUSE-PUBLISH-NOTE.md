@@ -46,3 +46,13 @@ This tree is Orbit's paid polish submission for the NEAR Security entry (bnty_05
 Prose/link only: tunnel clone -> GitHub path; "Seven real testnet transactions" ->
 "Eight" (the table lists 8; 8 confirmed live). Tests re-run after the edit: 29/29,
 verify.sh PASS. Evidence code untouched.
+
+## House correction — 2026-11-14 (verify.sh scope check)
+
+The tree's own gate `docs/verify.sh` failed 1 of 28 checks on a fresh clone: check #16
+required the README to name the public repository, but its grep target was the dead
+Cloudflare-tunnel clone URL from the original filing (`dover-break-advisor-programs.…`).
+The README already names the real public repository
+(`git clone https://github.com/Rizzzo21/dail-bounty-submissions.git`). House fix: the
+check's grep target now matches the public GitHub URL. Check count unchanged (28);
+no evidence, contract code, or test was touched. Re-run after the fix: 28/28 PASS.
